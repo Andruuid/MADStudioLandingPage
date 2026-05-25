@@ -78,6 +78,10 @@
     @apply mt-10 text-xl font-semibold tracking-tight text-white md:text-2xl;
   }
 
+  .research-prose h3 {
+    @apply mt-8 text-lg font-semibold tracking-tight text-white;
+  }
+
   .research-prose p {
     @apply mt-4 text-base leading-relaxed text-zinc-400;
   }

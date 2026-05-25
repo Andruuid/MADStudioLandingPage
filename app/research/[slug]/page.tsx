@@ -6,6 +6,7 @@ import ArticleStructuredData from "@/components/ArticleStructuredData";
 import ResearchNav from "@/components/ResearchNav";
 import Footer from "@/components/Footer";
 import DebateVsSelfConsistency from "@/components/research/DebateVsSelfConsistency";
+import RedTeamIdeasWithDebate from "@/components/research/RedTeamIdeasWithDebate";
 import {
   getResearchArticle,
   researchArticles,
@@ -15,6 +16,7 @@ const SITE_URL = "https://multiagentdebates.com";
 
 const articleContent: Record<string, ComponentType> = {
   "multi-agent-debate-vs-self-consistency": DebateVsSelfConsistency,
+  "red-team-ideas-multi-agent-debate": RedTeamIdeasWithDebate,
 };
 
 type PageProps = {

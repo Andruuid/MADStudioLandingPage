@@ -1,0 +1,35 @@
+# MAD Studio — Multi-Agent Debates
+
+> MAD Studio is a multi-agent AI debate platform for structured deliberation, truth-seeking, and adversarial red-teaming. Configure 2–100 reasoning agents, run peer-reviewed debate protocols (Open Discussion, Truth-Seeking Debate, Team Discussion), and score claims with M-MAD arbiter verdicts.
+
+Site: https://multiagentdebates.com
+Contact: mad@multiagentdebates.com
+GitHub: https://github.com/Andruuid/MADStudioLandingPage
+
+## Main
+
+- [Home](https://multiagentdebates.com/): Product landing page — features, science foundation, use cases, beta waitlist
+- [Research hub](https://multiagentdebates.com/research): Practical guides on multi-agent debate and LLM reasoning
+
+## Research articles
+
+- [When to Use Multi-Agent Debate vs Self-Consistency](https://multiagentdebates.com/research/multi-agent-debate-vs-self-consistency): Research-backed comparison of CoT-SC and MAD — benchmarks, cost analysis, failure modes, hybrid playbook
+- [How to Red-Team Ideas with Multi-Agent Debate](https://multiagentdebates.com/research/red-team-ideas-multi-agent-debate): Adversarial AI deliberation for stress-testing claims, messaging, and strategy before they ship
+
+## Product capabilities
+
+- Three debate protocols: Open Discussion, Truth-Seeking Debate (10-phase M-MAD), Team Discussion (battle/collaboration)
+- 2–100 agents with reusable personas, playbooks, and teams
+- M-MAD dimension-sweep arbiter: correctness, evidence, responsiveness, calibration, citation quality
+- Saga recursive prompt optimization and Lab Experiments parameter sweeps
+- Multi-provider routing (OpenRouter, LM Studio)
+- REST API and MCP server (beta)
+- Cost, runtime, and turn caps with durable orchestration
+
+## Use cases
+
+Political message testing, academic peer-review simulation, marketing positioning debates, legal argument mapping, product strategy devil's advocate, investigative journalism pre-flight, education and training
+
+## Scientific foundation
+
+Built on peer-reviewed multi-agent debate research including Du et al. (ICML 2024), Liang et al. (EMNLP 2024), Feng et al. M-MAD (ACL 2025), Khan et al. (ICML 2024 Best Paper), Choi et al. Debate or Vote (NeurIPS 2025), and related work.

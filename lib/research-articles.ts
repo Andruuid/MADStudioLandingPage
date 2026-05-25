@@ -22,6 +22,20 @@ export const researchArticles: ResearchArticle[] = [
       "CoT-SC",
     ],
   },
+  {
+    slug: "red-team-ideas-multi-agent-debate",
+    title: "How to Red-Team Ideas with Multi-Agent Debate",
+    description:
+      "A practical playbook for adversarial AI deliberation — stress-test political messaging, product decisions, research claims, and legal arguments before they ship.",
+    publishedAt: "2026-05-27",
+    readTimeMinutes: 10,
+    tags: [
+      "AI red teaming",
+      "multi-agent debate",
+      "adversarial reasoning",
+      "devil's advocate AI",
+    ],
+  },
 ];
 
 export function getResearchArticle(slug: string): ResearchArticle | undefined {

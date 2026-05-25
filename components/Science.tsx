@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   furtherReading,
   papers,
@@ -91,6 +92,16 @@ export default function Science() {
             >
               NeurIPS
             </a>
+            .
+          </p>
+          <p className="text-balance text-zinc-400 md:text-lg">
+            New to the field? Read our guide on{" "}
+            <Link
+              href="/research/multi-agent-debate-vs-self-consistency"
+              className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white"
+            >
+              when to use multi-agent debate vs self-consistency
+            </Link>
             .
           </p>
         </div>

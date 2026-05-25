@@ -512,6 +512,16 @@ export default function DebateVsSelfConsistency() {
           Join the beta waitlist →
         </Link>
       </div>
+
+      <p className="mt-8 text-sm text-zinc-500">
+        Related:{" "}
+        <Link
+          href="/research/red-team-ideas-multi-agent-debate"
+          className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:decoration-accent"
+        >
+          How to red-team ideas with multi-agent debate
+        </Link>
+      </p>
     </article>
   );
 }
