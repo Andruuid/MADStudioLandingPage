@@ -65,7 +65,7 @@ export default function FAQ() {
                       href="#science"
                       className="text-xs font-medium text-zinc-500 underline decoration-white/10 underline-offset-2 transition hover:text-accent-glow"
                     >
-                      See all 10 foundational papers ↓
+                      See all 11 foundational papers ↓
                     </a>
                   </p>
                 )}

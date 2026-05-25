@@ -1,6 +1,52 @@
-import { arxivPdfUrl, papers } from "@/lib/papers";
+import {
+  furtherReading,
+  papers,
+  pdfLink,
+  primaryLinkLabel,
+} from "@/lib/papers";
+
+function PaperLinks({ href, extraLinks }: { href: string; extraLinks?: { label: string; href: string }[] }) {
+  const pdf = pdfLink(href);
+
+  return (
+    <div className="mt-1 flex flex-wrap items-center gap-3 border-t border-white/5 pt-4">
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1.5 rounded-md border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-white transition hover:border-accent/60 hover:bg-accent/10"
+      >
+        {primaryLinkLabel(href)}
+        <span aria-hidden>↗</span>
+      </a>
+      {pdf && (
+        <a
+          href={pdf}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs font-medium text-zinc-500 underline decoration-white/10 underline-offset-2 transition hover:text-accent-glow"
+        >
+          PDF
+        </a>
+      )}
+      {extraLinks?.map((link) => (
+        <a
+          key={link.href}
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs font-medium text-zinc-500 underline decoration-white/10 underline-offset-2 transition hover:text-accent-glow"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  );
+}
 
 export default function Science() {
+  const allReferences = [...papers, ...furtherReading];
+
   return (
     <section
       id="science"
@@ -17,8 +63,8 @@ export default function Science() {
           <p className="text-balance text-zinc-400 md:text-lg">
             MAD Studio operationalizes the leading academic frameworks in
             multi-agent debate, turning them from research notebooks into a
-            production-grade workbench. Every protocol is traceable to a
-            published methodology — each paper below links directly to its{" "}
+            production-grade workbench. Every protocol links to its published
+            source — on{" "}
             <a
               href="https://arxiv.org"
               target="_blank"
@@ -26,8 +72,26 @@ export default function Science() {
               className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white"
             >
               arXiv
-            </a>{" "}
-            source.
+            </a>
+            ,{" "}
+            <a
+              href="https://aclanthology.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white"
+            >
+              ACL Anthology
+            </a>
+            , or{" "}
+            <a
+              href="https://neurips.cc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white"
+            >
+              NeurIPS
+            </a>
+            .
           </p>
         </div>
 
@@ -62,43 +126,62 @@ export default function Science() {
               <p className="text-sm leading-relaxed text-zinc-400">
                 {paper.note}
               </p>
-              <div className="mt-1 flex flex-wrap items-center gap-3 border-t border-white/5 pt-4">
-                <a
-                  href={paper.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-white transition hover:border-accent/60 hover:bg-accent/10"
-                >
-                  Read on arXiv
-                  <span aria-hidden>↗</span>
-                </a>
-                <a
-                  href={arxivPdfUrl(paper.href)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-medium text-zinc-500 underline decoration-white/10 underline-offset-2 transition hover:text-accent-glow"
-                >
-                  PDF
-                </a>
-              </div>
+              <PaperLinks href={paper.href} extraLinks={paper.extraLinks} />
             </li>
           ))}
         </ol>
+
+        <div className="mt-12">
+          <h3 className="font-mono text-[11px] uppercase tracking-[0.18em] text-zinc-500">
+            Further reading
+          </h3>
+          <ul className="mt-4 grid gap-4 md:grid-cols-2">
+            {furtherReading.map((item) => (
+              <li
+                key={item.id}
+                className="glow-border flex flex-col gap-3 rounded-xl border border-white/10 bg-ink-900/60 p-5"
+              >
+                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-cyan">
+                  {item.venue}
+                </span>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base font-semibold leading-snug text-white transition hover:text-accent-glow"
+                >
+                  {item.title}
+                </a>
+                <p className="text-xs text-zinc-500">{item.authors}</p>
+                <p className="text-sm text-zinc-400">{item.note}</p>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-fit items-center gap-1.5 rounded-md border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-white transition hover:border-accent/60 hover:bg-accent/10"
+                >
+                  Read on Medium
+                  <span aria-hidden>↗</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <div className="mt-12 rounded-xl border border-white/10 bg-ink-900/60 p-6">
           <h3 className="font-mono text-[11px] uppercase tracking-[0.18em] text-zinc-500">
             Full reference list
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
-            {papers.map((paper) => (
-              <li key={`ref-${paper.id}`}>
+            {allReferences.map((ref) => (
+              <li key={`ref-${ref.id}`}>
                 <a
-                  href={paper.href}
+                  href={ref.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-zinc-400 underline decoration-white/10 underline-offset-2 transition hover:text-accent-glow"
                 >
-                  {paper.authors} — {paper.title}
+                  {ref.authors} — {ref.title}
                 </a>
               </li>
             ))}

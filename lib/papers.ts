@@ -1,3 +1,8 @@
+export type PaperLink = {
+  label: string;
+  href: string;
+};
+
 export type Paper = {
   id: string;
   title: string;
@@ -5,6 +10,7 @@ export type Paper = {
   venue: string;
   href: string;
   note: string;
+  extraLinks?: PaperLink[];
 };
 
 export const papers: Paper[] = [
@@ -20,11 +26,18 @@ export const papers: Paper[] = [
   {
     id: "liang-2024",
     title:
-      "Encouraging Divergent Thinking in LLMs through Multi-Agent Debate",
-    authors: "Liang, He, Ma, Zhang, Wang, Hu, Zhang, Lin",
+      "Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate",
+    authors:
+      "Liang, He, Jiao, Wang, Wang, Wang, Yang, Shi, Tu",
     venue: "Tencent AI Lab · EMNLP 2024",
-    href: "https://arxiv.org/abs/2305.19118",
-    note: "Establishes that adversarial multi-agent debate counteracts degeneration of thought and unlocks deeper reasoning.",
+    href: "https://aclanthology.org/2024.emnlp-main.992/",
+    extraLinks: [
+      {
+        label: "arXiv",
+        href: "https://arxiv.org/abs/2305.19118",
+      },
+    ],
+    note: "Introduces the Degeneration-of-Thought problem and shows multi-agent debate unlocks divergent thinking where self-reflection stalls.",
   },
   {
     id: "m-mad-2025",
@@ -53,6 +66,15 @@ export const papers: Paper[] = [
     venue: "Anthropic · ICML 2024 (Best Paper)",
     href: "https://arxiv.org/abs/2402.06782",
     note: "Strong empirical evidence that debate makes weaker judges reliably select truthful answers from stronger debaters.",
+  },
+  {
+    id: "hu-2025",
+    title:
+      "Multi-Agent Debate for LLM Judges with Adaptive Stability Detection",
+    authors: "Hu, Tan, Wang, Qu, Chen",
+    venue: "NeurIPS 2025",
+    href: "https://neurips.cc/virtual/2025/loc/san-diego/poster/117644",
+    note: "Formalizes debate among LLM judges and adds adaptive stability detection so debates stop when consensus stabilizes — improving accuracy over majority vote.",
   },
   {
     id: "autogen-2024",
@@ -99,6 +121,32 @@ export const papers: Paper[] = [
   },
 ];
 
+export const furtherReading = [
+  {
+    id: "medium-debate-deep-dive",
+    title: "Building a Multi-Agent AI Debate System: A Technical Deep Dive",
+    authors: "Swastik Raj",
+    venue: "Medium · Engineering",
+    href: "https://medium.com/@swastikraj619/building-a-multi-agent-ai-debate-system-a-technical-deep-dive-e0ebf64d8180",
+    note: "Practical walkthrough of orchestrating multi-agent debate in production — useful context for how debate systems are built and scaled in the wild.",
+  },
+];
+
 export function arxivPdfUrl(absUrl: string): string {
   return absUrl.replace("/abs/", "/pdf/");
+}
+
+export function primaryLinkLabel(href: string): string {
+  if (href.includes("arxiv.org")) return "Read on arXiv";
+  if (href.includes("aclanthology.org")) return "Read on ACL Anthology";
+  if (href.includes("neurips.cc")) return "Read on NeurIPS";
+  return "Read paper";
+}
+
+export function pdfLink(href: string): string | null {
+  if (href.includes("arxiv.org/abs/")) return arxivPdfUrl(href);
+  if (href.includes("aclanthology.org") && !href.endsWith(".pdf")) {
+    return href.endsWith("/") ? `${href.slice(0, -1)}.pdf` : `${href}.pdf`;
+  }
+  return null;
 }

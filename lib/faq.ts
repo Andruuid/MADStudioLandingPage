@@ -24,8 +24,12 @@ export const faqs = [
         href: "https://arxiv.org/abs/2305.14325",
       },
       {
-        label: "Khan et al. — Debating with More Persuasive LLMs (ICML 2024 Best Paper)",
-        href: "https://arxiv.org/abs/2402.06782",
+        label: "Liang et al. — Multi-Agent Debate / DoT (EMNLP 2024)",
+        href: "https://aclanthology.org/2024.emnlp-main.992/",
+      },
+      {
+        label: "Hu et al. — LLM Judges with Adaptive Stability (NeurIPS 2025)",
+        href: "https://neurips.cc/virtual/2025/loc/san-diego/poster/117644",
       },
       {
         label: "Feng et al. — M-MAD dimension-sweep arbiter (ACL 2025)",
