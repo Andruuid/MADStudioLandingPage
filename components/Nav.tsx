@@ -6,17 +6,17 @@ export default function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="group flex items-center gap-3"
+          className="group flex shrink-0 items-center gap-3"
           aria-label="MAD Studio home"
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-md border border-white/10 bg-gradient-to-br from-accent/30 to-accent-cyan/10 font-mono text-[11px] font-semibold tracking-wider text-white">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-white/10 bg-gradient-to-br from-accent/30 to-accent-cyan/10 font-mono text-[11px] font-semibold tracking-wider text-white">
             M·A·D
           </span>
-          <span className="flex flex-col leading-tight">
+          <span className="flex flex-col leading-tight whitespace-nowrap">
             <span className="text-sm font-semibold tracking-wide text-white">
               MAD Studio
             </span>
-            <span className="text-[10px] uppercase tracking-[0.18em] text-zinc-500">
+            <span className="text-[10px] uppercase tracking-[0.14em] text-zinc-500">
               Multi-Agent Debates
             </span>
           </span>
