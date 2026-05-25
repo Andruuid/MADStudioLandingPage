@@ -93,4 +93,69 @@
   .research-prose strong {
     @apply font-medium text-white;
   }
+
+  .research-prose ol {
+    @apply mt-4 list-decimal space-y-3 pl-5 text-zinc-400;
+  }
+
+  .research-tldr {
+    @apply mb-8 rounded-xl border border-accent/25 bg-accent/5 p-6;
+  }
+
+  .research-tldr-label {
+    @apply mb-3 font-mono text-[11px] uppercase tracking-[0.2em] text-accent;
+  }
+
+  .research-tldr ul {
+    @apply mt-0 list-none space-y-2 pl-0 text-sm leading-relaxed text-zinc-300;
+  }
+
+  .research-callout {
+    @apply my-6 rounded-lg border border-white/10 bg-ink-800/60 p-5;
+  }
+
+  .research-callout-accent {
+    @apply border-accent/20 bg-accent/5;
+  }
+
+  .research-callout-title {
+    @apply mb-2 text-sm font-semibold text-white;
+  }
+
+  .research-callout p,
+  .research-callout ul {
+    @apply mt-0 text-sm leading-relaxed text-zinc-400;
+  }
+
+  .research-callout ul {
+    @apply list-disc space-y-2 pl-4;
+  }
+
+  .research-table-wrap {
+    @apply my-8 overflow-x-auto rounded-xl border border-white/10;
+  }
+
+  .research-table-wrap table {
+    @apply w-full min-w-[640px] text-left text-sm;
+  }
+
+  .research-table-wrap thead {
+    @apply border-b border-white/10 bg-ink-800/80;
+  }
+
+  .research-table-wrap th {
+    @apply px-4 py-3 font-medium text-white;
+  }
+
+  .research-table-wrap td {
+    @apply border-t border-white/5 px-4 py-3 align-top text-zinc-400;
+  }
+
+  .research-table-wrap td:first-child {
+    @apply font-medium text-zinc-300;
+  }
+
+  .research-table-wrap a {
+    @apply text-accent-glow underline decoration-accent/40 underline-offset-2;
+  }
 }

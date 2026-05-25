@@ -12,9 +12,9 @@ export const researchArticles: ResearchArticle[] = [
     slug: "multi-agent-debate-vs-self-consistency",
     title: "When to Use Multi-Agent Debate vs Self-Consistency",
     description:
-      "Self-consistency and multi-agent debate both improve LLM reasoning — but they fail in different ways. Here is a practical decision guide grounded in peer-reviewed research.",
+      "A research-backed guide to choosing between self-consistency (CoT-SC) and multi-agent debate (MAD) — with benchmark numbers, cost analysis, failure modes, and a hybrid playbook for production.",
     publishedAt: "2026-05-26",
-    readTimeMinutes: 5,
+    readTimeMinutes: 12,
     tags: [
       "multi-agent debate",
       "self-consistency",
