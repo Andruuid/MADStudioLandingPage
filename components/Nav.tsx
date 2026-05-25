@@ -9,8 +9,30 @@ export default function Nav() {
           className="group flex shrink-0 items-center gap-3"
           aria-label="MAD Studio home"
         >
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-white/10 bg-gradient-to-br from-accent/30 to-accent-cyan/10 font-mono text-[11px] font-semibold tracking-wider text-white">
-            M·A·D
+          <span
+            aria-hidden
+            className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br from-accent/40 via-ink-800 to-accent-cyan/20 shadow-[0_0_24px_-12px_rgba(124,92,255,0.8)]"
+          >
+            <span
+              aria-hidden
+              className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent"
+            />
+            <svg
+              viewBox="0 0 24 24"
+              className="relative h-4 w-4 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="6" cy="7" r="2" />
+              <circle cx="18" cy="7" r="2" />
+              <circle cx="12" cy="18" r="2" />
+              <path d="M7.5 8.4 11 16.4" />
+              <path d="M16.5 8.4 13 16.4" />
+              <path d="M8 7h8" />
+            </svg>
           </span>
           <span className="flex flex-col leading-tight whitespace-nowrap">
             <span className="text-sm font-semibold tracking-wide text-white">
