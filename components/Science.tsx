@@ -31,6 +31,35 @@ const papers = [
     href: "https://arxiv.org/abs/2308.07201",
     note: "Demonstrates that multi-agent debate panels evaluate generated text more reliably than single-judge baselines.",
   },
+  {
+    title: "AI Safety via Debate",
+    authors: "Irving, Christiano, Amodei",
+    venue: "OpenAI · 2018",
+    href: "https://arxiv.org/abs/1805.00899",
+    note: "Establishes debate as an AI alignment primitive: two agents argue their case, a judge decides. The conceptual ancestor of every modern multi-agent verdict protocol.",
+  },
+  {
+    title:
+      "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+    authors: "Wu, Bansal, Zhang, Wu, Li, Zhu, Wang, Saied, Awadallah, Awadalla, Wang",
+    venue: "Microsoft · COLM 2024",
+    href: "https://arxiv.org/abs/2308.08155",
+    note: "Shows that role-specialized agent groups orchestrated through structured conversation consistently outperform monolithic prompts on complex tasks.",
+  },
+  {
+    title: "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    authors: "Shinn, Cassano, Berman, Gopinath, Narasimhan, Yao",
+    venue: "Northeastern · NeurIPS 2023",
+    href: "https://arxiv.org/abs/2303.11366",
+    note: "Verbal self-critique loops iteratively raise agent performance — the direct precedent for Saga's recursive optimization passes.",
+  },
+  {
+    title: "Self-Refine: Iterative Refinement with Self-Feedback",
+    authors: "Madaan, Tandon, Gupta, Hallinan, Gao, Wiegreffe, Alon, et al.",
+    venue: "CMU · NeurIPS 2023",
+    href: "https://arxiv.org/abs/2303.17651",
+    note: "Single-model iterative refinement via self-generated feedback. The minimal version of what multi-agent debate scales up across roles.",
+  },
 ];
 
 export default function Science() {
