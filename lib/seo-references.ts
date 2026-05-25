@@ -38,4 +38,45 @@ export const seoReferences: SeoReference[] = [
     venue: "EMNLP 2024 Findings",
     url: "https://aclanthology.org/2024.findings-emnlp.427/",
   },
+  {
+    id: "going-mad-2024",
+    title:
+      "Should we be going MAD? A Look at Multi-Agent Debate Strategies for LLMs",
+    authors: "Smit, Duckworth, Grinsztajn, Barrett, Pretorius",
+    venue: "arXiv 2024",
+    url: "https://arxiv.org/abs/2311.17371",
+  },
+  {
+    id: "swe-debate-2025",
+    title:
+      "SWE-Debate: Competitive Multi-Agent Debate for Software Issue Resolution",
+    authors: "Li, Shi, Lin, Gu, Lian, Wang, Jia, Huang, Wang",
+    venue: "arXiv 2025",
+    url: "https://arxiv.org/abs/2507.23348",
+  },
+  {
+    id: "debate-or-vote-2025",
+    title:
+      "Debate or Vote: Which Yields Better Decisions in Multi-Agent Large Language Models?",
+    authors: "Choi, Zhu, Li",
+    venue: "NeurIPS 2025",
+    url: "https://proceedings.neurips.cc/paper_files/paper/2025/hash/934252acd87f254d5d4672fbde283bd2-Abstract-Conference.html",
+  },
+  {
+    id: "talk-isnt-cheap-2025",
+    title:
+      "Talk Isn't Always Cheap: Understanding Failure Modes in Multi-Agent Debate",
+    authors: "Wynn, Satija, Hadfield",
+    venue: "ICML MAS Workshop 2025",
+    url: "https://arxiv.org/abs/2509.05396",
+  },
+  {
+    id: "liang-mad-acl-proceedings",
+    title:
+      "Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate",
+    authors:
+      "Liang, He, Jiao, Wang, Wang, Wang, Yang, Shi, Tu",
+    venue: "EMNLP 2024",
+    url: "https://aclanthology.org/2024.emnlp-main.992/",
+  },
 ];
