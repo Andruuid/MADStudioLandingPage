@@ -54,6 +54,9 @@ export default function Nav() {
           <a href="#api" className="transition hover:text-white">
             API
           </a>
+          <a href="#recursive" className="transition hover:text-white">
+            Recursive
+          </a>
           <a href="#use-cases" className="transition hover:text-white">
             Use Cases
           </a>

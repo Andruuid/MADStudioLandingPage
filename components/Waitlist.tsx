@@ -71,7 +71,7 @@ export default function Waitlist() {
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-8 px-6 text-center">
         <span className="font-mono text-[11px] uppercase tracking-[0.24em] text-accent">
-          05 / Beta access
+          06 / Beta access
         </span>
         <h2 className="text-balance text-4xl font-semibold tracking-tight text-white md:text-6xl">
           Be among the first to deploy{" "}
