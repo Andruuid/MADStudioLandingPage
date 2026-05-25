@@ -1,7 +1,27 @@
 import { faqs } from "@/lib/faq";
+import { seoReferences } from "@/lib/seo-references";
 
 const SITE_URL = "https://multiagentdebates.com";
 const SITE_NAME = "MAD Studio";
+
+function scholarlyArticle(ref: (typeof seoReferences)[number]) {
+  return {
+    "@type": "ScholarlyArticle",
+    "@id": `${ref.url}#citation`,
+    name: ref.title,
+    headline: ref.title,
+    author: ref.authors.split(", ").map((name) => ({
+      "@type": "Person",
+      name: name.trim(),
+    })),
+    isPartOf: {
+      "@type": "PublicationEvent",
+      name: ref.venue,
+    },
+    url: ref.url,
+    mainEntityOfPage: ref.url,
+  };
+}
 
 export default function StructuredData() {
   const organization = {
@@ -67,6 +87,10 @@ export default function StructuredData() {
       bestRating: "5",
       worstRating: "1",
     },
+    citation: seoReferences.map((ref) => ({
+      "@id": `${ref.url}#citation`,
+    })),
+    isBasedOn: seoReferences.map((ref) => ref.url),
   };
 
   const faqPage = {
@@ -95,6 +119,11 @@ export default function StructuredData() {
     ],
   };
 
+  const researchCitations = {
+    "@context": "https://schema.org",
+    "@graph": seoReferences.map(scholarlyArticle),
+  };
+
   return (
     <>
       <script
@@ -116,6 +145,10 @@ export default function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(researchCitations) }}
       />
     </>
   );
