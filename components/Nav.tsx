@@ -57,6 +57,9 @@ export default function Nav() {
           <a href="#recursive" className="transition hover:text-white">
             Recursive
           </a>
+          <a href="#evaluation" className="transition hover:text-white">
+            Matrix
+          </a>
           <a href="#use-cases" className="transition hover:text-white">
             Use Cases
           </a>

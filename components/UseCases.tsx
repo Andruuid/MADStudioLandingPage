@@ -50,7 +50,7 @@ export default function UseCases() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-4 md:max-w-2xl">
           <span className="font-mono text-[11px] uppercase tracking-[0.24em] text-accent">
-            05 / Use cases
+            06 / Use cases
           </span>
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-white md:text-5xl">
             One platform. Every domain that needs structured argument.
