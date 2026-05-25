@@ -17,7 +17,25 @@ export const faqs = [
   {
     question: "Is multi-agent debate scientifically validated?",
     answer:
-      "Yes. MAD Studio is built on peer-reviewed research from MIT, Google Brain, Anthropic, Tencent AI Lab, and others — including the ICML 2024 Best Paper on debate-based truthfulness, the M-MAD multi-dimensional arbiter framework, and the Mixture-of-Agents architecture that beats GPT-4 Omni on AlpacaEval. Every protocol traces back to published methodology.",
+      "Yes. MAD Studio is built on peer-reviewed research from MIT, Google Brain, Anthropic, Tencent AI Lab, and others. Every protocol traces back to published methodology. Key papers:",
+    links: [
+      {
+        label: "Du et al. — Multiagent Debate (ICML 2024)",
+        href: "https://arxiv.org/abs/2305.14325",
+      },
+      {
+        label: "Khan et al. — Debating with More Persuasive LLMs (ICML 2024 Best Paper)",
+        href: "https://arxiv.org/abs/2402.06782",
+      },
+      {
+        label: "Feng et al. — M-MAD dimension-sweep arbiter (ACL 2025)",
+        href: "https://arxiv.org/abs/2412.20127",
+      },
+      {
+        label: "Wang et al. — Mixture-of-Agents (ICLR 2025)",
+        href: "https://arxiv.org/abs/2406.04692",
+      },
+    ],
   },
   {
     question: "What can I use multi-agent debate for?",
@@ -41,4 +59,6 @@ export const faqs = [
   },
 ];
 
-export type FAQ = (typeof faqs)[number];
+export type FAQ = (typeof faqs)[number] & {
+  links?: { label: string; href: string }[];
+};

@@ -1,82 +1,4 @@
-const papers = [
-  {
-    title:
-      "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
-    authors: "Du, Li, Torralba, Tenenbaum, Mordatch",
-    venue: "MIT / Google Brain · ICML 2024",
-    href: "https://arxiv.org/abs/2305.14325",
-    note: "Foundational result: agents critiquing each other across rounds converge on more factual, better-reasoned answers.",
-  },
-  {
-    title:
-      "Encouraging Divergent Thinking in LLMs through Multi-Agent Debate",
-    authors: "Liang, He, Ma, Zhang, Wang, Hu, Zhang, Lin",
-    venue: "Tencent AI Lab · EMNLP 2024",
-    href: "https://arxiv.org/abs/2305.19118",
-    note: "Establishes that adversarial multi-agent debate counteracts degeneration of thought and unlocks deeper reasoning.",
-  },
-  {
-    title:
-      "M-MAD: Multidimensional Multi-Agent Debate for Translation Evaluation",
-    authors: "Feng, Zhao, Lyu, Li, Tu, Wang",
-    venue: "ACL 2025",
-    href: "https://arxiv.org/abs/2412.20127",
-    note: "Introduces the per-dimension arbiter sweep that powers MAD Studio's truth-seeking verdict scoring.",
-  },
-  {
-    title:
-      "ChatEval: Towards Better LLM-based Evaluators through Multi-Agent Debate",
-    authors: "Chan, Chen, Yu, Lu, Sun, Liu",
-    venue: "ICLR 2024",
-    href: "https://arxiv.org/abs/2308.07201",
-    note: "Demonstrates that multi-agent debate panels evaluate generated text more reliably than single-judge baselines.",
-  },
-  {
-    title:
-      "Debating with More Persuasive LLMs Leads to More Truthful Answers",
-    authors: "Khan, Hughes, Valentine, Ruis, Sachan, Radhakrishnan, Bowman, Perez",
-    venue: "Anthropic · ICML 2024 (Best Paper)",
-    href: "https://arxiv.org/abs/2402.06782",
-    note: "Strong empirical evidence that debate makes weaker judges reliably select truthful answers from stronger debaters — the modern, capable-model successor to the original debate-as-alignment thesis.",
-  },
-  {
-    title:
-      "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
-    authors: "Wu, Bansal, Zhang, Wu, Li, Zhu, Wang, Saied, Awadallah, Awadalla, Wang",
-    venue: "Microsoft · COLM 2024",
-    href: "https://arxiv.org/abs/2308.08155",
-    note: "Shows that role-specialized agent groups orchestrated through structured conversation consistently outperform monolithic prompts on complex tasks.",
-  },
-  {
-    title: "Reflexion: Language Agents with Verbal Reinforcement Learning",
-    authors: "Shinn, Cassano, Berman, Gopinath, Narasimhan, Yao",
-    venue: "Northeastern · NeurIPS 2023",
-    href: "https://arxiv.org/abs/2303.11366",
-    note: "Verbal self-critique loops iteratively raise agent performance — the direct precedent for Saga's recursive optimization passes.",
-  },
-  {
-    title: "Self-Refine: Iterative Refinement with Self-Feedback",
-    authors: "Madaan, Tandon, Gupta, Hallinan, Gao, Wiegreffe, Alon, et al.",
-    venue: "CMU · NeurIPS 2023",
-    href: "https://arxiv.org/abs/2303.17651",
-    note: "Single-model iterative refinement via self-generated feedback. The minimal version of what multi-agent debate scales up across roles.",
-  },
-  {
-    title: "Mixture-of-Agents Enhances Large Language Model Capabilities",
-    authors: "Wang, Bai, Liu, Chen, Cardie, Zhang, et al.",
-    venue: "Together AI · ICLR 2025",
-    href: "https://arxiv.org/abs/2406.04692",
-    note: "Layered multi-LLM collaboration where each layer's agents refine the previous layer's outputs. Open-source MoA reaches 65.1% on AlpacaEval 2.0, beating GPT-4 Omni.",
-  },
-  {
-    title:
-      "Demystifying Multi-Agent Debate: The Role of Confidence and Diversity",
-    authors: "Choi, Zhu, Li, et al.",
-    venue: "2026",
-    href: "https://arxiv.org/abs/2601.19921",
-    note: "Pinpoints when multi-agent debate actually beats majority vote: diversity-aware initialization plus calibrated confidence communication. Directly informs MAD Studio's persona and confidence design.",
-  },
-];
+import { arxivPdfUrl, papers } from "@/lib/papers";
 
 export default function Science() {
   return (
@@ -96,37 +18,92 @@ export default function Science() {
             MAD Studio operationalizes the leading academic frameworks in
             multi-agent debate, turning them from research notebooks into a
             production-grade workbench. Every protocol is traceable to a
-            published methodology.
+            published methodology — each paper below links directly to its{" "}
+            <a
+              href="https://arxiv.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white"
+            >
+              arXiv
+            </a>{" "}
+            source.
           </p>
         </div>
 
         <ol className="mt-14 grid gap-4 md:grid-cols-2">
           {papers.map((paper, idx) => (
             <li
-              key={paper.title}
-              className="glow-border relative flex flex-col gap-3 rounded-xl border border-white/10 bg-ink-800/60 p-6 transition hover:border-white/20"
+              key={paper.id}
+              className="glow-border group relative flex flex-col gap-3 rounded-xl border border-white/10 bg-ink-800/60 p-6 transition hover:border-white/20"
             >
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-3">
                 <span className="font-mono text-xs text-zinc-500">
                   Paper {String(idx + 1).padStart(2, "0")}
                 </span>
-                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-cyan">
+                <a
+                  href={paper.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-cyan transition hover:text-white"
+                >
                   {paper.venue}
-                </span>
+                </a>
               </div>
               <a
                 href={paper.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base font-semibold leading-snug text-white transition hover:text-accent-glow md:text-lg"
+                className="text-base font-semibold leading-snug text-white transition group-hover:text-accent-glow md:text-lg"
               >
                 {paper.title}
               </a>
               <p className="text-xs text-zinc-500">{paper.authors}</p>
-              <p className="text-sm text-zinc-400">{paper.note}</p>
+              <p className="text-sm leading-relaxed text-zinc-400">
+                {paper.note}
+              </p>
+              <div className="mt-1 flex flex-wrap items-center gap-3 border-t border-white/5 pt-4">
+                <a
+                  href={paper.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-white transition hover:border-accent/60 hover:bg-accent/10"
+                >
+                  Read on arXiv
+                  <span aria-hidden>↗</span>
+                </a>
+                <a
+                  href={arxivPdfUrl(paper.href)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-medium text-zinc-500 underline decoration-white/10 underline-offset-2 transition hover:text-accent-glow"
+                >
+                  PDF
+                </a>
+              </div>
             </li>
           ))}
         </ol>
+
+        <div className="mt-12 rounded-xl border border-white/10 bg-ink-900/60 p-6">
+          <h3 className="font-mono text-[11px] uppercase tracking-[0.18em] text-zinc-500">
+            Full reference list
+          </h3>
+          <ul className="mt-4 space-y-2 text-sm">
+            {papers.map((paper) => (
+              <li key={`ref-${paper.id}`}>
+                <a
+                  href={paper.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 underline decoration-white/10 underline-offset-2 transition hover:text-accent-glow"
+                >
+                  {paper.authors} — {paper.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

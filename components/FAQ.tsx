@@ -42,7 +42,33 @@ export default function FAQ() {
                 </span>
               </summary>
               <div className="px-6 pb-6 pl-[3.75rem] text-sm leading-relaxed text-zinc-400 md:text-base">
-                {faq.answer}
+                <p>{faq.answer}</p>
+                {"links" in faq && faq.links && faq.links.length > 0 && (
+                  <ul className="mt-3 space-y-2">
+                    {faq.links.map((link) => (
+                      <li key={link.href}>
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent-glow underline decoration-accent/30 underline-offset-2 transition hover:text-white"
+                        >
+                          {link.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {"links" in faq && faq.links && (
+                  <p className="mt-3">
+                    <a
+                      href="#science"
+                      className="text-xs font-medium text-zinc-500 underline decoration-white/10 underline-offset-2 transition hover:text-accent-glow"
+                    >
+                      See all 10 foundational papers ↓
+                    </a>
+                  </p>
+                )}
               </div>
             </details>
           ))}
