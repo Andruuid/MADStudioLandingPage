@@ -32,11 +32,12 @@ const papers = [
     note: "Demonstrates that multi-agent debate panels evaluate generated text more reliably than single-judge baselines.",
   },
   {
-    title: "AI Safety via Debate",
-    authors: "Irving, Christiano, Amodei",
-    venue: "OpenAI · 2018",
-    href: "https://arxiv.org/abs/1805.00899",
-    note: "Establishes debate as an AI alignment primitive: two agents argue their case, a judge decides. The conceptual ancestor of every modern multi-agent verdict protocol.",
+    title:
+      "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+    authors: "Khan, Hughes, Valentine, Ruis, Sachan, Radhakrishnan, Bowman, Perez",
+    venue: "Anthropic · ICML 2024 (Best Paper)",
+    href: "https://arxiv.org/abs/2402.06782",
+    note: "Strong empirical evidence that debate makes weaker judges reliably select truthful answers from stronger debaters — the modern, capable-model successor to the original debate-as-alignment thesis.",
   },
   {
     title:
@@ -59,6 +60,21 @@ const papers = [
     venue: "CMU · NeurIPS 2023",
     href: "https://arxiv.org/abs/2303.17651",
     note: "Single-model iterative refinement via self-generated feedback. The minimal version of what multi-agent debate scales up across roles.",
+  },
+  {
+    title: "Mixture-of-Agents Enhances Large Language Model Capabilities",
+    authors: "Wang, Bai, Liu, Chen, Cardie, Zhang, et al.",
+    venue: "Together AI · ICLR 2025",
+    href: "https://arxiv.org/abs/2406.04692",
+    note: "Layered multi-LLM collaboration where each layer's agents refine the previous layer's outputs. Open-source MoA reaches 65.1% on AlpacaEval 2.0, beating GPT-4 Omni.",
+  },
+  {
+    title:
+      "Demystifying Multi-Agent Debate: The Role of Confidence and Diversity",
+    authors: "Choi, Zhu, Li, et al.",
+    venue: "2026",
+    href: "https://arxiv.org/abs/2601.19921",
+    note: "Pinpoints when multi-agent debate actually beats majority vote: diversity-aware initialization plus calibrated confidence communication. Directly informs MAD Studio's persona and confidence design.",
   },
 ];
 
