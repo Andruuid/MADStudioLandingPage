@@ -7,7 +7,11 @@ type Status = "idle" | "loading" | "success" | "error";
 const FORMSPREE_ENDPOINT =
   process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? "";
 
-export default function Waitlist() {
+type WaitlistProps = {
+  waitlistCount: number;
+};
+
+export default function Waitlist({ waitlistCount }: WaitlistProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
@@ -80,8 +84,9 @@ export default function Waitlist() {
           </span>
         </h2>
         <p className="max-w-xl text-balance text-zinc-400 md:text-lg">
-          Closed beta is rolling out now. Join the waitlist for free early
-          access — no card, no commitment, no spam.
+          Closed beta is rolling out now. Join {waitlistCount.toLocaleString()}{" "}
+          teams already on the waitlist — free early access, no card, no
+          commitment, no spam.
         </p>
 
         <form

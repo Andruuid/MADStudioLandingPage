@@ -1,4 +1,8 @@
-export default function Hero() {
+type HeroProps = {
+  waitlistCount: number;
+};
+
+export default function Hero({ waitlistCount }: HeroProps) {
   return (
     <section className="relative isolate overflow-hidden">
       <div
@@ -18,7 +22,7 @@ export default function Hero() {
         <div className="flex max-w-3xl flex-col gap-8">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-300">
             <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_12px_2px_rgba(124,92,255,0.6)]" />
-            Closed beta — invitation only
+            Closed beta · {waitlistCount.toLocaleString()} teams already in
           </div>
 
           <h1 className="text-balance text-5xl font-semibold leading-[1.05] tracking-tight text-white md:text-7xl">
@@ -55,7 +59,7 @@ export default function Hero() {
             </a>
 
             <span className="text-xs text-zinc-500">
-              Free during beta · no credit card · cancel anytime
+              Join {waitlistCount.toLocaleString()} teams · Free during beta · no credit card
             </span>
           </div>
 
