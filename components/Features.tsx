@@ -47,6 +47,14 @@ const features = [
     title: "In-app + email notifications",
     body: "Get pinged when a run finishes or hits its cost cap. Resend integration when configured, in-app fallback when not.",
   },
+  {
+    title: "Full REST API",
+    body: "Spin up sessions, inject interventions, stream turns, and pull transcripts programmatically. Every UI action is mirrored as a documented endpoint with stable contracts.",
+  },
+  {
+    title: "MCP server",
+    body: "Expose MAD Studio as a Model Context Protocol server. Drop it into Claude Desktop, Cursor, or any MCP client and orchestrate debates as a callable tool.",
+  },
 ];
 
 export default function Features() {
