@@ -4,7 +4,7 @@ const features = [
     body: "Open Discussion for brainstorming, Truth-Seeking Debate with a 10-phase M-MAD verdict, and Team Discussion for two-team battle or collaboration modes.",
   },
   {
-    title: "2 to 12 reasoning agents",
+    title: "2 to 100 reasoning agents",
     body: "Compose participants from a reusable Worker library. Snapshotted into the conversation so editing a Worker never rewrites historical transcripts.",
   },
   {

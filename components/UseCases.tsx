@@ -36,7 +36,7 @@ const cases = [
   },
   {
     label: "Just for Fun",
-    headline: "Send GPT-4 and Claude into a five-round debate.",
+    headline: "Send GPT 5.5 and Opus 4.7 into a five-round debate.",
     body: "Pick a spicy topic. Pick six agents. Hit start. Watch them go. Export the transcript. No wrong answers — that's what the arbiter is for.",
   },
 ];

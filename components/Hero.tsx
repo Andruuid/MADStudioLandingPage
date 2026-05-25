@@ -31,7 +31,7 @@ export default function Hero() {
 
           <p className="max-w-2xl text-balance text-lg text-zinc-400 md:text-xl">
             MAD Studio is an operational thinking console for structured AI
-            deliberation. Configure 2–12 reasoning agents, run them through
+            deliberation. Configure 2–100 reasoning agents, run them through
             peer-reviewed debate protocols, and watch them pressure-test ideas
             one turn at a time.
           </p>
@@ -64,19 +64,19 @@ export default function Hero() {
               <dt className="text-[11px] uppercase tracking-[0.18em] text-zinc-500">
                 Agents per session
               </dt>
-              <dd className="mt-1 font-mono text-lg text-white">2 – 12</dd>
+              <dd className="mt-1 font-mono text-lg text-white">2 – 100</dd>
             </div>
             <div>
               <dt className="text-[11px] uppercase tracking-[0.18em] text-zinc-500">
                 Debate phases
               </dt>
-              <dd className="mt-1 font-mono text-lg text-white">10</dd>
+              <dd className="mt-1 font-mono text-lg text-white">1 – 10</dd>
             </div>
             <div>
               <dt className="text-[11px] uppercase tracking-[0.18em] text-zinc-500">
                 Concurrent runs
               </dt>
-              <dd className="mt-1 font-mono text-lg text-white">4</dd>
+              <dd className="mt-1 font-mono text-lg text-white">1 – 100</dd>
             </div>
           </dl>
         </div>
