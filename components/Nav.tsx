@@ -44,24 +44,27 @@ export default function Nav() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 text-sm text-zinc-400 md:flex">
-          <a href="#science" className="transition hover:text-white">
+        <nav className="flex items-center gap-3 text-sm text-zinc-400 lg:gap-6">
+          <a href="#science" className="hidden transition hover:text-white lg:inline">
             Science
           </a>
-          <a href="#features" className="transition hover:text-white">
+          <a href="#features" className="hidden transition hover:text-white lg:inline">
             Features
           </a>
-          <a href="#api" className="transition hover:text-white">
+          <a href="#api" className="hidden transition hover:text-white lg:inline">
             API
           </a>
-          <a href="#recursive" className="transition hover:text-white">
+          <a href="#recursive" className="hidden transition hover:text-white lg:inline">
             Recursive
           </a>
-          <a href="#evaluation" className="transition hover:text-white">
+          <a href="#evaluation" className="hidden transition hover:text-white lg:inline">
             Matrix
           </a>
-          <a href="#use-cases" className="transition hover:text-white">
+          <a href="#use-cases" className="hidden transition hover:text-white lg:inline">
             Use Cases
+          </a>
+          <a href="#faq" className="hidden transition hover:text-white lg:inline">
+            FAQ
           </a>
           <a
             href="#waitlist"

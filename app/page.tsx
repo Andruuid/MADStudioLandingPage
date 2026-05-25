@@ -6,6 +6,7 @@ import ApiSection from "@/components/ApiSection";
 import Recursive from "@/components/Recursive";
 import Evaluation from "@/components/Evaluation";
 import UseCases from "@/components/UseCases";
+import FAQ from "@/components/FAQ";
 import Waitlist from "@/components/Waitlist";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Recursive />
       <Evaluation />
       <UseCases />
+      <FAQ />
       <Waitlist />
       <Footer />
     </main>
