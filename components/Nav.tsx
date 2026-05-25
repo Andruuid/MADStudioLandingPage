@@ -51,6 +51,9 @@ export default function Nav() {
           <a href="#features" className="transition hover:text-white">
             Features
           </a>
+          <a href="#api" className="transition hover:text-white">
+            API
+          </a>
           <a href="#use-cases" className="transition hover:text-white">
             Use Cases
           </a>
