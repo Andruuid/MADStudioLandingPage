@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="border-t border-white/5 py-12">
@@ -28,7 +30,10 @@ export default function Footer() {
             MAD Studio — Multi-Agent Debates
           </span>
         </div>
-        <div className="flex items-center gap-6 text-xs text-zinc-500">
+        <div className="flex flex-wrap items-center gap-6 text-xs text-zinc-500">
+          <Link href="/research" className="transition hover:text-zinc-300">
+            Research
+          </Link>
           <span>© {new Date().getFullYear()} MAD Studio</span>
           <span className="font-mono">multiagentdebates.com</span>
         </div>

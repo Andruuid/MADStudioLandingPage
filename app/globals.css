@@ -73,4 +73,24 @@
   .glow-border:hover::before {
     opacity: 1;
   }
+
+  .research-prose h2 {
+    @apply mt-10 text-xl font-semibold tracking-tight text-white md:text-2xl;
+  }
+
+  .research-prose p {
+    @apply mt-4 text-base leading-relaxed text-zinc-400;
+  }
+
+  .research-prose ul {
+    @apply mt-4 list-disc space-y-3 pl-5 text-zinc-400;
+  }
+
+  .research-prose li {
+    @apply leading-relaxed;
+  }
+
+  .research-prose strong {
+    @apply font-medium text-white;
+  }
 }
