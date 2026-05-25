@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body {
+    background-color: #05070b;
+    color: #e6e8ee;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(124, 92, 255, 0.35);
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(124, 92, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124, 92, 255, 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+    background-position: -1px -1px;
+  }
+
+  .radial-fade {
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+    -webkit-mask-image: radial-gradient(
+      ellipse at center,
+      black 40%,
+      transparent 75%
+    );
+  }
+
+  .glow-border {
+    position: relative;
+  }
+
+  .glow-border::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      rgba(124, 92, 255, 0.6),
+      rgba(34, 211, 238, 0.2),
+      rgba(124, 92, 255, 0)
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 250ms ease;
+    pointer-events: none;
+  }
+
+  .glow-border:hover::before {
+    opacity: 1;
+  }
+}
