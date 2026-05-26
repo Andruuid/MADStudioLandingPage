@@ -438,12 +438,12 @@ export default function DebateVsSelfConsistency() {
       <h2>Where MAD Studio fits</h2>
       <p>
         MAD Studio is built for the hybrid playbook — not naive round-robin chat.
-        Three protocols cover different deliberation modes: Open Discussion for
-        exploratory brainstorming, Truth-Seeking Debate with a 10-phase M-MAD
-        verdict for adversarial fact-finding, and Team Discussion for
-        two-team battle or collaboration. You configure 2–100 agents with
-        distinct personas, set cost and turn caps, and get dimension-level
-        arbiter scores plus a transcript you can actually audit.
+        Five built-in engines cover the full spectrum: Truth-Seeking Debate
+        (10-phase M-MAD), Open Discussion, Team Discussion in battle or
+        collaboration mode, Blind Ping Pong for masked pairwise reasoning, and
+        Scored Debate (FREE-MAD). Fork any of them in the Protocol Library.
+        Configure 2–100 agents with distinct personas, set cost and turn caps,
+        and get dimension-level arbiter scores plus a transcript you can actually audit.
       </p>
       <p>
         Saga recursive optimization and Lab Experiments handle the Smit et al.

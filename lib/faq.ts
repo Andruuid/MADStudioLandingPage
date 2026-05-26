@@ -7,7 +7,7 @@ export const faqs = [
   {
     question: "How is MAD Studio different from running prompts in ChatGPT or Claude?",
     answer:
-      "A single prompt gives you one model's first-pass answer. MAD Studio runs 2–100 reasoning agents through formal protocols — open discussion, truth-seeking debate with a 10-phase M-MAD verdict, or two-team battle and collaboration modes — so claims get rebutted, evidence gets weighed, and verdicts come with auditable per-dimension scorecards instead of a single confidence number.",
+      "A single prompt gives you one model's first-pass answer. MAD Studio runs 2–100 reasoning agents through five built-in protocol engines — Truth-Seeking Debate (10-phase M-MAD), Open Discussion, Team Discussion (battle/collaboration), Blind Ping Pong, Scored Debate (FREE-MAD) — plus a custom Protocol Library you can fork and save. Claims get rebutted, evidence gets weighed, and verdicts come with auditable per-dimension scorecards.",
   },
   {
     question: "Which AI models can I use with MAD Studio?",

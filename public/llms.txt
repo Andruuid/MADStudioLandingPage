@@ -1,6 +1,6 @@
 # MAD Studio — Multi-Agent Debates
 
-> MAD Studio is a multi-agent AI debate platform for structured deliberation, truth-seeking, and adversarial red-teaming. Configure 2–100 reasoning agents, run peer-reviewed debate protocols (Open Discussion, Truth-Seeking Debate, Team Discussion), and score claims with M-MAD arbiter verdicts.
+> MAD Studio is a multi-agent AI debate platform for structured deliberation, truth-seeking, and adversarial red-teaming. Configure 2–100 reasoning agents across five built-in protocol engines plus a custom Protocol Library.
 
 Site: https://multiagentdebates.com
 Contact: mad@multiagentdebates.com
@@ -19,7 +19,8 @@ RSS: https://multiagentdebates.com/research/feed.xml
 
 ## Product capabilities
 
-- Three debate protocols: Open Discussion, Truth-Seeking Debate (10-phase M-MAD), Team Discussion (battle/collaboration)
+- Five built-in protocol engines: Truth-Seeking Debate (10-phase M-MAD), Open Discussion, Team Discussion (battle/collaboration), Blind Ping Pong, Scored Debate (FREE-MAD)
+- Custom Protocol Library — fork built-ins and save named variants
 - 2–100 agents with reusable personas, playbooks, and teams
 - M-MAD dimension-sweep arbiter: correctness, evidence, responsiveness, calibration, citation quality
 - Saga recursive prompt optimization and Lab Experiments parameter sweeps

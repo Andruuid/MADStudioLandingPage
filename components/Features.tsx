@@ -1,7 +1,40 @@
+const protocols = [
+  {
+    name: "Truth-Seeking Debate",
+    tag: "10-phase · M-MAD",
+    body: "Independent openings and rebuttals, then a five-dimension arbiter sweep — correctness, evidence, responsiveness, calibration, citations — before a binding verdict.",
+  },
+  {
+    name: "Open Discussion",
+    tag: "Multi-agent",
+    body: "Rolling brainstorm where 2–100 agents reason in public. Models nominate the next speaker; human interventions steer mid-run.",
+  },
+  {
+    name: "Team Discussion",
+    tag: "Battle · Collaborate",
+    body: "Two saved Teams of 2–6 Workers each. Private huddles, public spokesperson turns — battle mode for adversarial critique, collaboration mode for joint synthesis.",
+  },
+  {
+    name: "Blind Ping Pong",
+    tag: "Masked 1:1",
+    body: "Two participants alternate in a blind, human-style chat. Identities masked until external stop — ideal for unbiased pairwise reasoning.",
+  },
+  {
+    name: "Scored Debate",
+    tag: "FREE-MAD",
+    body: "Round-robin debate on a single structured question. Score-based decisions across rounds with anti-conformity prompts built in.",
+  },
+  {
+    name: "Custom Protocol Library",
+    tag: "Your rules",
+    body: "Fork any built-in engine, edit prompt sections, and save named variants. Your protocol — without forking the codebase.",
+  },
+];
+
 const features = [
   {
-    title: "Three rigorous protocols",
-    body: "Open Discussion for brainstorming, Truth-Seeking Debate with a 10-phase M-MAD verdict, and Team Discussion for two-team battle or collaboration modes.",
+    title: "Evidence packs & claims ledger",
+    body: "Attach plain-text evidence to truth-seeking runs. Claims are tracked across phases so the arbiter scores against what was actually cited — not what agents wish they had said.",
   },
   {
     title: "2 to 100 reasoning agents",
@@ -9,7 +42,7 @@ const features = [
   },
   {
     title: "Dimension-sweep arbiter",
-    body: "Five independent arbiter passes — correctness, evidence use, responsiveness, calibration, citation quality — feed a structured verdict the model cannot retroactively rewrite.",
+    body: "Five independent arbiter passes feed a structured verdict the model cannot retroactively rewrite — each dimension scored before the final call.",
   },
   {
     title: "Rolling summary + recent window",
@@ -65,16 +98,38 @@ export default function Features() {
             02 / Capabilities
           </span>
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-white md:text-5xl">
-            Engineered for serious deliberation.
+            Five engines. One protocol library. Zero duct tape.
           </h2>
           <p className="text-balance text-zinc-400 md:text-lg">
-            Every primitive a researcher, strategist, or analyst needs to run a
-            structured AI debate at production quality — without rebuilding the
-            scaffolding from scratch.
+            Not three presets — five built-in debate engines plus a custom
+            protocol library you can fork and save. Every mode is peer-reviewed
+            or production-hardened, from 10-phase M-MAD truth-seeking to
+            blind pairwise ping-pong.
           </p>
         </div>
 
-        <ul className="mt-14 grid gap-px overflow-hidden rounded-xl border border-white/10 bg-white/5 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {protocols.map((protocol) => (
+            <li
+              key={protocol.name}
+              className="glow-border flex flex-col gap-2 rounded-xl border border-accent/15 bg-accent/5 p-5 transition hover:border-accent/30"
+            >
+              <div className="flex flex-wrap items-center gap-2">
+                <h3 className="text-sm font-semibold text-white">
+                  {protocol.name}
+                </h3>
+                <span className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-accent-cyan">
+                  {protocol.tag}
+                </span>
+              </div>
+              <p className="text-xs leading-relaxed text-zinc-400">
+                {protocol.body}
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        <ul className="mt-8 grid gap-px overflow-hidden rounded-xl border border-white/10 bg-white/5 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, idx) => (
             <li
               key={feature.title}
