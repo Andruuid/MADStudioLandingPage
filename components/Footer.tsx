@@ -34,6 +34,12 @@ export default function Footer() {
           <Link href="/research" className="transition hover:text-zinc-300">
             Research
           </Link>
+          <a
+            href="mailto:mad@multiagentdebates.com"
+            className="transition hover:text-zinc-300"
+          >
+            mad@multiagentdebates.com
+          </a>
           <span>© {new Date().getFullYear()} MAD Studio</span>
           <span className="font-mono">multiagentdebates.com</span>
         </div>

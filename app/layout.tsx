@@ -121,6 +121,14 @@ export const metadata: Metadata = {
   category: "technology",
   alternates: {
     canonical: SITE_URL,
+    types: {
+      "application/rss+xml": [
+        {
+          url: `${SITE_URL}/research/feed.xml`,
+          title: "MAD Studio Research",
+        },
+      ],
+    },
   },
   openGraph: {
     type: "website",

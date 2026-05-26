@@ -1,4 +1,29 @@
+import Link from "next/link";
 import { faqs } from "@/lib/faq";
+
+function FaqLink({ href, label }: { href: string; label: string }) {
+  const className =
+    "text-accent-glow underline decoration-accent/30 underline-offset-2 transition hover:text-white";
+
+  if (href.startsWith("/")) {
+    return (
+      <Link href={href} className={className}>
+        {label}
+      </Link>
+    );
+  }
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {label}
+    </a>
+  );
+}
 
 export default function FAQ() {
   return (
@@ -47,14 +72,7 @@ export default function FAQ() {
                   <ul className="mt-3 space-y-2">
                     {faq.links.map((link) => (
                       <li key={link.href}>
-                        <a
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-accent-glow underline decoration-accent/30 underline-offset-2 transition hover:text-white"
-                        >
-                          {link.label}
-                        </a>
+                        <FaqLink href={link.href} label={link.label} />
                       </li>
                     ))}
                   </ul>

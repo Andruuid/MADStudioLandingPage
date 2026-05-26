@@ -5,6 +5,7 @@
 Site: https://multiagentdebates.com
 Contact: mad@multiagentdebates.com
 GitHub: https://github.com/Andruuid/MADStudioLandingPage
+RSS: https://multiagentdebates.com/research/feed.xml
 
 ## Main
 

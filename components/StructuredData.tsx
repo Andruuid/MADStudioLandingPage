@@ -34,6 +34,13 @@ export default function StructuredData() {
     sameAs: [
       "https://github.com/Andruuid/MADStudioLandingPage",
     ],
+    email: "mad@multiagentdebates.com",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "mad@multiagentdebates.com",
+      contactType: "customer support",
+      availableLanguage: ["English"],
+    },
     description:
       "MAD Studio is the most advanced multi-agent debate platform for structured AI deliberation, built on peer-reviewed research.",
   };

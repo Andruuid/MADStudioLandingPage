@@ -76,6 +76,22 @@ export default function ResearchIndexPage() {
             </li>
           ))}
         </ul>
+
+        <div className="mt-14 rounded-xl border border-accent/20 bg-accent/5 p-6">
+          <p className="text-sm font-medium text-white">
+            Ready to run structured debate?
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+            MAD Studio implements the protocols described in these guides — join
+            the free beta waitlist.
+          </p>
+          <Link
+            href="/#waitlist"
+            className="mt-4 inline-flex items-center rounded-md border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-accent/20"
+          >
+            Request beta access →
+          </Link>
+        </div>
       </div>
 
       <Footer />

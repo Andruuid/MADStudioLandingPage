@@ -161,6 +161,14 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
 
         <p className="text-xs text-zinc-600">
           By joining, you agree to receive infrequent product updates. Unsubscribe anytime.
+          {" "}
+          Questions?{" "}
+          <a
+            href="mailto:mad@multiagentdebates.com"
+            className="text-zinc-500 underline decoration-white/10 underline-offset-2 transition hover:text-zinc-300"
+          >
+            mad@multiagentdebates.com
+          </a>
         </p>
       </div>
     </section>

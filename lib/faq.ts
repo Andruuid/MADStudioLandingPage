@@ -42,6 +42,25 @@ export const faqs = [
     ],
   },
   {
+    question: "Where can I read more about multi-agent debate?",
+    answer:
+      "We publish free, in-depth guides on multi-agent debate methodology — no signup required. Start here:",
+    links: [
+      {
+        label: "When to use multi-agent debate vs self-consistency",
+        href: "/research/multi-agent-debate-vs-self-consistency",
+      },
+      {
+        label: "How to red-team ideas with multi-agent debate",
+        href: "/research/red-team-ideas-multi-agent-debate",
+      },
+      {
+        label: "All research guides",
+        href: "/research",
+      },
+    ],
+  },
+  {
     question: "What can I use multi-agent debate for?",
     answer:
       "Political campaigns stress-test messaging against simulated opposition. Researchers run hypotheses through skeptical peer-review panels. Marketers debate competing campaign angles. Lawyers map adversarial arguments. Product teams institutionalize the devil's advocate. Educators make critical thinking visible. Anyone can run debates for fun — pick a topic, pick six agents, hit start.",

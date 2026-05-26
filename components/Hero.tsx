@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type HeroProps = {
   waitlistCount: number;
 };
@@ -40,7 +42,7 @@ export default function Hero({ waitlistCount }: HeroProps) {
             one turn at a time.
           </p>
 
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             <a
               href="#waitlist"
               className="group inline-flex items-center justify-center gap-2 rounded-md bg-gradient-to-r from-accent to-accent-glow px-6 py-3 text-sm font-semibold text-white shadow-[0_0_40px_-10px_rgba(124,92,255,0.8)] transition hover:shadow-[0_0_60px_-8px_rgba(124,92,255,1)]"
@@ -58,7 +60,14 @@ export default function Hero({ waitlistCount }: HeroProps) {
               </svg>
             </a>
 
-            <span className="text-xs text-zinc-500">
+            <Link
+              href="/research/multi-agent-debate-vs-self-consistency"
+              className="inline-flex items-center justify-center rounded-md border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-accent/60 hover:bg-accent/10"
+            >
+              Read the research guides
+            </Link>
+
+            <span className="w-full text-xs text-zinc-500 sm:w-auto">
               Join {waitlistCount.toLocaleString()} teams · Free during beta · no credit card
             </span>
           </div>

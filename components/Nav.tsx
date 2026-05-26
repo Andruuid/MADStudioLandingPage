@@ -63,6 +63,9 @@ export default function Nav() {
           <a href="#use-cases" className="hidden transition hover:text-white lg:inline">
             Use Cases
           </a>
+          <Link href="/research" className="hidden transition hover:text-white lg:inline">
+            Research
+          </Link>
           <a href="#faq" className="hidden transition hover:text-white lg:inline">
             FAQ
           </a>

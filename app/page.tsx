@@ -8,6 +8,7 @@ import Evaluation from "@/components/Evaluation";
 import UseCases from "@/components/UseCases";
 import FAQ from "@/components/FAQ";
 import Waitlist from "@/components/Waitlist";
+import ResearchSpotlight from "@/components/ResearchSpotlight";
 import Footer from "@/components/Footer";
 import { getWaitlistCount } from "@/lib/waitlist-count";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <Nav />
       <Hero waitlistCount={waitlistCount} />
       <Science />
+      <ResearchSpotlight />
       <Features />
       <ApiSection />
       <Recursive />
