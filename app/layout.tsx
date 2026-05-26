@@ -13,6 +13,7 @@ const inter = Inter({
 
 const SITE_URL = "https://multiagentdebates.com";
 const SITE_NAME = "MAD Studio";
+const CURRENT_YEAR = new Date().getFullYear();
 const DESCRIPTION =
   "Run 2–100 LLM agents through peer-reviewed multi-agent debate protocols. Auditable verdicts, hallucination scoring, free during beta.";
 const SOCIAL_DESCRIPTION =
@@ -21,7 +22,7 @@ const SOCIAL_DESCRIPTION =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "MAD Studio — Multi-Agent Debate Platform for LLMs",
+    default: `MAD Studio — Multi-Agent Debate Platform for LLMs (${CURRENT_YEAR})`,
     template: `%s | ${SITE_NAME}`,
   },
   description: DESCRIPTION,

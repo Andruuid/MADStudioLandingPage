@@ -34,6 +34,12 @@ export default function Footer() {
           <Link href="/research" className="transition hover:text-zinc-300">
             Research
           </Link>
+          <Link href="/glossary" className="transition hover:text-zinc-300">
+            Glossary
+          </Link>
+          <Link href="/bullshit-index" className="transition hover:text-zinc-300">
+            Bullshit Index
+          </Link>
           <a
             href="mailto:mad@multiagentdebates.com"
             className="transition hover:text-zinc-300"

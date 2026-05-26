@@ -80,6 +80,36 @@ export const faqs = [
     answer:
       "Saga is MAD Studio's recursive optimization engine. It spawns hidden child sessions from a source conversation, scores each transcript against your rubric, applies the best optimizer suggestion, and re-runs — generation after generation — until the score curve flattens or a stop condition fires. It's how you find answers that no single prompt would have produced.",
   },
+  {
+    question: "Is MAD Studio an alternative to AutoGen, CrewAI, or LangGraph?",
+    answer:
+      "MAD Studio is purpose-built for multi-agent debate specifically — verdict-grade protocols, the M-MAD arbiter pipeline, and the Bullshit Index — rather than general-purpose agent orchestration. If you need a graph of role-specialized agents executing arbitrary tasks, AutoGen, CrewAI, and LangGraph are excellent. If you need auditable structured disagreement with per-dimension scoring, MAD Studio is the right tool.",
+  },
+  {
+    question: "How much does multi-agent debate cost in tokens?",
+    answer:
+      "Token cost scales with agents × rounds, so a 6-agent, 5-round Truth-Seeking Debate is roughly 30× a single-prompt baseline before arbiter passes. MAD Studio mitigates this with rolling summaries, sparse communication topology (Li et al., EMNLP 2024), adaptive stopping (Hu et al., NeurIPS 2025), and hard cost caps that self-terminate sessions before they burn budget.",
+  },
+  {
+    question: "Does multi-agent debate actually beat majority voting?",
+    answer:
+      "It depends on the task. For discrete math and multiple-choice with one correct answer, Self-Consistency (CoT-SC) is usually the better default. For factuality, open-ended strategy, and adversarial red-teaming, multi-agent debate consistently wins in peer-reviewed benchmarks (Du et al. ICML 2024, Khan et al. ICML 2024). MAD Studio supports both paradigms and a hybrid mode that combines them.",
+  },
+  {
+    question: "Can I use MAD Studio without writing any code?",
+    answer:
+      "Yes. Every protocol — Open Discussion, Truth-Seeking Debate, Team Discussion, Saga, Lab Experiments — is configurable from the web UI. The REST API and MCP server are there if you want to drive debates programmatically from your own stack, but they are optional. The platform ships with reusable Personas, Playbooks, and Teams so a typical first session takes under two minutes to configure.",
+  },
+  {
+    question: "Is my data used to train AI models?",
+    answer:
+      "No. MAD Studio sends prompts to whichever provider you configure (OpenRouter, LM Studio, or your own endpoint) — we do not retrain models on your transcripts and do not share session data with third parties. Local-only deployments via LM Studio are fully private. Transcripts are stored in your Supabase workspace and you can purge them at any time.",
+  },
+  {
+    question: "What is the Degeneration of Thought problem?",
+    answer:
+      "Degeneration of Thought, formalized by Liang et al. (EMNLP 2024), is the failure mode where an LLM commits to an answer and then cannot produce genuinely novel reasoning during self-reflection — even when wrong. The critic and advocate inside one model share the same latent commitment. Multi-agent debate fixes this by separating roles into agents with distinct context.",
+  },
 ];
 
 export type FAQ = (typeof faqs)[number] & {

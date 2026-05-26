@@ -11,6 +11,8 @@ RSS: https://multiagentdebates.com/research/feed.xml
 
 - [Home](https://multiagentdebates.com/): Product landing page — features, science foundation, use cases, beta waitlist
 - [Research hub](https://multiagentdebates.com/research): Practical guides on multi-agent debate and LLM reasoning
+- [Glossary](https://multiagentdebates.com/glossary): Definitions for multi-agent debate, M-MAD, CoT-SC, Degeneration of Thought, Bullshit Index, and 25+ other LLM reasoning terms
+- [Bullshit Index](https://multiagentdebates.com/bullshit-index): MAD Studio's real-time hallucination meter — every claim cross-checked against evidence, web, and prior turns
 
 ## Research articles
 

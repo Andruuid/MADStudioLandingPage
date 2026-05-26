@@ -57,9 +57,17 @@ export default function UseCases() {
           </h2>
           <p className="text-balance text-zinc-400 md:text-lg">
             MAD Studio is the only platform on the web that delivers
-            peer-reviewed multi-agent debate as a daily-driver tool. From war
-            rooms to lab notebooks to weekend curiosity — the same engine, the
-            same rigor.
+            peer-reviewed multi-agent debate as a daily-driver tool. Where
+            AutoGen, CrewAI, and LangGraph give you a graph of agents, MAD
+            Studio gives you a verdict — built on M-MAD scoring and the{" "}
+            <a
+              href="/bullshit-index"
+              className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white"
+            >
+              Bullshit Index
+            </a>
+            . From war rooms to lab notebooks to weekend curiosity — the same
+            engine, the same rigor.
           </p>
         </div>
 
