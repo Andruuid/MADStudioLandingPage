@@ -101,10 +101,9 @@ export default function Features() {
             Five engines. One protocol library. Zero duct tape.
           </h2>
           <p className="text-balance text-zinc-400 md:text-lg">
-            Not three presets — five built-in debate engines plus a custom
-            protocol library you can fork and save. Every mode is peer-reviewed
-            or production-hardened, from 10-phase M-MAD truth-seeking to
-            blind pairwise ping-pong.
+            Five built-in debate engines and a custom protocol library you can
+            fork and save. Each mode is peer-reviewed or production-hardened —
+            from 10-phase M-MAD truth-seeking to blind pairwise ping-pong.
           </p>
         </div>
 
