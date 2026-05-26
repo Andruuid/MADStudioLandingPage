@@ -7,26 +7,93 @@ import { researchArticles } from "@/lib/research-articles";
 const SITE_URL = "https://multiagentdebates.com";
 
 export const metadata: Metadata = {
-  title: "Research — Multi-Agent Debate Guides",
+  title: "Research — Free Guides on Multi-Agent Debate & LLM Reasoning",
   description:
-    "Practical guides on multi-agent debate, LLM reasoning, and when structured AI deliberation beats single-prompt approaches. From the MAD Studio team.",
+    "Practical, research-backed guides on multi-agent debate, self-consistency, and LLM reasoning. From the MAD Studio team. Free, no signup.",
   alternates: {
     canonical: `${SITE_URL}/research`,
+    types: {
+      "application/rss+xml": [
+        {
+          url: `${SITE_URL}/research/feed.xml`,
+          title: "MAD Studio Research",
+        },
+      ],
+    },
   },
   openGraph: {
-    title: "Research | MAD Studio",
+    title: "Research Guides on Multi-Agent Debate | MAD Studio",
     description:
-      "Guides on multi-agent debate vs self-consistency, LLM reasoning strategies, and structured AI deliberation.",
+      "Free guides on multi-agent debate vs self-consistency, LLM reasoning, and red-teaming with AI.",
     url: `${SITE_URL}/research`,
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "MAD Studio Research — guides on multi-agent debate",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Research Guides on Multi-Agent Debate | MAD Studio",
+    description:
+      "Free guides on multi-agent debate vs self-consistency and LLM reasoning.",
+    images: ["/opengraph-image"],
+  },
+};
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": `${SITE_URL}/research`,
+  url: `${SITE_URL}/research`,
+  name: "MAD Studio Research",
+  description:
+    "Practical guides on multi-agent debate, LLM reasoning, and structured AI deliberation.",
+  inLanguage: "en-US",
+  publisher: {
+    "@type": "Organization",
+    name: "MAD Studio",
+    url: SITE_URL,
+  },
+  blogPost: researchArticles.map((article) => ({
+    "@type": "BlogPosting",
+    headline: article.title,
+    description: article.description,
+    datePublished: article.publishedAt,
+    dateModified: article.publishedAt,
+    url: `${SITE_URL}/research/${article.slug}`,
+    author: { "@type": "Organization", name: "MAD Studio", url: SITE_URL },
+    image: [`${SITE_URL}/opengraph-image`],
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Research", item: `${SITE_URL}/research` },
+  ],
 };
 
 export default function ResearchIndexPage() {
   return (
-    <main className="relative min-h-screen bg-ink-950 text-zinc-200">
+    <div className="relative min-h-screen bg-ink-950 text-zinc-200">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ResearchNav />
 
-      <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+      <main id="main-content" className="mx-auto max-w-3xl px-6 py-16 md:py-24">
         <span className="font-mono text-[11px] uppercase tracking-[0.24em] text-accent">
           Research
         </span>
@@ -92,9 +159,9 @@ export default function ResearchIndexPage() {
             Request beta access →
           </Link>
         </div>
-      </div>
+      </main>
 
       <Footer />
-    </main>
+    </div>
   );
 }

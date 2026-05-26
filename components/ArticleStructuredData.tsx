@@ -14,11 +14,12 @@ export default function ArticleStructuredData({
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: article.title,
     description: article.description,
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
+    image: [`${SITE_URL}/opengraph-image`],
     author: {
       "@type": "Organization",
       name: SITE_NAME,
@@ -31,6 +32,8 @@ export default function ArticleStructuredData({
       logo: {
         "@type": "ImageObject",
         url: `${SITE_URL}/icon`,
+        width: 32,
+        height: 32,
       },
     },
     mainEntityOfPage: {

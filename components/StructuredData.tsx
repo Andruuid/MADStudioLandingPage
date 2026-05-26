@@ -27,10 +27,16 @@ export default function StructuredData() {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${SITE_URL}#organization`,
     name: SITE_NAME,
     alternateName: "MAD Studio · Multi-Agent Debates",
     url: SITE_URL,
-    logo: `${SITE_URL}/icon`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/icon`,
+      width: 32,
+      height: 32,
+    },
     sameAs: [
       "https://github.com/Andruuid/MADStudioLandingPage",
     ],
@@ -50,13 +56,9 @@ export default function StructuredData() {
     "@type": "WebSite",
     name: SITE_NAME,
     url: SITE_URL,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${SITE_URL}/?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
+    inLanguage: "en-US",
+    publisher: {
+      "@id": `${SITE_URL}#organization`,
     },
   };
 
@@ -87,13 +89,6 @@ export default function StructuredData() {
       "Live human intervention",
       "Cost, runtime, and turn caps",
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      ratingCount: "12",
-      bestRating: "5",
-      worstRating: "1",
-    },
     citation: seoReferences.map((ref) => ({
       "@id": `${ref.url}#citation`,
     })),

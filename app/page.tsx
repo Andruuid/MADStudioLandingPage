@@ -16,19 +16,21 @@ export default function Home() {
   const waitlistCount = getWaitlistCount();
 
   return (
-    <main className="relative min-h-screen overflow-x-clip bg-ink-950 text-zinc-200">
+    <div className="relative min-h-screen overflow-x-clip bg-ink-950 text-zinc-200">
       <Nav />
-      <Hero waitlistCount={waitlistCount} />
-      <Science />
-      <ResearchSpotlight />
-      <Features />
-      <ApiSection />
-      <Recursive />
-      <Evaluation />
-      <UseCases />
-      <FAQ />
-      <Waitlist waitlistCount={waitlistCount} />
+      <main id="main-content">
+        <Hero waitlistCount={waitlistCount} />
+        <Science />
+        <ResearchSpotlight />
+        <Features />
+        <ApiSection />
+        <Recursive />
+        <Evaluation />
+        <UseCases />
+        <FAQ />
+        <Waitlist waitlistCount={waitlistCount} />
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }

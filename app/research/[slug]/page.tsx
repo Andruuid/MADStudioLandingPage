@@ -52,13 +52,23 @@ export async function generateMetadata({
       description: article.description,
       url,
       publishedTime: article.publishedAt,
+      modifiedTime: article.publishedAt,
       authors: ["MAD Studio"],
       tags: article.tags,
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: article.title,
       description: article.description,
+      images: ["/opengraph-image"],
     },
   };
 }
@@ -73,11 +83,11 @@ export default async function ResearchArticlePage({ params }: PageProps) {
   }
 
   return (
-    <main className="relative min-h-screen bg-ink-950 text-zinc-200">
+    <div className="relative min-h-screen bg-ink-950 text-zinc-200">
       <ArticleStructuredData article={article} />
       <ResearchNav />
 
-      <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+      <main id="main-content" className="mx-auto max-w-3xl px-6 py-16 md:py-24">
         <Link
           href="/research"
           className="text-sm text-zinc-500 transition hover:text-white"
@@ -108,9 +118,9 @@ export default async function ResearchArticlePage({ params }: PageProps) {
         <div className="mt-10">
           <Content />
         </div>
-      </div>
+      </main>
 
       <Footer />
-    </main>
+    </div>
   );
 }

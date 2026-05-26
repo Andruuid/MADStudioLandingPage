@@ -148,7 +148,11 @@
   }
 
   .research-table-wrap th {
-    @apply px-4 py-3 font-medium text-white;
+    @apply px-4 py-3 text-left font-medium text-white;
+  }
+
+  .research-table-wrap tbody th {
+    @apply border-t border-white/5 align-top font-medium text-zinc-300;
   }
 
   .research-table-wrap td {

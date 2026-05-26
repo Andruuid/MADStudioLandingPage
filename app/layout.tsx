@@ -13,107 +13,26 @@ const inter = Inter({
 
 const SITE_URL = "https://multiagentdebates.com";
 const SITE_NAME = "MAD Studio";
-const TAGLINE = "Multi-Agent Debates";
 const DESCRIPTION =
-  "MAD Studio is the most advanced multi-agent debate platform on the web. Configure 2–100 reasoning agents, run peer-reviewed debate protocols, score every claim with the Bullshit Index, and surface insights no single LLM prompt can find.";
+  "Run 2–100 LLM agents through peer-reviewed multi-agent debate protocols. Auditable verdicts, hallucination scoring, free during beta.";
+const SOCIAL_DESCRIPTION =
+  "The most advanced multi-agent debate platform. Configure 2–100 reasoning agents, run peer-reviewed debate protocols, surface insights no single LLM prompt can find.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — ${TAGLINE} | The Multi-Agent Debate Platform`,
+    default: "MAD Studio — Multi-Agent Debate Platform for LLMs",
     template: `%s | ${SITE_NAME}`,
   },
   description: DESCRIPTION,
   applicationName: SITE_NAME,
   keywords: [
-    // Core product
     "multi-agent debate",
-    "multi-agent AI debate",
-    "multi-agent LLM",
-    "AI debate platform",
     "MAD Studio",
-    "multiagentdebates.com",
-    "structured AI deliberation",
-    "LLM multi-agent reasoning",
-    "AI agent framework",
-    "AI debate workbench",
-    "agent orchestration",
-    "multi-agent reasoning",
-    // Protocols & features
+    "AI debate platform",
+    "LLM reasoning",
     "M-MAD",
-    "truth-seeking debate protocol",
-    "open discussion AI agents",
-    "team debate mode LLM",
-    "dimension-sweep arbiter",
-    "AI evaluation matrix",
-    "Bullshit Index AI",
-    "factuality scoring LLM",
-    "Saga recursive prompt optimization",
-    "AI lab experiments parameter sweep",
-    "live human intervention AI debate",
-    "rolling summary long context agents",
-    // Problems we solve
-    "AI fact checking",
-    "AI hallucination detection",
-    "LLM truthfulness",
-    "Degeneration of Thought",
-    "when single prompt fails",
-    "LLM self-reflection limits",
-    "debate vs majority vote LLM",
-    "multi-agent debate failure modes",
-    // Research & papers
-    "constitutional AI alternative",
-    "MAD-M2 memory masking",
-    "GroupDebate multi-agent",
-    "sparse communication topology",
-    "ChatEval ICLR",
-    "Should we be going MAD",
-    "SWE-Debate software engineering",
-    "Debate or Vote NeurIPS",
-    "society of minds LLM",
-    "LLM-as-judge debate",
-    // Models & providers
-    "GPT debate",
-    "Claude debate",
-    "Opus debate agents",
-    "multi-model debate platform",
-    "OpenRouter multi-agent",
-    "LM Studio agent orchestration",
-    "heterogeneous LLM debate",
-    // Alternatives & ecosystem
-    "AutoGen alternative",
-    "CrewAI debate alternative",
-    "LangGraph multi-agent reasoning",
-    "AI red teaming platform",
-    "adversarial LLM reasoning",
-    // Use cases — creative long-tail
-    "devil's advocate AI",
-    "AI red team your ideas",
-    "stress test political messaging AI",
-    "simulate peer review with AI",
-    "AI thesis defense simulator",
-    "legal argument mapping AI",
-    "due diligence AI agents",
-    "competitive intelligence debate AI",
-    "investigative journalism AI tool",
-    "product strategy devil's advocate",
-    "pre-mortem AI analysis",
-    "counterargument generator LLM",
-    "AI war room deliberation",
-    "campaign message testing AI",
-    // Conceptual / memorable
-    "epistemic AI debate",
-    "cognitive diversity LLM agents",
-    "collective LLM intelligence",
-    "AI argumentation engine",
-    "structured argument AI",
-    "agents that disagree productively",
-    "debate until consensus AI",
-    "LLM deliberation platform",
-    "AI panel discussion simulator",
-    "multi-agent truth seeking",
-    "rigorous AI reasoning platform",
-    "peer-reviewed debate protocols AI",
+    "structured AI deliberation",
   ],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
@@ -121,6 +40,10 @@ export const metadata: Metadata = {
   category: "technology",
   alternates: {
     canonical: SITE_URL,
+    languages: {
+      "en-US": SITE_URL,
+      "x-default": SITE_URL,
+    },
     types: {
       "application/rss+xml": [
         {
@@ -135,13 +58,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — The Multi-Agent Debate Platform`,
-    description: DESCRIPTION,
+    title: "MAD Studio — Multi-Agent Debate Platform for LLMs",
+    description: SOCIAL_DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Multi-Agent Debates`,
-    description: DESCRIPTION,
+    title: "MAD Studio — Multi-Agent Debate Platform",
+    description: SOCIAL_DESCRIPTION,
     creator: "@madstudio",
   },
   robots: {
@@ -160,9 +83,6 @@ export const metadata: Metadata = {
     email: false,
     address: false,
     telephone: false,
-  },
-  other: {
-    "theme-color": "#05070b",
   },
 };
 

@@ -72,19 +72,21 @@ export default function DebateVsSelfConsistency() {
         <table>
           <thead>
             <tr>
-              <th />
-              <th>Self-consistency (CoT-SC)</th>
-              <th>Multi-agent debate (MAD)</th>
+              <th scope="col">
+                <span className="sr-only">Comparison dimension</span>
+              </th>
+              <th scope="col">Self-consistency (CoT-SC)</th>
+              <th scope="col">Multi-agent debate (MAD)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Core mechanism</td>
+              <th scope="row">Core mechanism</th>
               <td>Sample <em>m</em> independent reasoning paths; majority-vote the final answer</td>
               <td>Agents see each other&apos;s outputs across rounds; critique and revise</td>
             </tr>
             <tr>
-              <td>Best-known paper</td>
+              <th scope="row">Best-known paper</th>
               <td>
                 <ExternalLink href="https://arxiv.org/abs/2203.11171">
                   Wang et al., ICLR 2023
@@ -97,22 +99,22 @@ export default function DebateVsSelfConsistency() {
               </td>
             </tr>
             <tr>
-              <td>Parallelism</td>
+              <th scope="row">Parallelism</th>
               <td>Embarrassingly parallel — all samples at once</td>
               <td>Sequential rounds; token cost grows fast with agents × rounds</td>
             </tr>
             <tr>
-              <td>Primary output</td>
+              <th scope="row">Primary output</th>
               <td>A single answer (reasoning paths often discarded)</td>
               <td>Answer + full argument transcript</td>
             </tr>
             <tr>
-              <td>Sweet spot</td>
+              <th scope="row">Sweet spot</th>
               <td>Math, logic, multiple-choice with one correct label</td>
               <td>Factuality, open-ended strategy, adversarial red-teaming</td>
             </tr>
             <tr>
-              <td>Main risk</td>
+              <th scope="row">Main risk</th>
               <td>Shared systematic bias — wrong paths vote together</td>
               <td>Sycophancy, agreement bias, runaway token cost</td>
             </tr>
