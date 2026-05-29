@@ -69,6 +69,12 @@ export default function Nav() {
           <Link href="/research" className="hidden transition hover:text-white lg:inline">
             Research
           </Link>
+          <Link href="/glossary" className="hidden transition hover:text-white lg:inline">
+            Glossary
+          </Link>
+          <Link href="/bullshit-index" className="hidden transition hover:text-white lg:inline">
+            Bullshit Index
+          </Link>
           <a href="#faq" className="hidden transition hover:text-white lg:inline">
             FAQ
           </a>
@@ -124,6 +130,16 @@ export default function Nav() {
               <li>
                 <Link href="/research" className="block rounded px-3 py-2 text-zinc-300 transition hover:bg-white/5 hover:text-white">
                   Research
+                </Link>
+              </li>
+              <li>
+                <Link href="/glossary" className="block rounded px-3 py-2 text-zinc-300 transition hover:bg-white/5 hover:text-white">
+                  Glossary
+                </Link>
+              </li>
+              <li>
+                <Link href="/bullshit-index" className="block rounded px-3 py-2 text-zinc-300 transition hover:bg-white/5 hover:text-white">
+                  Bullshit Index
                 </Link>
               </li>
               <li>

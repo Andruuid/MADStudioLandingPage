@@ -144,6 +144,51 @@ export default function ResearchIndexPage() {
           ))}
         </ul>
 
+        <section aria-labelledby="research-resources" className="mt-14">
+          <h2
+            id="research-resources"
+            className="font-mono text-[11px] uppercase tracking-[0.24em] text-accent"
+          >
+            Reference
+          </h2>
+          <ul className="mt-4 grid gap-4 sm:grid-cols-2">
+            <li>
+              <Link
+                href="/glossary"
+                className="glow-border group block h-full rounded-xl border border-white/10 bg-ink-800/40 p-5 transition hover:border-white/20"
+              >
+                <h3 className="text-base font-semibold leading-snug text-white transition group-hover:text-accent-glow">
+                  Multi-Agent Debate Glossary
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                  25+ definitions — M-MAD, CoT-SC, Degeneration of Thought,
+                  sycophancy, and more.
+                </p>
+                <span className="mt-3 inline-block text-xs font-medium text-accent-cyan transition group-hover:text-white">
+                  Browse glossary →
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/bullshit-index"
+                className="glow-border group block h-full rounded-xl border border-white/10 bg-ink-800/40 p-5 transition hover:border-white/20"
+              >
+                <h3 className="text-base font-semibold leading-snug text-white transition group-hover:text-accent-glow">
+                  The Bullshit Index
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                  How MAD Studio detects hallucinations, position drift, and
+                  fabricated citations in real time.
+                </p>
+                <span className="mt-3 inline-block text-xs font-medium text-accent-cyan transition group-hover:text-white">
+                  Read deep dive →
+                </span>
+              </Link>
+            </li>
+          </ul>
+        </section>
+
         <div className="mt-14 rounded-xl border border-accent/20 bg-accent/5 p-6">
           <p className="text-sm font-medium text-white">
             Ready to run structured debate?

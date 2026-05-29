@@ -183,6 +183,23 @@ export default async function ResearchArticlePage({ params }: PageProps) {
                   </span>
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/bullshit-index"
+                  className="glow-border group block h-full rounded-xl border border-white/10 bg-ink-800/40 p-5 transition hover:border-white/20"
+                >
+                  <h3 className="text-base font-semibold leading-snug text-white transition group-hover:text-accent-glow">
+                    The Bullshit Index
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                    Real-time hallucination detection — how every claim is
+                    cross-checked during debate.
+                  </p>
+                  <span className="mt-3 inline-block text-xs font-medium text-accent-cyan transition group-hover:text-white">
+                    Read deep dive →
+                  </span>
+                </Link>
+              </li>
             </ul>
           </aside>
         )}

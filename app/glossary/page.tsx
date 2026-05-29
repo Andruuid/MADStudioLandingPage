@@ -99,9 +99,16 @@ export default function GlossaryPage() {
             Multi-Agent Debate &amp; LLM Reasoning Glossary
           </h1>
           <p className="mt-4 text-balance text-zinc-400 md:text-lg">
-            Plain-English definitions for the terms used across MAD Studio
-            research — from <em>M-MAD</em> and <em>CoT-SC</em> to{" "}
-            <em>Degeneration of Thought</em> and the <em>Bullshit Index</em>.
+            Plain-English definitions for the terms used across{" "}
+            <Link href="/research" className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white">
+              MAD Studio research
+            </Link>{" "}
+            — from <em>M-MAD</em> and <em>CoT-SC</em> to{" "}
+            <em>Degeneration of Thought</em> and the{" "}
+            <Link href="/bullshit-index" className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white">
+              Bullshit Index
+            </Link>
+            .
           </p>
         </header>
 
@@ -168,15 +175,26 @@ export default function GlossaryPage() {
           </p>
           <p className="mt-2 text-sm leading-relaxed text-zinc-400">
             MAD Studio implements every protocol on this page — M-MAD verdicts,
-            Truth-Seeking Debate, Team Discussion, Saga, and the Bullshit Index.
-            Free during beta.
+            Truth-Seeking Debate, Team Discussion, Saga, and the{" "}
+            <Link href="/bullshit-index" className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white">
+              Bullshit Index
+            </Link>
+            . Free during beta.
           </p>
-          <Link
-            href="/#waitlist"
-            className="mt-4 inline-flex items-center rounded-md border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-accent/20"
-          >
-            Request beta access →
-          </Link>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Link
+              href="/research"
+              className="inline-flex items-center rounded-md border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/10"
+            >
+              Read research guides →
+            </Link>
+            <Link
+              href="/#waitlist"
+              className="inline-flex items-center rounded-md border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-accent/20"
+            >
+              Request beta access →
+            </Link>
+          </div>
         </aside>
       </main>
 

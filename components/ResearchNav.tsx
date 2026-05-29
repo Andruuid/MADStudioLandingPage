@@ -39,6 +39,12 @@ export default function ResearchNav() {
           <Link href="/research" className="transition hover:text-white">
             Research
           </Link>
+          <Link href="/glossary" className="hidden transition hover:text-white sm:inline">
+            Glossary
+          </Link>
+          <Link href="/bullshit-index" className="hidden transition hover:text-white md:inline">
+            Bullshit Index
+          </Link>
           <Link
             href="/#waitlist"
             className="rounded-md border border-white/10 bg-white/5 px-3 py-1.5 text-white transition hover:border-accent/60 hover:bg-accent/10"

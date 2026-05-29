@@ -134,9 +134,16 @@ export default function BullshitIndexPage() {
             The Bullshit Index
           </h1>
           <p className="mt-4 text-balance text-lg text-zinc-400 md:text-xl">
-            A real-time hallucination meter built directly into the multi-agent
-            debate loop. Every claim, every turn, cross-checked before it
-            becomes a quote.
+            A real-time hallucination meter built directly into the{" "}
+            <Link href="/research" className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white">
+              multi-agent debate
+            </Link>{" "}
+            loop. Every claim, every turn, cross-checked before it becomes a
+            quote. See also:{" "}
+            <Link href="/glossary#bullshit-index" className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white">
+              glossary entry
+            </Link>
+            .
           </p>
         </header>
 
@@ -273,12 +280,20 @@ export default function BullshitIndexPage() {
             Free during beta — every session ships with the Bullshit Index on
             by default.
           </p>
-          <Link
-            href="/#waitlist"
-            className="mt-4 inline-flex items-center rounded-md border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-accent/20"
-          >
-            Request beta access →
-          </Link>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Link
+              href="/glossary"
+              className="inline-flex items-center rounded-md border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/10"
+            >
+              Browse glossary →
+            </Link>
+            <Link
+              href="/#waitlist"
+              className="inline-flex items-center rounded-md border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-accent/20"
+            >
+              Request beta access →
+            </Link>
+          </div>
         </aside>
       </main>
 
