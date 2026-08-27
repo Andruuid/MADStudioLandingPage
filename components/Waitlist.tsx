@@ -2,40 +2,10 @@
 
 import { useState } from "react";
 
+import { submitWaitlist } from "@/app/actions/waitlist";
+import { INDUSTRIES, USE_CASES } from "@/lib/waitlist";
+
 type Status = "idle" | "loading" | "success" | "error";
-
-const FORMSPREE_ENDPOINT =
-  process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? "";
-
-const INDUSTRIES = [
-  "Film & Media",
-  "Politics & Government",
-  "Marketing & Advertising",
-  "Legal",
-  "Research & Academia",
-  "Education",
-  "Product & Strategy",
-  "Journalism",
-  "Finance & Investing",
-  "Other",
-] as const;
-
-const USE_CASES = [
-  "Focus Groups",
-  "1:1 Debates",
-  "Team Debates",
-  "Shark Tank Pitch",
-  "Marketing Showdown",
-  "Tribe Mind",
-  "Virtual Jury",
-  "Boardroom Challenge",
-  "Strategy War Room",
-  "Red Team Arena",
-  "Crisis Simulation",
-  "Investment Committee",
-  "Idea Tournament",
-  "Comedy Battle",
-] as const;
 
 type WaitlistProps = {
   waitlistCount: number;
@@ -55,8 +25,6 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
     Boolean(industry) &&
     (industry !== "Other" || Boolean(customIndustry.trim()));
   const useCasesAreValid = useCases.length === 3;
-  const selectedIndustry =
-    industry === "Other" ? customIndustry.trim() : industry;
 
   function clearError() {
     if (status === "error") {
@@ -88,6 +56,7 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError(null);
+    const form = event.currentTarget;
 
     if (!industryIsValid || !useCasesAreValid) {
       setStatus("error");
@@ -95,48 +64,35 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
       return;
     }
 
-    if (!email || !email.includes("@")) {
+    if (!email.trim() || !email.includes("@")) {
       setStatus("error");
       setError("Please enter a valid email address.");
       return;
     }
 
-    if (!FORMSPREE_ENDPOINT) {
-      setStatus("success");
-      setEmail("");
-      return;
-    }
-
     try {
       setStatus("loading");
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          industry: selectedIndustry,
-          useCases: useCases.join(", "),
-          notes: notes.trim(),
-          source: "multiagentdebates.com",
-        }),
+      const formData = new FormData(form);
+      const result = await submitWaitlist({
+        email,
+        industry,
+        customIndustry,
+        useCases,
+        notes,
+        website: String(formData.get("website") ?? ""),
       });
 
-      if (!res.ok) {
-        throw new Error(`Submission failed (${res.status})`);
+      if (!result.ok) {
+        setStatus("error");
+        setError(result.error);
+        return;
       }
 
       setStatus("success");
       setEmail("");
-    } catch (err) {
+    } catch {
       setStatus("error");
-      setError(
-        err instanceof Error
-          ? err.message
-          : "Something went wrong. Please try again."
-      );
+      setError("Something went wrong. Please try again.");
     }
   }
 
@@ -201,6 +157,20 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
           </div>
 
           <form onSubmit={handleSubmit} noValidate>
+            <div
+              className="pointer-events-none absolute -left-[10000px] top-auto h-px w-px overflow-hidden"
+              aria-hidden="true"
+            >
+              <label htmlFor="waitlist-website">Website</label>
+              <input
+                id="waitlist-website"
+                name="website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+
             {step === 1 && (
               <fieldset>
                 <legend className="text-xl font-semibold text-white sm:text-2xl">
@@ -246,6 +216,7 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
                     </label>
                     <input
                       id="custom-industry"
+                      name="customIndustry"
                       type="text"
                       value={customIndustry}
                       onChange={(event) => {
@@ -253,6 +224,7 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
                         clearError();
                       }}
                       autoFocus
+                      maxLength={100}
                       className="mt-2 w-full rounded-md border border-white/10 bg-ink-950/70 px-4 py-3 text-sm text-white placeholder:text-zinc-500 focus:border-accent/60 focus:outline-none focus:ring-2 focus:ring-accent/30"
                       placeholder="e.g. Healthcare, Gaming, Nonprofit"
                       required
@@ -326,9 +298,11 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
                   </label>
                   <textarea
                     id="waitlist-notes"
+                    name="notes"
                     value={notes}
                     onChange={(event) => setNotes(event.target.value)}
                     rows={3}
+                    maxLength={2000}
                     className="mt-2 w-full resize-y rounded-md border border-white/10 bg-ink-950/70 px-4 py-3 text-sm text-white placeholder:text-zinc-500 focus:border-accent/60 focus:outline-none focus:ring-2 focus:ring-accent/30"
                     placeholder="Tell us about the debate, decision, or audience you have in mind."
                   />
@@ -372,6 +346,7 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
                   </label>
                   <input
                     id="waitlist-email"
+                    name="email"
                     type="email"
                     inputMode="email"
                     autoComplete="email"
@@ -385,6 +360,7 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
                     aria-describedby="waitlist-status"
                     autoFocus
                     required
+                    maxLength={254}
                   />
                 </div>
 
