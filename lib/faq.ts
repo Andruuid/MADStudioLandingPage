@@ -2,22 +2,22 @@ export const faqs = [
   {
     question: "What is multi-agent debate?",
     answer:
-      "Multi-agent debate is an AI reasoning technique where multiple language models (or multiple instances of the same model with different roles) argue about a question across structured rounds. Peer-reviewed research consistently shows debate produces more factual, better-calibrated answers than single-prompt baselines, especially on hard reasoning and evaluation tasks.",
+      "Multi-agent debate is an AI reasoning technique where multiple language models, or multiple instances of the same model with different roles, discuss a question across structured rounds. Research suggests it can improve some reasoning and evaluation tasks, though results depend on the models, format, and problem.",
   },
   {
-    question: "How is MAD Studio different from running prompts in ChatGPT or Claude?",
+    question: "How is Delibora different from running prompts in ChatGPT or Claude?",
     answer:
-      "A single prompt gives you one model's first-pass answer. MAD Studio runs 2–100 reasoning agents through five built-in protocol engines — Truth-Seeking Debate (10-phase M-MAD), Open Discussion, Team Discussion (battle/collaboration), Blind Ping Pong, Scored Debate (FREE-MAD) — plus a custom Protocol Library you can fork and save. Claims get rebutted, evidence gets weighed, and verdicts come with auditable per-dimension scorecards.",
+      "A single prompt gives you one model's first-pass answer. Delibora gives you 10 purpose-built formats: Decision stress-test, Expert panel, Judged debate, 1:1 Human Dialogue, Team Battle, Shark Tank, Focus group, TribeMind, Idea Tournament, and Custom discussion. Each format preserves the run and produces an output suited to the job.",
   },
   {
-    question: "Which AI models can I use with MAD Studio?",
+    question: "Which AI models can I use with Delibora?",
     answer:
-      "MAD Studio supports any model on OpenRouter (including GPT 5.5, Claude Opus 4.7, Gemini, Llama, Mixtral, and dozens more), local models served by LM Studio, and deterministic dummy providers for testing. You can mix providers per agent and configure automatic fallbacks.",
+      "Delibora supports models available through OpenRouter and local models served by LM Studio. You can select models per Worker and configure automatic fallback order in Settings.",
   },
   {
     question: "Is multi-agent debate scientifically validated?",
     answer:
-      "Yes. MAD Studio is built on peer-reviewed research from MIT, Google Brain, Anthropic, Tencent AI Lab, and others. Every protocol traces back to published methodology. Key papers:",
+      "Delibora's debate workflows draw on published research from several institutions. The evidence is promising for some reasoning and evaluation tasks, but results remain model-, protocol-, and task-dependent. Key papers include:",
     links: [
       {
         label: "Du et al. — Multiagent Debate (ICML 2024)",
@@ -44,7 +44,7 @@ export const faqs = [
   {
     question: "Where can I read more about multi-agent debate?",
     answer:
-      "We publish free, in-depth guides on multi-agent debate methodology — no signup required. Start here:",
+      "We publish free, in-depth guides on multi-agent debate methodology—no signup required. Start here:",
     links: [
       {
         label: "When to use multi-agent debate vs self-consistency",
@@ -61,54 +61,49 @@ export const faqs = [
     ],
   },
   {
-    question: "What can I use multi-agent debate for?",
+    question: "What can I use Delibora for?",
     answer:
-      "Political campaigns stress-test messaging against simulated opposition. Researchers run hypotheses through skeptical peer-review panels. Marketers debate competing campaign angles. Lawyers map adversarial arguments. Product teams institutionalize the devil's advocate. Educators make critical thinking visible. Anyone can run debates for fun — pick a topic, pick six agents, hit start.",
+      "Use it to pressure-test decisions, gather specialist viewpoints, compare two arguments, observe a private AI-to-AI dialogue, stage Team Battles, evaluate pitches, run moderated Focus Groups, simulate audience response with TribeMind, select ideas in a tournament, or configure a discussion from scratch.",
   },
   {
-    question: "What is the Bullshit Index?",
+    question: "How does the Focus group format work?",
     answer:
-      "The Bullshit Index is MAD Studio's real-time fact-checking layer. Every claim made by an agent is extracted, cross-referenced against your evidence pack, the public web, and the agent's earlier turns. Hallucinated citations, drifted positions, false precision, and contradicted statements all push the meter up. It's hallucination detection built directly into the debate loop.",
+      "Choose 4–12 Workers with known personas, edit the discussion guide, and let a neutral moderator run the session. The resulting report is grounded in that simulated panel and includes themes and verified quotes rather than presenting the run as real population research.",
   },
   {
-    question: "Can I integrate MAD Studio into my own product?",
+    question: "What do Shark Tank, TribeMind, and Idea Tournament produce?",
     answer:
-      "Yes. MAD Studio offers a full REST API and a native Model Context Protocol (MCP) server. Spin up sessions, inject human turns, stream transcripts, and run experiments programmatically. The MCP server drops directly into Claude Desktop, Cursor, and any MCP-compatible client.",
+      "Shark Tank returns a cited pitch scorecard and verdict. TribeMind runs 12–50 fictional participants through independent and social rounds, then produces descriptive metrics and a grounded Observer report. Idea Tournament compares 4–16 ideas head to head and produces a champion spec plus kill cards.",
   },
   {
-    question: "What does Saga do?",
+    question: "What do Lab Experiments do?",
     answer:
-      "Saga is MAD Studio's recursive optimization engine. It spawns hidden child sessions from a source conversation, scores each transcript against your rubric, applies the best optimizer suggestion, and re-runs — generation after generation — until the score curve flattens or a stop condition fires. It's how you find answers that no single prompt would have produced.",
+      "Lab Experiments copy a draft discussion into hidden child runs, vary temperature and repetition, frequency, and presence penalties, then evaluate each transcript against your validation prompt and expected outcome. They can stop on a score threshold, iteration limit, or total cost cap.",
   },
   {
-    question: "Is MAD Studio an alternative to AutoGen, CrewAI, or LangGraph?",
+    question: "Is Delibora an alternative to AutoGen, CrewAI, or LangGraph?",
     answer:
-      "MAD Studio is purpose-built for multi-agent debate specifically — verdict-grade protocols, the M-MAD arbiter pipeline, and the Bullshit Index — rather than general-purpose agent orchestration. If you need a graph of role-specialized agents executing arbitrary tasks, AutoGen, CrewAI, and LangGraph are excellent. If you need auditable structured disagreement with per-dimension scoring, MAD Studio is the right tool.",
+      "Delibora focuses on purpose-built discussion formats, durable run monitoring, and format-specific reports rather than general-purpose agent orchestration. AutoGen, CrewAI, and LangGraph are broader frameworks for building custom agent applications and graphs.",
   },
   {
-    question: "How much does multi-agent debate cost in tokens?",
+    question: "How much does a Delibora run cost?",
     answer:
-      "Token cost scales with agents × rounds, so a 6-agent, 5-round Truth-Seeking Debate is roughly 30× a single-prompt baseline before arbiter passes. MAD Studio mitigates this with rolling summaries, sparse communication topology (Li et al., EMNLP 2024), adaptive stopping (Hu et al., NeurIPS 2025), and hard cost caps that self-terminate sessions before they burn budget.",
+      "Cost varies with the selected models, participant count, number of rounds, research calls, and report generation. Delibora records token and cost metadata and supports turn, runtime, and observed-cost limits. Lab Experiments also support their own total cost cap.",
   },
   {
-    question: "Does multi-agent debate actually beat majority voting?",
+    question: "Can I use Delibora without writing any code?",
     answer:
-      "It depends on the task. For discrete math and multiple-choice with one correct answer, Self-Consistency (CoT-SC) is usually the better default. For factuality, open-ended strategy, and adversarial red-teaming, multi-agent debate consistently wins in peer-reviewed benchmarks (Du et al. ICML 2024, Khan et al. ICML 2024). MAD Studio supports both paradigms and a hybrid mode that combines them.",
-  },
-  {
-    question: "Can I use MAD Studio without writing any code?",
-    answer:
-      "Yes. Every protocol — Open Discussion, Truth-Seeking Debate, Team Discussion, Saga, Lab Experiments — is configurable from the web UI. The REST API and MCP server are there if you want to drive debates programmatically from your own stack, but they are optional. The platform ships with reusable Personas, Playbooks, and Teams so a typical first session takes under two minutes to configure.",
+      "Yes. All 10 discussion formats, Workers, Teams, Personas, Playbooks, Lab Experiments, live monitors, and exports are available through the web interface.",
   },
   {
     question: "Is my data used to train AI models?",
     answer:
-      "No. MAD Studio sends prompts to whichever provider you configure (OpenRouter, LM Studio, or your own endpoint) — we do not retrain models on your transcripts and do not share session data with third parties. Local-only deployments via LM Studio are fully private. Transcripts are stored in your Supabase workspace and you can purge them at any time.",
+      "Delibora does not train models on your transcripts. Prompts are sent to the model route you configure, so provider data handling depends on your OpenRouter model choice or LM Studio setup. Delibora persists workspace records in its configured Supabase storage and provides archive, delete, and export controls.",
   },
   {
     question: "What is the Degeneration of Thought problem?",
     answer:
-      "Degeneration of Thought, formalized by Liang et al. (EMNLP 2024), is the failure mode where an LLM commits to an answer and then cannot produce genuinely novel reasoning during self-reflection — even when wrong. The critic and advocate inside one model share the same latent commitment. Multi-agent debate fixes this by separating roles into agents with distinct context.",
+      "Degeneration of Thought, formalized by Liang et al. (EMNLP 2024), is a failure mode where an LLM commits to an answer and struggles to produce genuinely novel reasoning during self-reflection. Separating roles across agents may help surface different arguments, but it does not eliminate the underlying risk.",
   },
 ];
 

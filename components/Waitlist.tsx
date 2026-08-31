@@ -7,11 +7,7 @@ import { INDUSTRIES, USE_CASES } from "@/lib/waitlist";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-type WaitlistProps = {
-  waitlistCount: number;
-};
-
-export default function Waitlist({ waitlistCount }: WaitlistProps) {
+export default function Waitlist() {
   const [step, setStep] = useState(1);
   const [industry, setIndustry] = useState("");
   const [customIndustry, setCustomIndustry] = useState("");
@@ -115,15 +111,14 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
           07 / Beta access
         </span>
         <h2 className="text-balance text-4xl font-semibold tracking-tight text-white md:text-6xl">
-          Be among the first to deploy{" "}
+          See whether Delibora fits{" "}
           <span className="bg-gradient-to-r from-accent via-accent-glow to-accent-cyan bg-clip-text text-transparent">
-            a real debate engine.
+            your way of working.
           </span>
         </h2>
         <p className="max-w-xl text-balance text-zinc-400 md:text-lg">
-          Closed beta is rolling out now. Join {waitlistCount.toLocaleString()}{" "}
-          teams already on the waitlist — free early access, no card, no
-          commitment, no spam.
+          Closed beta is rolling out gradually. Tell us what you would use it
+          for, and we will send an invite when there is room.
         </p>
 
         <div className="w-full max-w-2xl rounded-2xl border border-white/10 bg-ink-900/80 p-5 text-left shadow-2xl shadow-black/20 backdrop-blur sm:p-8">
@@ -248,7 +243,7 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
             {step === 2 && (
               <fieldset>
                 <legend className="text-xl font-semibold text-white sm:text-2xl">
-                  What would you use MAD Studio for?
+                  What would you use Delibora for?
                 </legend>
                 <div className="mt-2 flex items-center justify-between gap-4">
                   <p className="text-sm text-zinc-400">Choose exactly three.</p>
@@ -293,7 +288,7 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
                     htmlFor="waitlist-notes"
                     className="text-sm font-medium text-zinc-200"
                   >
-                    Anything else you’d like to use MAD Studio for?{" "}
+                    Anything else you’d like to use Delibora for?{" "}
                     <span className="font-normal text-zinc-500">Optional</span>
                   </label>
                   <textarea
@@ -334,7 +329,7 @@ export default function Waitlist({ waitlistCount }: WaitlistProps) {
                   Where should we send your invite?
                 </legend>
                 <p className="mt-2 text-sm text-zinc-400">
-                  You’re one step away from the MAD Studio beta.
+                  You’re one step away from the Delibora beta.
                 </p>
 
                 <div className="mt-6">

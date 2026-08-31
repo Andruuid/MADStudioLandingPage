@@ -38,7 +38,7 @@ export async function GET(request: Request) {
     const to = getRequiredEnvironmentVariable("WAITLIST_DIGEST_TO");
     const from =
       process.env.WAITLIST_DIGEST_FROM?.trim() ||
-      "MAD Studio <waitlist@multiagentdebates.com>";
+      "Delibora <waitlist@multiagentdebates.com>";
     const digestFingerprint = createHash("sha256")
       .update(
         submissions
@@ -78,4 +78,3 @@ export async function GET(request: Request) {
     );
   }
 }
-

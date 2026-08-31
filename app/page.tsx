@@ -10,16 +10,13 @@ import FAQ from "@/components/FAQ";
 import Waitlist from "@/components/Waitlist";
 import ResearchSpotlight from "@/components/ResearchSpotlight";
 import Footer from "@/components/Footer";
-import { getWaitlistCount } from "@/lib/waitlist-count";
 
 export default function Home() {
-  const waitlistCount = getWaitlistCount();
-
   return (
     <div className="relative min-h-screen overflow-x-clip bg-ink-950 text-zinc-200">
       <Nav />
       <main id="main-content">
-        <Hero waitlistCount={waitlistCount} />
+        <Hero />
         <Science />
         <ResearchSpotlight />
         <Features />
@@ -28,7 +25,7 @@ export default function Home() {
         <Evaluation />
         <UseCases />
         <FAQ />
-        <Waitlist waitlistCount={waitlistCount} />
+        <Waitlist />
       </main>
       <Footer />
     </div>

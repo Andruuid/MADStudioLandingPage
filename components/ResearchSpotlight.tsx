@@ -73,28 +73,6 @@ export default function ResearchSpotlight() {
               </span>
             </Link>
           </li>
-          <li>
-            <Link
-              href="/bullshit-index"
-              className="glow-border group flex h-full flex-col gap-3 rounded-xl border border-white/10 bg-ink-800/40 p-6 transition hover:border-white/20"
-            >
-              <div className="flex items-center gap-3 text-xs text-zinc-500">
-                <span>Product feature</span>
-                <span aria-hidden>·</span>
-                <span>Deep dive</span>
-              </div>
-              <h3 className="text-lg font-semibold leading-snug text-white transition group-hover:text-accent-glow">
-                The Bullshit Index
-              </h3>
-              <p className="flex-1 text-sm leading-relaxed text-zinc-400">
-                Real-time hallucination detection — every claim cross-checked
-                against evidence, the web, and prior turns.
-              </p>
-              <span className="text-xs font-medium text-accent-cyan transition group-hover:text-white">
-                Learn how it works →
-              </span>
-            </Link>
-          </li>
         </ul>
       </div>
     </section>

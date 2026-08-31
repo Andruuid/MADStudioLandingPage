@@ -1,45 +1,46 @@
+import Image from "next/image";
 import Link from "next/link";
 
-type HeroProps = {
-  waitlistCount: number;
-};
-
-export default function Hero({ waitlistCount }: HeroProps) {
+export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden">
+    <section className="relative isolate min-h-[760px] overflow-hidden border-b border-blue-300/10">
       <div
         aria-hidden
-        className="absolute inset-0 grid-bg radial-fade opacity-60"
+        className="absolute inset-0 blueprint-bg opacity-90"
       />
       <div
         aria-hidden
-        className="absolute -top-40 left-1/2 h-[640px] w-[1100px] -translate-x-1/2 rounded-full bg-accent/20 blur-3xl animate-drift"
+        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,11,26,0.98)_0%,rgba(2,11,26,0.88)_43%,rgba(2,11,26,0.28)_78%,rgba(2,11,26,0.58)_100%)]"
       />
       <div
         aria-hidden
-        className="absolute bottom-[-200px] right-[-160px] h-[480px] w-[680px] rounded-full bg-accent-cyan/10 blur-3xl"
+        className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-ink-950 to-transparent"
       />
 
-      <div className="relative mx-auto max-w-6xl px-6 pb-32 pt-28 md:pb-40 md:pt-36">
-        <div className="flex max-w-3xl flex-col gap-8">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-300">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_12px_2px_rgba(124,92,255,0.6)]" />
-            Closed beta · {waitlistCount.toLocaleString()} teams already in
+      <div className="relative mx-auto max-w-6xl px-6 pb-28 pt-24 md:pb-36 md:pt-32">
+        <div className="flex max-w-3xl flex-col gap-7">
+          <Image
+            src="/brand/delibora-wordmark.svg"
+            alt="Delibora"
+            width={825}
+            height={166}
+            priority
+            className="h-auto w-[250px] sm:w-[320px]"
+          />
+
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-blue-300/20 bg-blue-950/45 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-blue-100/80 backdrop-blur">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan shadow-[0_0_12px_2px_rgba(0,213,220,0.45)]" />
+            Closed beta · early access
           </div>
 
           <h1 className="text-balance text-5xl font-semibold leading-[1.05] tracking-tight text-white md:text-7xl">
-            The world's most advanced{" "}
-            <span className="bg-gradient-to-r from-accent via-accent-glow to-accent-cyan bg-clip-text text-transparent">
-              multi-agent debate
-            </span>{" "}
-            platform.
+            Put more than one perspective on the question.
           </h1>
 
-          <p className="max-w-2xl text-balance text-lg text-zinc-400 md:text-xl">
-            MAD Studio is an operational thinking console for structured AI
-            deliberation. Configure 2–100 reasoning agents, run them through
-            peer-reviewed debate protocols, and watch them pressure-test ideas
-            one turn at a time.
+          <p className="max-w-2xl text-balance text-lg leading-relaxed text-blue-100/70 md:text-xl">
+            Delibora is a workspace for structured AI deliberation. Configure
+            multiple reasoning agents, give them a shared question, and inspect
+            the arguments, revisions, and final assessment in one place.
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
@@ -47,7 +48,7 @@ export default function Hero({ waitlistCount }: HeroProps) {
               href="#waitlist"
               className="group inline-flex items-center justify-center gap-2 rounded-md bg-gradient-to-r from-accent to-accent-glow px-6 py-3 text-sm font-semibold text-white shadow-[0_0_40px_-10px_rgba(124,92,255,0.8)] transition hover:shadow-[0_0_60px_-8px_rgba(124,92,255,1)]"
             >
-              Request free beta access
+              Request beta access
               <svg
                 className="h-4 w-4 transition group-hover:translate-x-0.5"
                 viewBox="0 0 16 16"
@@ -64,32 +65,28 @@ export default function Hero({ waitlistCount }: HeroProps) {
               href="/research/multi-agent-debate-vs-self-consistency"
               className="inline-flex items-center justify-center rounded-md border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-accent/60 hover:bg-accent/10"
             >
-              Read the research guides
+              Explore the research
             </Link>
-
-            <span className="w-full text-xs text-zinc-500 sm:w-auto">
-              Join {waitlistCount.toLocaleString()} teams · Free during beta · no credit card
-            </span>
           </div>
 
           <dl className="mt-6 grid grid-cols-3 gap-6 border-t border-white/5 pt-8 text-left">
             <div>
               <dt className="text-[11px] uppercase tracking-[0.18em] text-zinc-500">
-                Agents per session
+                Participants
               </dt>
               <dd className="mt-1 font-mono text-lg text-white">2 – 100</dd>
             </div>
             <div>
               <dt className="text-[11px] uppercase tracking-[0.18em] text-zinc-500">
-                Debate phases
+                Formats
               </dt>
-              <dd className="mt-1 font-mono text-lg text-white">1 – 10</dd>
+              <dd className="mt-1 font-mono text-lg text-white">10</dd>
             </div>
             <div>
               <dt className="text-[11px] uppercase tracking-[0.18em] text-zinc-500">
-                Concurrent runs
+                Model routes
               </dt>
-              <dd className="mt-1 font-mono text-lg text-white">1 – 100</dd>
+              <dd className="mt-1 font-mono text-lg text-white">Cloud + local</dd>
             </div>
           </dl>
         </div>

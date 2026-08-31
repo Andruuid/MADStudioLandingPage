@@ -1,7 +1,7 @@
 export default function Recursive() {
   return (
     <section
-      id="recursive"
+      id="experiments"
       className="relative isolate overflow-hidden border-t border-white/5 bg-ink-900/40 py-28 md:py-36"
     >
       <div
@@ -16,15 +16,15 @@ export default function Recursive() {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-4 md:max-w-3xl">
           <span className="font-mono text-[11px] uppercase tracking-[0.24em] text-accent">
-            04 / Recursive
+            04 / Evidence and iteration
           </span>
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-white md:text-5xl">
-            Find what a single prompt can't find.
+            Test settings. Ground the result.
           </h2>
           <p className="text-balance text-zinc-400 md:text-lg">
-            Saga and Experiments run hidden recursive debates until the agents
-            stop surprising each other. Surface insights no model — not GPT 5.5,
-            not Opus 4.7 — would give you from a single shot.
+            Lab Experiments compare parameter choices across child runs, while
+            Evidence Packs and optional Truth-Seeking internet research keep
+            factual work connected to source material.
           </p>
         </div>
 
@@ -32,44 +32,37 @@ export default function Recursive() {
           <article className="glow-border relative flex flex-col gap-5 rounded-xl border border-white/10 bg-ink-800/60 p-6 md:p-8">
             <div className="flex items-center gap-3">
               <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-cyan">
-                Saga
+                Lab Experiments
               </span>
               <span className="h-px flex-1 bg-white/5" />
               <span className="font-mono text-[10px] text-zinc-600">
-                recursive · convergence-stopped
+                parameter sweeps
               </span>
             </div>
 
             <h3 className="text-xl font-semibold leading-snug text-white md:text-2xl">
-              Let them argue until something stabilizes.
+              Compare configurations systematically.
             </h3>
 
             <p className="text-sm leading-relaxed text-zinc-400">
-              Saga spawns zero-turn child sessions, scores each transcript
-              against your rubric, applies the best optimizer suggestion, and
-              re-runs. It stops only when the score curve flattens — or when
-              the answer changes everything you thought you knew.
+              Start from a draft discussion, create hidden child runs, vary
+              temperature and repetition, frequency, and presence penalties,
+              then score each transcript against a validation prompt and
+              expected outcome.
             </p>
 
             <ul className="mt-2 space-y-2 text-xs text-zinc-500">
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                <span>
-                  Hidden child runs — never pollute the source conversation
-                </span>
+                <span>Inspect child-run links, scores, costs, and parameter snapshots</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                <span>
-                  Per-generation scorecard, applied patch, optimizer suggestion
-                </span>
+                <span>Pause, resume, stop, edit, or delete an Experiment</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                <span>
-                  Stops on convergence, score threshold, cost cap, or generation
-                  limit
-                </span>
+                <span>Stop on score threshold, iteration limit, or total cost cap</span>
               </li>
             </ul>
           </article>
@@ -77,45 +70,37 @@ export default function Recursive() {
           <article className="glow-border relative flex flex-col gap-5 rounded-xl border border-white/10 bg-ink-800/60 p-6 md:p-8">
             <div className="flex items-center gap-3">
               <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-cyan">
-                Experiments
+                Evidence and research
               </span>
               <span className="h-px flex-1 bg-white/5" />
               <span className="font-mono text-[10px] text-zinc-600">
-                parameter sweep · best-of-N
+                source-aware
               </span>
             </div>
 
             <h3 className="text-xl font-semibold leading-snug text-white md:text-2xl">
-              Run it a hundred times. Keep what wins.
+              Give agents material they can inspect.
             </h3>
 
             <p className="text-sm leading-relaxed text-zinc-400">
-              Experiments fan out hidden child runs across temperature,
-              repetition, frequency, and presence sweeps. Score every transcript
-              against a validation prompt. Promote the configuration that beats
-              the field. The answer you would have hand-written, rewritten by
-              the search.
+              Upload an Evidence Pack for a discussion. In Truth-Seeking Debate,
+              optional internet research prepares separate material for both
+              debaters and neutral material for the Arbiter before the relevant
+              phases run.
             </p>
 
             <ul className="mt-2 space-y-2 text-xs text-zinc-500">
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-cyan" />
-                <span>
-                  Run 1 mirrors the source; later runs randomize sampling per
-                  agent
-                </span>
+                <span>Shared files and pasted evidence stay attached to the draft</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-cyan" />
-                <span>
-                  Validation prompt + expected outcome power transcript scoring
-                </span>
+                <span>Research is purpose-built for Truth-Seeking Debate</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-cyan" />
-                <span>
-                  Stops on iteration limit, score threshold, or total cost cap
-                </span>
+                <span>Claims and citations remain visible in the persisted run</span>
               </li>
             </ul>
           </article>
@@ -129,12 +114,11 @@ export default function Recursive() {
           <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between md:gap-8">
             <div className="flex flex-col gap-2">
               <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
-                The promise
+                What this adds
               </span>
               <p className="text-balance text-lg font-medium text-white md:text-xl">
-                Beyond what one prompt can reach. Both Saga and Experiments
-                surface answers no human or single model would have arrived at
-                unaided.
+                Compare runs without losing the transcript, parameters, evidence,
+                or cost trail behind the result.
               </p>
             </div>
             <a
@@ -142,20 +126,7 @@ export default function Recursive() {
               className="inline-flex shrink-0 items-center gap-2 rounded-md border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white transition hover:border-accent/60 hover:bg-accent/10"
             >
               Join the beta
-              <svg
-                className="h-3.5 w-3.5"
-                viewBox="0 0 16 16"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                aria-hidden
-              >
-                <path
-                  d="M3 8h10M9 4l4 4-4 4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <span aria-hidden>→</span>
             </a>
           </div>
         </div>

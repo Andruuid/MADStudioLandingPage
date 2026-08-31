@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "MAD Studio — The Multi-Agent Debate Platform";
+export const alt = "Delibora — Structured Multi-Agent Deliberation";
 export const size = {
   width: 1200,
   height: 630,
@@ -19,7 +19,7 @@ export default async function Image() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "linear-gradient(135deg, #05070b 0%, #0c1018 60%, #1a0f2e 100%)",
+          background: "linear-gradient(135deg, #020b1a 0%, #041226 55%, #071f3b 100%)",
           padding: "72px",
           fontFamily: "Inter, system-ui, sans-serif",
           position: "relative",
@@ -33,7 +33,7 @@ export default async function Image() {
             width: "600px",
             height: "600px",
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(124,92,255,0.35) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(45,156,255,0.28) 0%, transparent 70%)",
             display: "flex",
           }}
         />
@@ -45,7 +45,7 @@ export default async function Image() {
             width: "500px",
             height: "500px",
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(34,211,238,0.25) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(0,213,220,0.2) 0%, transparent 70%)",
             display: "flex",
           }}
         />
@@ -92,7 +92,7 @@ export default async function Image() {
                 lineHeight: 1,
               }}
             >
-              MAD Studio
+              Delibora
             </div>
             <div
               style={{
@@ -103,7 +103,7 @@ export default async function Image() {
                 marginTop: "4px",
               }}
             >
-              Multi-Agent Debates
+              Structured deliberation
             </div>
           </div>
         </div>
@@ -130,7 +130,7 @@ export default async function Image() {
                 display: "flex",
               }}
             />
-            The Multi-Agent Debate Platform
+            Multi-agent deliberation workspace
           </div>
           <div
             style={{
@@ -143,7 +143,7 @@ export default async function Image() {
               flexWrap: "wrap",
             }}
           >
-            <span>Find what a&nbsp;</span>
+            <span>Put more than one&nbsp;</span>
             <span
               style={{
                 background:
@@ -152,9 +152,9 @@ export default async function Image() {
                 color: "transparent",
               }}
             >
-              single prompt
+              perspective
             </span>
-            <span>&nbsp;can't find.</span>
+            <span>&nbsp;on the question.</span>
           </div>
         </div>
 

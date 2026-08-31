@@ -59,13 +59,12 @@ export default function Science() {
             01 / Scientific foundation
           </span>
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-white md:text-5xl">
-            Built on peer-reviewed research, not vibes.
+            Protocols connected to their research origins.
           </h2>
           <p className="text-balance text-zinc-400 md:text-lg">
-            MAD Studio operationalizes the leading academic frameworks in
-            multi-agent debate, turning them from research notebooks into a
-            production-grade workbench. Every protocol links to its published
-            source — on{" "}
+            Delibora&apos;s debate workflows are informed by published
+            multi-agent research. The references below explain the methods and
+            tradeoffs behind structured debate, judging, and collaboration on{" "}
             <a
               href="https://arxiv.org"
               target="_blank"

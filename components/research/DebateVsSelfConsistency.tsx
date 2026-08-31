@@ -435,21 +435,21 @@ export default function DebateVsSelfConsistency() {
         drift.
       </p>
 
-      <h2>Where MAD Studio fits</h2>
+      <h2>Where Delibora fits</h2>
       <p>
-        MAD Studio is built for the hybrid playbook — not naive round-robin chat.
-        Five built-in engines cover the full spectrum: Truth-Seeking Debate
-        (10-phase M-MAD), Open Discussion, Team Discussion in battle or
-        collaboration mode, Blind Ping Pong for masked pairwise reasoning, and
-        Scored Debate (FREE-MAD). Fork any of them in the Protocol Library.
-        Configure 2–100 agents with distinct personas, set cost and turn caps,
-        and get dimension-level arbiter scores plus a transcript you can actually audit.
+        Delibora focuses on structured multi-agent discussion rather than a
+        dedicated self-consistency runner. Its 10 formats cover decision
+        stress-tests, expert panels, judged debates, private 1:1 dialogue, Team
+        Battle, Shark Tank, Focus Group, TribeMind, Idea Tournament, and custom
+        discussions. Format-specific outputs range from transcripts and decision
+        memos to scorecards, qualitative reports, audience metrics, and champion
+        specs.
       </p>
       <p>
-        Saga recursive optimization and Lab Experiments handle the Smit et al.
-        lesson — MAD is hyperparameter-sensitive — by letting you sweep
-        temperature, repetition penalties, and prompt variants in hidden child
-        runs without manual guesswork.
+        Lab Experiments address the Smit et al. lesson that MAD is
+        hyperparameter-sensitive by sweeping temperature and repetition,
+        frequency, and presence penalties across hidden child runs, then scoring
+        the transcripts against a validation prompt and expected outcome.
       </p>
 
       <h2>Further reading</h2>
@@ -503,7 +503,7 @@ export default function DebateVsSelfConsistency() {
           Ready to run structured debate?
         </p>
         <p className="mb-4 text-sm leading-relaxed text-zinc-300">
-          MAD Studio implements peer-reviewed protocols with M-MAD arbiter
+          Delibora implements research-informed protocols with M-MAD arbiter
           scoring, 2–100 agents, and full transcript persistence. Join the beta
           waitlist — no scaffolding required.
         </p>

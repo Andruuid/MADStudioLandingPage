@@ -46,7 +46,7 @@ export const papers: Paper[] = [
     authors: "Feng, Zhao, Lyu, Li, Tu, Wang",
     venue: "ACL 2025",
     href: "https://arxiv.org/abs/2412.20127",
-    note: "Introduces the per-dimension arbiter sweep that powers MAD Studio's truth-seeking verdict scoring.",
+    note: "Introduces the per-dimension arbiter sweep that informs Delibora's truth-seeking verdict scoring.",
   },
   {
     id: "chateval-2024",
@@ -92,7 +92,7 @@ export const papers: Paper[] = [
     authors: "Shinn, Cassano, Berman, Gopinath, Narasimhan, Yao",
     venue: "Northeastern · NeurIPS 2023",
     href: "https://arxiv.org/abs/2303.11366",
-    note: "Verbal self-critique loops iteratively raise agent performance — the direct precedent for Saga's recursive optimization passes.",
+    note: "Studies verbal self-critique loops in which an agent reflects on prior attempts, generates feedback, and retries.",
   },
   {
     id: "self-refine-2023",

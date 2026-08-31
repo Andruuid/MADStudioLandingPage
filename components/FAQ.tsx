@@ -41,7 +41,7 @@ export default function FAQ() {
           </h2>
           <p className="text-balance text-zinc-400 md:text-lg">
             Quick answers to the questions teams ask before they run their
-            first MAD Studio session.
+            first Delibora session.
           </p>
         </div>
 

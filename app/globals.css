@@ -9,7 +9,7 @@
 
   html,
   body {
-    background-color: #05070b;
+    background-color: #020b1a;
     color: #e6e8ee;
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
@@ -29,10 +29,19 @@
 
   .grid-bg {
     background-image:
-      linear-gradient(rgba(124, 92, 255, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(124, 92, 255, 0.06) 1px, transparent 1px);
-    background-size: 56px 56px;
+      linear-gradient(rgba(45, 156, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45, 156, 255, 0.08) 1px, transparent 1px);
+    background-size: 52px 52px;
     background-position: -1px -1px;
+  }
+
+  .blueprint-bg {
+    background-image:
+      linear-gradient(180deg, rgba(2, 11, 26, 0.04), rgba(2, 11, 26, 0.9)),
+      url("/brand/midnight-blueprint.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .radial-fade {
@@ -56,9 +65,9 @@
     padding: 1px;
     background: linear-gradient(
       135deg,
-      rgba(124, 92, 255, 0.6),
-      rgba(34, 211, 238, 0.2),
-      rgba(124, 92, 255, 0)
+      rgba(45, 156, 255, 0.65),
+      rgba(0, 213, 220, 0.25),
+      rgba(45, 156, 255, 0)
     );
     -webkit-mask:
       linear-gradient(#000 0 0) content-box,

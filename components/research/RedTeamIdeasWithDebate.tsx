@@ -124,8 +124,8 @@ export default function RedTeamIdeasWithDebate() {
 
       <h2>The red-team debate architecture</h2>
       <p>
-        A production-grade red-team run has five components. Skip any one and you
-        are back to expensive theater.
+        A structured red-team run has five components. Leaving one out can turn
+        the exercise into expensive theater.
       </p>
 
       <div className="research-table-wrap">
@@ -377,19 +377,19 @@ export default function RedTeamIdeasWithDebate() {
         .
       </p>
 
-      <h2>Running red-team debate in MAD Studio</h2>
+      <h2>Running red-team debate in Delibora</h2>
       <p>
-        MAD Studio is built for exactly this workflow. Configure adversary and
+        Delibora supports this workflow. Configure adversary and
         advocate Workers with distinct personas and playbooks, snapshotted into
-        a Team Discussion (battle mode) or Truth-Seeking Debate run. Set cost
+        a Team Battle or Judged Debate run. Set cost
         and turn caps before you start. Inject human guidance mid-run if an
         agent misses an obvious line of attack. When the run finishes, review
-        the M-MAD dimension scores and export the full transcript.
+        the format-specific verdict or scorecard and export the full transcript.
       </p>
       <p>
-        Saga and Lab Experiments help tune adversary strength — sweep temperature
-        and persona variants in hidden child runs until the red team reliably
-        surfaces the objections your human reviewers would raise.
+        Lab Experiments can compare sampling configurations by sweeping
+        temperature and repetition, frequency, and presence penalties in hidden
+        child runs, then evaluating each transcript against a validation prompt.
       </p>
 
       <div className="mt-10 rounded-xl border border-accent/20 bg-accent/5 p-6">
@@ -397,9 +397,10 @@ export default function RedTeamIdeasWithDebate() {
           Stress-test your next idea before it ships
         </p>
         <p className="mb-4 text-sm leading-relaxed text-zinc-300">
-          MAD Studio runs structured adversarial debate with M-MAD arbiter
-          scoring, 2–100 agents, and full transcript persistence. Join the beta
-          waitlist to red-team without building the orchestration yourself.
+          Delibora combines structured adversarial formats, reusable Workers
+          and Teams, Evidence Packs, human intervention, format-specific
+          verdicts, and persisted transcripts. Join the beta waitlist to
+          red-team without building the orchestration yourself.
         </p>
         <Link
           href="/#waitlist"

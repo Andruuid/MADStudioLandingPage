@@ -34,7 +34,7 @@ const redTeamHowTo = {
   tool: [
     {
       "@type": "HowToTool",
-      name: "MAD Studio (or any multi-agent debate framework)",
+      name: "Delibora (or any multi-agent debate framework)",
     },
     {
       "@type": "HowToTool",
@@ -66,8 +66,8 @@ const redTeamHowTo = {
     {
       "@type": "HowToStep",
       position: 4,
-      name: "Pick a debate protocol with bounded rounds",
-      text: "Use Open Discussion for exploratory objection surfacing, Truth-Seeking Debate for verdict-grade pressure-testing, or Team Discussion battle mode for adversarial dynamics. Set hard caps on rounds, tokens, and total cost so debates self-terminate.",
+      name: "Pick a discussion format with bounded rounds",
+      text: "Use Expert Panel for exploratory objection surfacing, Judged Debate for a neutral scored verdict, or Team Battle for adversarial team dynamics. Set turn, runtime, and cost limits before the run starts.",
       url: `${SITE_URL}/research/red-team-ideas-multi-agent-debate#configure`,
     },
     {
@@ -80,8 +80,8 @@ const redTeamHowTo = {
     {
       "@type": "HowToStep",
       position: 6,
-      name: "Extract the claims ledger and objection log",
-      text: "Pull the structured deliverables: claims ledger, objection log, dimension scores, citation gaps, full transcript. The transcript is often more valuable than the verdict — it shows why a claim failed, in a reasoning chain a human reviewer can challenge.",
+      name: "Review the verdict, evidence gaps, and transcript",
+      text: "Pull the format-specific verdict or scorecard, inspect the supporting rationale and evidence gaps, and export the full transcript. The transcript is often more valuable than the final verdict because it shows which objections changed the result.",
       url: `${SITE_URL}/research/red-team-ideas-multi-agent-debate#output`,
     },
   ],

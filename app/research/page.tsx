@@ -9,20 +9,20 @@ const SITE_URL = "https://multiagentdebates.com";
 export const metadata: Metadata = {
   title: "Research — Free Guides on Multi-Agent Debate & LLM Reasoning",
   description:
-    "Practical, research-backed guides on multi-agent debate, self-consistency, and LLM reasoning. From the MAD Studio team. Free, no signup.",
+    "Practical, research-backed guides on multi-agent debate, self-consistency, and LLM reasoning. From the Delibora team. Free, no signup.",
   alternates: {
     canonical: `${SITE_URL}/research`,
     types: {
       "application/rss+xml": [
         {
           url: `${SITE_URL}/research/feed.xml`,
-          title: "MAD Studio Research",
+          title: "Delibora Research",
         },
       ],
     },
   },
   openGraph: {
-    title: "Research Guides on Multi-Agent Debate | MAD Studio",
+    title: "Research Guides on Multi-Agent Debate | Delibora",
     description:
       "Free guides on multi-agent debate vs self-consistency, LLM reasoning, and red-teaming with AI.",
     url: `${SITE_URL}/research`,
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "MAD Studio Research — guides on multi-agent debate",
+        alt: "Delibora Research — guides on multi-agent debate",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Research Guides on Multi-Agent Debate | MAD Studio",
+    title: "Research Guides on Multi-Agent Debate | Delibora",
     description:
       "Free guides on multi-agent debate vs self-consistency and LLM reasoning.",
     images: ["/opengraph-image"],
@@ -50,13 +50,13 @@ const blogSchema = {
   "@type": "Blog",
   "@id": `${SITE_URL}/research`,
   url: `${SITE_URL}/research`,
-  name: "MAD Studio Research",
+  name: "Delibora Research",
   description:
     "Practical guides on multi-agent debate, LLM reasoning, and structured AI deliberation.",
   inLanguage: "en-US",
   publisher: {
     "@type": "Organization",
-    name: "MAD Studio",
+    name: "Delibora",
     url: SITE_URL,
   },
   blogPost: researchArticles.map((article) => ({
@@ -66,7 +66,7 @@ const blogSchema = {
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
     url: `${SITE_URL}/research/${article.slug}`,
-    author: { "@type": "Organization", name: "MAD Studio", url: SITE_URL },
+    author: { "@type": "Organization", name: "Delibora", url: SITE_URL },
     image: [`${SITE_URL}/opengraph-image`],
   })),
 };
@@ -151,7 +151,7 @@ export default function ResearchIndexPage() {
           >
             Reference
           </h2>
-          <ul className="mt-4 grid gap-4 sm:grid-cols-2">
+          <ul className="mt-4 grid gap-4">
             <li>
               <Link
                 href="/glossary"
@@ -169,23 +169,6 @@ export default function ResearchIndexPage() {
                 </span>
               </Link>
             </li>
-            <li>
-              <Link
-                href="/bullshit-index"
-                className="glow-border group block h-full rounded-xl border border-white/10 bg-ink-800/40 p-5 transition hover:border-white/20"
-              >
-                <h3 className="text-base font-semibold leading-snug text-white transition group-hover:text-accent-glow">
-                  The Bullshit Index
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                  How MAD Studio detects hallucinations, position drift, and
-                  fabricated citations in real time.
-                </p>
-                <span className="mt-3 inline-block text-xs font-medium text-accent-cyan transition group-hover:text-white">
-                  Read deep dive →
-                </span>
-              </Link>
-            </li>
           </ul>
         </section>
 
@@ -194,8 +177,8 @@ export default function ResearchIndexPage() {
             Ready to run structured debate?
           </p>
           <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-            MAD Studio implements the protocols described in these guides — join
-            the free beta waitlist.
+            Delibora implements the protocols described in these guides. Join
+            the beta waitlist if you would like to try them in the product.
           </p>
           <Link
             href="/#waitlist"

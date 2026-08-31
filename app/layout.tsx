@@ -12,24 +12,24 @@ const inter = Inter({
 });
 
 const SITE_URL = "https://multiagentdebates.com";
-const SITE_NAME = "MAD Studio";
+const SITE_NAME = "Delibora";
 const CURRENT_YEAR = new Date().getFullYear();
 const DESCRIPTION =
-  "Run 2–100 LLM agents through peer-reviewed multi-agent debate protocols. Auditable verdicts, hallucination scoring, free during beta.";
+  "Run 2–100 LLM agents across 10 formats for decisions, debates, focus groups, pitch review, audience simulation, idea tournaments, and custom discussions.";
 const SOCIAL_DESCRIPTION =
-  "The most advanced multi-agent debate platform. Configure 2–100 reasoning agents, run peer-reviewed debate protocols, surface insights no single LLM prompt can find.";
+  "A workspace for structured multi-agent deliberation with 10 purpose-built formats and inspectable, format-specific outputs.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `MAD Studio — Multi-Agent Debate Platform for LLMs (${CURRENT_YEAR})`,
+    default: `Delibora — Structured Multi-Agent Deliberation (${CURRENT_YEAR})`,
     template: `%s | ${SITE_NAME}`,
   },
   description: DESCRIPTION,
   applicationName: SITE_NAME,
   keywords: [
     "multi-agent debate",
-    "MAD Studio",
+    "Delibora",
     "AI debate platform",
     "LLM reasoning",
     "M-MAD",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "application/rss+xml": [
         {
           url: `${SITE_URL}/research/feed.xml`,
-          title: "MAD Studio Research",
+          title: "Delibora Research",
         },
       ],
     },
@@ -59,14 +59,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "MAD Studio — Multi-Agent Debate Platform for LLMs",
+    title: "Delibora — Structured Multi-Agent Deliberation",
     description: SOCIAL_DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: "MAD Studio — Multi-Agent Debate Platform",
+    title: "Delibora — Multi-Agent Deliberation",
     description: SOCIAL_DESCRIPTION,
-    creator: "@madstudio",
   },
   robots: {
     index: true,
@@ -88,7 +87,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#05070b",
+  themeColor: "#020b1a",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,

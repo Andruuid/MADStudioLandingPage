@@ -1,8 +1,9 @@
 import { faqs } from "@/lib/faq";
+import { productFormats } from "@/lib/product-formats";
 import { seoReferences } from "@/lib/seo-references";
 
 const SITE_URL = "https://multiagentdebates.com";
-const SITE_NAME = "MAD Studio";
+const SITE_NAME = "Delibora";
 
 function scholarlyArticle(ref: (typeof seoReferences)[number]) {
   return {
@@ -29,7 +30,7 @@ export default function StructuredData() {
     "@type": "Organization",
     "@id": `${SITE_URL}#organization`,
     name: SITE_NAME,
-    alternateName: "MAD Studio · Multi-Agent Debates",
+    alternateName: "Delibora · Multi-Agent Deliberation",
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
@@ -37,9 +38,6 @@ export default function StructuredData() {
       width: 32,
       height: 32,
     },
-    sameAs: [
-      "https://github.com/Andruuid/MADStudioLandingPage",
-    ],
     email: "mad@multiagentdebates.com",
     contactPoint: {
       "@type": "ContactPoint",
@@ -48,7 +46,7 @@ export default function StructuredData() {
       availableLanguage: ["English"],
     },
     description:
-      "MAD Studio is the most advanced multi-agent debate platform for structured AI deliberation, built on peer-reviewed research.",
+      "Delibora is a workspace for structured multi-agent AI deliberation informed by peer-reviewed research.",
   };
 
   const website = {
@@ -70,7 +68,7 @@ export default function StructuredData() {
     applicationSubCategory: "Multi-Agent AI Debate Platform",
     operatingSystem: "Web, Linux, macOS, Windows",
     description:
-      "Configure 2–100 reasoning agents, run them through peer-reviewed debate protocols including M-MAD truth-seeking debate and two-team battle modes, and surface insights no single LLM prompt can find.",
+      "Configure 2–100 reasoning agents across 10 purpose-built discussion formats, preserve the run, and review a format-specific report, verdict, transcript, or decision artifact.",
     offers: {
       "@type": "Offer",
       price: "0",
@@ -78,21 +76,17 @@ export default function StructuredData() {
       description: "Free during beta",
     },
     featureList: [
-      "Truth-Seeking Debate — 10-phase M-MAD with dimension-sweep arbiter",
-      "Open Discussion — multi-agent rolling brainstorm",
-      "Team Discussion — battle and collaboration modes with private huddles",
-      "Blind Ping Pong — masked one-to-one alternating debate",
-      "Scored Debate (FREE-MAD) — round-robin with anti-conformity scoring",
-      "Custom Protocol Library — fork and save named protocol variants",
-      "Evidence packs and claims ledger for truth-seeking runs",
-      "Saga recursive prompt optimization",
-      "Lab Experiments with parameter sweeps",
-      "12-dimension Evaluation Matrix",
-      "Bullshit Index real-time fact-checking",
-      "Full REST API and MCP server",
+      ...productFormats.map(
+        (format) => `${format.name} — ${format.output}`,
+      ),
+      "Evidence Packs and optional Truth-Seeking internet research",
+      "Reusable Workers, Teams, Personas, and Playbooks",
+      "Lab Experiments with parameter sweeps and transcript evaluation",
       "Multi-provider support (OpenRouter, LM Studio)",
       "Live human intervention",
       "Cost, runtime, and turn caps",
+      "Persisted transcripts, run logs, token and cost metadata, and JSON exports",
+      "In-app and optional email notifications",
     ],
     citation: seoReferences.map((ref) => ({
       "@id": `${ref.url}#citation`,

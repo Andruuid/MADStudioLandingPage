@@ -9,14 +9,14 @@ const SITE_URL = "https://multiagentdebates.com";
 export const metadata: Metadata = {
   title: "Glossary — Multi-Agent Debate & LLM Reasoning Terms",
   description:
-    "Plain-English definitions for multi-agent debate, M-MAD, CoT-SC, Degeneration of Thought, Bullshit Index, sycophancy, and 25+ other terms — from the MAD Studio team.",
+    "Plain-English definitions for multi-agent debate, M-MAD, CoT-SC, Degeneration of Thought, sycophancy, and related terms — from the Delibora team.",
   alternates: {
     canonical: `${SITE_URL}/glossary`,
   },
   openGraph: {
-    title: "Multi-Agent Debate Glossary | MAD Studio",
+    title: "Multi-Agent Debate Glossary | Delibora",
     description:
-      "Definitions for multi-agent debate, M-MAD, CoT-SC, Degeneration of Thought, Bullshit Index, and 25+ other LLM reasoning terms.",
+      "Definitions for multi-agent debate, M-MAD, CoT-SC, Degeneration of Thought, and related LLM reasoning terms.",
     url: `${SITE_URL}/glossary`,
     type: "website",
     images: [
@@ -24,15 +24,15 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "MAD Studio Glossary",
+        alt: "Delibora Glossary",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Multi-Agent Debate Glossary | MAD Studio",
+    title: "Multi-Agent Debate Glossary | Delibora",
     description:
-      "Plain-English definitions for multi-agent debate, M-MAD, CoT-SC, Bullshit Index, and 25+ other LLM reasoning terms.",
+      "Plain-English definitions for multi-agent debate, M-MAD, CoT-SC, and related LLM reasoning terms.",
     images: ["/opengraph-image"],
   },
 };
@@ -43,7 +43,7 @@ const definedTermSchema = {
   "@id": `${SITE_URL}/glossary`,
   name: "Multi-Agent Debate & LLM Reasoning Glossary",
   description:
-    "Definitions for multi-agent debate, M-MAD, CoT-SC, Degeneration of Thought, Bullshit Index, sycophancy, and related LLM reasoning terms.",
+    "Definitions for multi-agent debate, M-MAD, CoT-SC, Degeneration of Thought, sycophancy, and related LLM reasoning terms.",
   inLanguage: "en-US",
   hasDefinedTerm: glossaryTerms.map((term) => ({
     "@type": "DefinedTerm",
@@ -101,14 +101,10 @@ export default function GlossaryPage() {
           <p className="mt-4 text-balance text-zinc-400 md:text-lg">
             Plain-English definitions for the terms used across{" "}
             <Link href="/research" className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white">
-              MAD Studio research
+              Delibora research
             </Link>{" "}
             — from <em>M-MAD</em> and <em>CoT-SC</em> to{" "}
-            <em>Degeneration of Thought</em> and the{" "}
-            <Link href="/bullshit-index" className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white">
-              Bullshit Index
-            </Link>
-            .
+            <em>Degeneration of Thought</em> and <em>calibration</em>.
           </p>
         </header>
 
@@ -174,12 +170,10 @@ export default function GlossaryPage() {
             Want to see these protocols in action?
           </p>
           <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-            MAD Studio implements every protocol on this page — M-MAD verdicts,
-            Truth-Seeking Debate, Team Discussion, Saga, and the{" "}
-            <Link href="/bullshit-index" className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white">
-              Bullshit Index
-            </Link>
-            . Free during beta.
+            Delibora applies several ideas described on this page through
+            Judged Debate, Team Battle, Expert Panel, Focus Group, TribeMind,
+            Idea Tournament, and other purpose-built formats. The product is
+            currently in beta.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <Link

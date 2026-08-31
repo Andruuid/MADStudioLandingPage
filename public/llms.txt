@@ -1,39 +1,52 @@
-# MAD Studio — Multi-Agent Debates
+# Delibora — Multi-Agent Deliberation
 
-> MAD Studio is a multi-agent AI debate platform for structured deliberation, truth-seeking, and adversarial red-teaming. Configure 2–100 reasoning agents across five built-in protocol engines plus a custom Protocol Library.
+> Delibora is a workspace for structured multi-agent AI deliberation. Configure 2–100 reasoning agents across 10 purpose-built discussion formats and inspect the transcript, run trail, and format-specific output.
 
 Site: https://multiagentdebates.com
 Contact: mad@multiagentdebates.com
-GitHub: https://github.com/Andruuid/MADStudioLandingPage
 RSS: https://multiagentdebates.com/research/feed.xml
 
 ## Main
 
-- [Home](https://multiagentdebates.com/): Product landing page — features, science foundation, use cases, beta waitlist
+- [Home](https://multiagentdebates.com/): Product landing page — formats, capabilities, science foundation, use cases, beta waitlist
 - [Research hub](https://multiagentdebates.com/research): Practical guides on multi-agent debate and LLM reasoning
-- [Glossary](https://multiagentdebates.com/glossary): Definitions for multi-agent debate, M-MAD, CoT-SC, Degeneration of Thought, Bullshit Index, and 25+ other LLM reasoning terms
-- [Bullshit Index](https://multiagentdebates.com/bullshit-index): MAD Studio's real-time hallucination meter — every claim cross-checked against evidence, web, and prior turns
+- [Glossary](https://multiagentdebates.com/glossary): Definitions for multi-agent debate, M-MAD, CoT-SC, Degeneration of Thought, and related LLM reasoning terms
 
 ## Research articles
 
 - [When to Use Multi-Agent Debate vs Self-Consistency](https://multiagentdebates.com/research/multi-agent-debate-vs-self-consistency): Research-backed comparison of CoT-SC and MAD — benchmarks, cost analysis, failure modes, hybrid playbook
 - [How to Red-Team Ideas with Multi-Agent Debate](https://multiagentdebates.com/research/red-team-ideas-multi-agent-debate): Adversarial AI deliberation for stress-testing claims, messaging, and strategy before they ship
 
+## Discussion formats
+
+- Decision stress-test — 2 opposing agents; decision memo
+- Expert panel — 3–5 experts; key insights without a verdict
+- Judged debate — 2 debaters plus Arbiter; scored verdict
+- 1:1 Human Dialogue — 2 Worker-backed LLMs; private-chat transcript
+- Team Battle — 2 saved Teams plus fixed Arbiter; five-dimension scorecard and verdict
+- Shark Tank — 2–4 Workers; cited pitch scorecard and verdict
+- Focus group — 4–12 Workers; themes and verified quotes
+- TribeMind — 12–50 synthetic participants; metrics and Observer report
+- Idea Tournament — 4–16 ideas and 1–5 judges; champion spec and kill cards
+- Custom discussion — configurable protocol, participants, models, runtime, evidence, notifications, and output
+
 ## Product capabilities
 
-- Five built-in protocol engines: Truth-Seeking Debate (10-phase M-MAD), Open Discussion, Team Discussion (battle/collaboration), Blind Ping Pong, Scored Debate (FREE-MAD)
-- Custom Protocol Library — fork built-ins and save named variants
-- 2–100 agents with reusable personas, playbooks, and teams
-- M-MAD dimension-sweep arbiter: correctness, evidence, responsiveness, calibration, citation quality
-- Saga recursive prompt optimization and Lab Experiments parameter sweeps
-- Multi-provider routing (OpenRouter, LM Studio)
-- REST API and MCP server (beta)
-- Cost, runtime, and turn caps with durable orchestration
+- 2–100 agents, with format-specific participant limits for specialized workflows
+- Reusable Workers, Teams, Personas, and Playbooks
+- Evidence Packs and optional internet research for Truth-Seeking Debate
+- Lab Experiments that sweep sampling parameters and evaluate hidden child-run transcripts
+- OpenRouter and LM Studio model routes with configurable fallbacks
+- Live human intervention in running or paused discussions
+- Turn, wall-clock runtime, and observed-cost limits
+- Persisted transcripts, run logs, token and cost metadata, and portable JSON exports
+- In-app notifications with optional Resend email delivery
+- Durable Supabase-backed workers for discussions, pitches, Focus Groups, TribeMind, evidence, and research
 
 ## Use cases
 
-Political message testing, academic peer-review simulation, marketing positioning debates, legal argument mapping, product strategy devil's advocate, investigative journalism pre-flight, education and training
+Decision stress-testing, expert review, adversarial debate, AI-to-AI dialogue, team competition, pitch evaluation, moderated qualitative research, synthetic-audience simulation, and idea selection
 
 ## Scientific foundation
 
-Built on peer-reviewed multi-agent debate research including Du et al. (ICML 2024), Liang et al. (EMNLP 2024), Feng et al. M-MAD (ACL 2025), Khan et al. (ICML 2024 Best Paper), Choi et al. Debate or Vote (NeurIPS 2025), and related work.
+Delibora's debate workflows are informed by published multi-agent research including Du et al. (ICML 2024), Liang et al. (EMNLP 2024), Feng et al. M-MAD (ACL 2025), Khan et al. (ICML 2024 Best Paper), Choi et al. Debate or Vote (NeurIPS 2025), and related work.

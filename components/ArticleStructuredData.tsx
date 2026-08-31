@@ -1,7 +1,7 @@
 import type { ResearchArticle } from "@/lib/research-articles";
 
 const SITE_URL = "https://multiagentdebates.com";
-const SITE_NAME = "MAD Studio";
+const SITE_NAME = "Delibora";
 
 type ArticleStructuredDataProps = {
   article: ResearchArticle;

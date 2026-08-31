@@ -38,12 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
-    {
-      url: `${SITE_URL}/bullshit-index`,
-      lastModified: HOMEPAGE_LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
     ...researchUrls,
   ];
 }

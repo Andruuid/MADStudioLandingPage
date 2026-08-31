@@ -1,43 +1,43 @@
 const cases = [
   {
     label: "Political Campaigns",
-    headline: "Stress-test every message before it ships.",
-    body: "Stage opposition agents that hammer your platform with the strongest rebuttals from across the spectrum. Find weak claims before journalists do.",
+    headline: "Test a message from more than one angle.",
+    body: "Use Team Battle for structured opposition, Focus Group for moderated reactions, or TribeMind to observe synthetic audience shifts across rounds.",
   },
   {
     label: "Academic Research",
-    headline: "Simulate the toughest peer review you'll ever get.",
-    body: "Run hypotheses through a panel of skeptical agents with persona-specific priors. Capture structured rebuttals, citations needed, and open questions.",
+    headline: "Run a simulated peer review.",
+    body: "Put a hypothesis in front of an Expert Panel or compare two competing interpretations in a Judged Debate with attached evidence.",
   },
   {
     label: "Marketing & Brand",
-    headline: "Debate positioning until only the strongest survives.",
-    body: "Run two competing campaign angles as Teams. Battle mode surfaces critique; collaboration mode synthesizes the best of both into a single brief.",
+    headline: "Move from reactions to a usable report.",
+    body: "Moderate known personas in a Focus Group, score a campaign pitch in Shark Tank, or simulate wider audience response with TribeMind.",
   },
   {
     label: "Legal & Due Diligence",
-    headline: "Map adversarial arguments end-to-end.",
-    body: "Configure prosecutor and defense agents over a shared evidence pack. Get a structured claims ledger and a five-dimension verdict scorecard.",
+    headline: "Lay out competing arguments.",
+    body: "Use a Decision Stress-Test or Judged Debate to compare competing cases, preserve the transcript, and keep supporting evidence with the run.",
   },
   {
     label: "Product Strategy",
-    headline: "Institutionalize the devil's advocate.",
-    body: "Pressure-test roadmap decisions, pricing models, and launch plans against agents seeded with competitor personas, customer archetypes, and risk lenses.",
+    headline: "Stress-test a decision or select an idea.",
+    body: "Challenge a roadmap choice with opposing agents, or send several concepts through an Idea Tournament for a champion spec and kill cards.",
   },
   {
     label: "Education & Training",
-    headline: "Watch reasoning happen, step by step.",
-    body: "Make critical thinking visible. Students follow turn-by-turn argument structure, evidence handling, and the arbiter's dimension-level rationale.",
+    headline: "Make contrasting viewpoints visible.",
+    body: "Review the transcript from an Expert Panel, 1:1 Human Dialogue, or Judged Debate and discuss how each participant handled the question.",
   },
   {
     label: "Investigative Journalism",
-    headline: "Pre-flight your strongest counterstory.",
-    body: "Before publication, simulate the most aggressive defense your subject could mount. Identify the holes that will get raised — and patch them.",
+    headline: "Rehearse the counterargument before publication.",
+    body: "Attach source material, run a Judged Debate or Team Battle, and collect the counterarguments your draft still needs to answer.",
   },
   {
     label: "Just for Fun",
-    headline: "Send GPT 5.5 and Opus 4.7 into a five-round debate.",
-    body: "Pick a spicy topic. Pick six agents. Hit start. Watch them go. Export the transcript. No wrong answers — that's what the arbiter is for.",
+    headline: "Stage a conversation or bracket.",
+    body: "Put two AI personalities into a 1:1 Human Dialogue, build a custom discussion, or let several ideas compete in a tournament.",
   },
 ];
 
@@ -53,21 +53,12 @@ export default function UseCases() {
             06 / Use cases
           </span>
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-white md:text-5xl">
-            One platform. Every domain that needs structured argument.
+            A workspace for questions that benefit from structured disagreement.
           </h2>
           <p className="text-balance text-zinc-400 md:text-lg">
-            MAD Studio is the only platform on the web that delivers
-            peer-reviewed multi-agent debate as a daily-driver tool. Where
-            AutoGen, CrewAI, and LangGraph give you a graph of agents, MAD
-            Studio gives you a verdict — built on M-MAD scoring and the{" "}
-            <a
-              href="/bullshit-index"
-              className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white"
-            >
-              Bullshit Index
-            </a>
-            . From war rooms to lab notebooks to weekend curiosity — the same
-            engine, the same rigor.
+            Delibora can support message testing, qualitative research, pitch
+            review, argument mapping, product decisions, audience simulation,
+            and idea selection.
           </p>
         </div>
 

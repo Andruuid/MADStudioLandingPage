@@ -1,10 +1,15 @@
-# MAD Studio — Landing Page
+# Delibora — Landing Page
 
 **Live site:** [https://multiagentdebates.com](https://multiagentdebates.com)
 
 **Contact:** [mad@multiagentdebates.com](mailto:mad@multiagentdebates.com)
 
-**MAD Studio** (Multi-Agent Debates) is the most advanced platform on the web for structured multi-agent AI deliberation, built on peer-reviewed research in multi-agent debate.
+**Delibora** is a workspace for structured multi-agent AI deliberation, informed by peer-reviewed research in multi-agent debate.
+
+The public format catalogue lives in [`lib/product-formats.ts`](./lib/product-formats.ts)
+and mirrors the canonical product registry at
+`AgentDiscussionMVP-PersonaTemplates/lib/discussion-formats.ts`. Update the two
+together whenever a format name, participant contract, or output changes.
 
 ## Research guides (free)
 
@@ -63,7 +68,7 @@ the changed row for the next digest.
 
    ```dotenv
    WAITLIST_DIGEST_TO=your-private-inbox@example.com
-   WAITLIST_DIGEST_FROM=MAD Studio <waitlist@multiagentdebates.com>
+   WAITLIST_DIGEST_FROM=Delibora <waitlist@multiagentdebates.com>
    CRON_SECRET=replace-with-a-long-random-secret
    ```
 

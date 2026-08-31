@@ -1,91 +1,56 @@
-const protocols = [
-  {
-    name: "Truth-Seeking Debate",
-    tag: "10-phase · M-MAD",
-    body: "Independent openings and rebuttals, then a five-dimension arbiter sweep — correctness, evidence, responsiveness, calibration, citations — before a binding verdict.",
-  },
-  {
-    name: "Open Discussion",
-    tag: "Multi-agent",
-    body: "Rolling brainstorm where 2–100 agents reason in public. Models nominate the next speaker; human interventions steer mid-run.",
-  },
-  {
-    name: "Team Discussion",
-    tag: "Battle · Collaborate",
-    body: "Two saved Teams of 2–6 Workers each. Private huddles, public spokesperson turns — battle mode for adversarial critique, collaboration mode for joint synthesis.",
-  },
-  {
-    name: "Blind Ping Pong",
-    tag: "Masked 1:1",
-    body: "Two participants alternate in a blind, human-style chat. Identities masked until external stop — ideal for unbiased pairwise reasoning.",
-  },
-  {
-    name: "Scored Debate",
-    tag: "FREE-MAD",
-    body: "Round-robin debate on a single structured question. Score-based decisions across rounds with anti-conformity prompts built in.",
-  },
-  {
-    name: "Custom Protocol Library",
-    tag: "Your rules",
-    body: "Fork any built-in engine, edit prompt sections, and save named variants. Your protocol — without forking the codebase.",
-  },
-];
+import { productFormats } from "@/lib/product-formats";
 
 const features = [
   {
-    title: "Evidence packs & claims ledger",
-    body: "Attach plain-text evidence to truth-seeking runs. Claims are tracked across phases so the arbiter scores against what was actually cited — not what agents wish they had said.",
+    title: "Evidence packs & internet research",
+    body: "Attach source material to discussions. Truth-Seeking Debate can also prepare dedicated research for both sides and the neutral Arbiter.",
   },
   {
     title: "2 to 100 reasoning agents",
-    body: "Compose participants from a reusable Worker library. Snapshotted into the conversation so editing a Worker never rewrites historical transcripts.",
+    body: "Start with a focused pair or assemble a larger panel. Specialized formats add their own participant limits and roles.",
   },
   {
-    title: "Dimension-sweep arbiter",
-    body: "Five independent arbiter passes feed a structured verdict the model cannot retroactively rewrite — each dimension scored before the final call.",
+    title: "Workers, Teams, Personas & Playbooks",
+    body: "Reuse configured participants, saved teams, visible role presets, shared rules, and hidden turn guidance across discussions.",
   },
   {
-    title: "Rolling summary + recent window",
-    body: "Bounded prompts that scale to long-running runs. Full transcripts stay persisted, but each turn is fed a compact, faithful context.",
-  },
-  {
-    title: "Saga recursive optimization",
-    body: "Hidden child runs iteratively refine the parent prompt. Stops on convergence, score threshold, cost cap, or generation limit.",
+    title: "Format-specific outputs",
+    body: "Get a decision memo, scored verdict, qualitative report, audience metrics, dialogue transcript, or champion spec—depending on the format.",
   },
   {
     title: "Lab Experiments",
-    body: "Sweep temperature, repetition, frequency, and presence penalties across hidden child copies. Score transcripts against a validation prompt and expected outcome.",
+    body: "Copy a draft into hidden child runs, sweep sampling parameters, score each transcript, and stop on score, iteration, or cost limits.",
   },
   {
     title: "Live human intervention",
-    body: "Inject guidance mid-run, optionally targeting the next responding agent. Interventions are first-class transcript inputs.",
+    body: "Inject a human message into a running or paused discussion when the agents need a correction, constraint, or new piece of context.",
   },
   {
-    title: "Multi-provider routing",
-    body: "OpenRouter, LM Studio, and deterministic dummy providers. Configure per-agent fallbacks with server-side prompt caching.",
+    title: "OpenRouter + LM Studio",
+    body: "Use cloud models through OpenRouter or local models through LM Studio, with configurable model fallbacks.",
   },
   {
-    title: "Cost, runtime, and turn caps",
-    body: "Hard ceilings on every dimension that matters. Sessions self-terminate before they burn budget or time.",
+    title: "Runtime controls",
+    body: "Bound work with turn, wall-clock runtime, and observed-cost limits so long-running discussions stop predictably.",
   },
   {
-    title: "Durable orchestration",
-    body: "Supabase-backed job claims, runtime locks, and transactional mutations. One failed conversation never stalls the others.",
+    title: "Durable execution",
+    body: "Dedicated workers advance discussions, pitches, focus groups, simulations, evidence, and research outside long HTTP requests.",
   },
   {
-    title: "Personas, Playbooks, Teams",
-    body: "Reusable prompt guidance, hidden discussion rules, and snapshotted 2–6 Worker teams. Configure once, run forever.",
+    title: "Transcripts, logs & exports",
+    body: "Review persisted turns, run logs, token and cost metadata, then export portable JSON records for further analysis.",
   },
   {
     title: "In-app + email notifications",
-    body: "Get pinged when a run finishes or hits its cost cap. Resend integration when configured, in-app fallback when not.",
+    body: "Receive an in-app notification—and optional Resend email—when a run finishes or reaches its cost cap.",
   },
 ];
 
 export default function Features() {
   return (
     <section
-      id="features"
+      id="formats"
       className="relative border-t border-white/5 py-28 md:py-36"
     >
       <div
@@ -98,31 +63,34 @@ export default function Features() {
             02 / Capabilities
           </span>
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-white md:text-5xl">
-            Five engines. One protocol library. Zero duct tape.
+            Ten formats for ten different jobs.
           </h2>
           <p className="text-balance text-zinc-400 md:text-lg">
-            Five built-in debate engines and a custom protocol library you can
-            fork and save. Each mode is peer-reviewed or production-hardened —
-            from 10-phase M-MAD truth-seeking to blind pairwise ping-pong.
+            Start with a purpose-built workflow for decisions, expert review,
+            debate, dialogue, team competition, pitches, qualitative research,
+            audience simulation, idea selection, or a custom setup.
           </p>
         </div>
 
-        <ul className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {protocols.map((protocol) => (
+        <ul className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          {productFormats.map((format) => (
             <li
-              key={protocol.name}
+              key={format.id}
               className="glow-border flex flex-col gap-2 rounded-xl border border-accent/15 bg-accent/5 p-5 transition hover:border-accent/30"
             >
-              <div className="flex flex-wrap items-center gap-2">
+              <div className="flex flex-col gap-2">
                 <h3 className="text-sm font-semibold text-white">
-                  {protocol.name}
+                  {format.name}
                 </h3>
-                <span className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-accent-cyan">
-                  {protocol.tag}
+                <span className="w-fit rounded-full border border-white/10 bg-white/5 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-accent-cyan">
+                  {format.participants}
                 </span>
               </div>
               <p className="text-xs leading-relaxed text-zinc-400">
-                {protocol.body}
+                {format.description}
+              </p>
+              <p className="mt-auto border-t border-white/5 pt-2 font-mono text-[10px] text-zinc-500">
+                Output: <span className="text-zinc-300">{format.output}</span>
               </p>
             </li>
           ))}

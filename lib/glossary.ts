@@ -12,7 +12,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Multi-Agent Debate (MAD)",
     slug: "multi-agent-debate",
     definition:
-      "Multi-Agent Debate is an LLM reasoning technique in which two or more language model instances argue across structured rounds, critiquing each other's claims before a verdict. Compared to single-prompt baselines, multi-agent debate consistently improves factuality, calibration, and adversarial robustness across peer-reviewed benchmarks.",
+      "Multi-Agent Debate is an LLM reasoning technique in which two or more language model instances argue across structured rounds, critiquing each other's claims before a verdict. Research reports improvements on some factuality, calibration, and adversarial robustness benchmarks, with outcomes varying by model and task.",
     aliases: ["MAD", "LLM debate", "multi-agent AI debate"],
     related: ["self-consistency", "m-mad", "degeneration-of-thought"],
   },
@@ -28,50 +28,36 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "M-MAD",
     slug: "m-mad",
     definition:
-      "M-MAD (Multidimensional Multi-Agent Debate) is a verdict-scoring protocol from Feng et al. (ACL 2025) that runs independent arbiter passes on separate dimensions — correctness, evidence use, responsiveness, calibration, and citation quality — instead of one holistic 'who won' judgment. MAD Studio uses M-MAD as the backbone of its Truth-Seeking Debate verdict.",
+      "M-MAD (Multidimensional Multi-Agent Debate) is a verdict-scoring protocol from Feng et al. (ACL 2025) that runs independent arbiter passes on separate dimensions — correctness, evidence use, responsiveness, calibration, and citation quality — instead of one holistic 'who won' judgment. Delibora uses M-MAD in its Truth-Seeking Debate workflow.",
     related: ["multi-agent-debate", "arbiter", "dimension-sweep"],
   },
   {
     term: "Degeneration of Thought (DoT)",
     slug: "degeneration-of-thought",
     definition:
-      "Degeneration of Thought is a failure mode formalized by Liang et al. (EMNLP 2024) where an LLM, once committed to an answer, fails to produce genuinely novel reasoning during self-reflection — even when the initial answer is wrong. Multi-agent debate fixes this by separating critic and advocate into agents with distinct context.",
+      "Degeneration of Thought is a failure mode formalized by Liang et al. (EMNLP 2024) where an LLM, once committed to an answer, fails to produce genuinely novel reasoning during self-reflection — even when the initial answer is wrong. Separating critic and advocate roles may help, but does not eliminate the risk.",
     aliases: ["DoT"],
     related: ["multi-agent-debate", "self-refine"],
-  },
-  {
-    term: "Bullshit Index",
-    slug: "bullshit-index",
-    definition:
-      "The Bullshit Index is MAD Studio's real-time fact-checking layer. Every claim made by an agent is extracted and cross-referenced against the evidence pack, the public web, and the agent's earlier turns. Hallucinated citations, drifted positions, false precision, and contradicted statements all push the meter higher.",
-    related: ["hallucination", "fact-checking", "calibration"],
-  },
-  {
-    term: "Saga",
-    slug: "saga",
-    definition:
-      "Saga is MAD Studio's recursive optimization engine. It spawns hidden child sessions from a source conversation, scores each transcript against a rubric, applies the best optimizer suggestion, and re-runs — generation after generation — until the score curve flattens or a stop condition fires. Direct precedent: Reflexion and Self-Refine.",
-    related: ["reflexion", "self-refine", "experiments"],
   },
   {
     term: "Truth-Seeking Debate",
     slug: "truth-seeking-debate",
     definition:
-      "Truth-Seeking Debate is MAD Studio's verdict-grade protocol — a 10-phase pipeline that combines structured rebuttals, claim extraction, and an independent M-MAD arbiter sweep. Designed for cases where the deliverable must be an auditable per-dimension scorecard rather than a single confidence number.",
+      "Truth-Seeking Debate is Delibora's 10-phase protocol combining structured rebuttals, claim extraction, and an independent M-MAD arbiter sweep. It is designed for cases where an auditable per-dimension scorecard is more useful than a single confidence number.",
     related: ["m-mad", "arbiter", "multi-agent-debate"],
   },
   {
     term: "Open Discussion",
     slug: "open-discussion",
     definition:
-      "Open Discussion is MAD Studio's brainstorming protocol — agents take turns surfacing objections, evidence, and angles without a fixed verdict pipeline. Best for exploratory pre-mortems, early-stage idea expansion, and surfacing the long tail of objections before pressure-testing the strongest ones with Truth-Seeking Debate.",
+      "Open Discussion is Delibora's brainstorming protocol. Agents take turns surfacing objections, evidence, and angles without a fixed verdict pipeline. It can be used for exploratory pre-mortems, early-stage idea expansion, and collecting objections before a more structured debate.",
     related: ["truth-seeking-debate", "team-discussion"],
   },
   {
     term: "Team Discussion",
     slug: "team-discussion",
     definition:
-      "Team Discussion is MAD Studio's two-team protocol. Battle mode pits an advocate team against an adversary team across bounded rounds; collaboration mode lets the teams synthesize. Useful for political messaging, product positioning, and any setting where the strongest opposing case must be staged before a decision is locked in.",
+      "Team Discussion is Delibora's two-team protocol. Battle mode places an advocate team against an adversary team across bounded rounds; collaboration mode lets the teams synthesize. It can be used for message testing, product positioning, and other settings that benefit from a staged opposing case.",
     related: ["open-discussion", "truth-seeking-debate"],
   },
   {
@@ -101,8 +87,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Reflexion",
     slug: "reflexion",
     definition:
-      "Reflexion (Shinn et al., NeurIPS 2023) is a verbal self-critique loop where an agent reflects on prior attempts, generates a critique, and retries. It iteratively raises performance without weight updates — the direct precedent for MAD Studio's Saga recursive optimization passes.",
-    related: ["saga", "self-refine"],
+      "Reflexion (Shinn et al., NeurIPS 2023) is a verbal self-critique loop where an agent reflects on prior attempts, generates a critique, and retries. The method uses linguistic feedback rather than updating model weights during the task.",
+    related: ["self-refine"],
   },
   {
     term: "Self-Refine",
@@ -122,28 +108,28 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "AutoGen",
     slug: "autogen",
     definition:
-      "AutoGen (Microsoft, COLM 2024) is a multi-agent conversation framework that orchestrates role-specialized agents through structured dialogues. It is one of the most-cited alternatives to MAD Studio for general multi-agent tasks; MAD Studio differentiates with peer-reviewed debate protocols and the M-MAD arbiter pipeline.",
+      "AutoGen (Microsoft, COLM 2024) is a multi-agent conversation framework that orchestrates role-specialized agents through structured dialogues. It covers general multi-agent tasks, while Delibora focuses on configured debate protocols and an M-MAD-inspired arbiter pipeline.",
     related: ["multi-agent-debate"],
   },
   {
     term: "CrewAI",
     slug: "crewai",
     definition:
-      "CrewAI is an open-source framework for role-based multi-agent orchestration with sequential or hierarchical task execution. Compared to MAD Studio, it is general-purpose agent orchestration; MAD Studio is specifically built for debate, arbitration, and recursive optimization with academic-grade protocols.",
+      "CrewAI is an open-source framework for role-based multi-agent orchestration with sequential or hierarchical task execution. It is a general-purpose orchestration framework, while Delibora focuses on purpose-built discussion formats, durable monitoring, and format-specific reports.",
     related: ["multi-agent-debate", "autogen"],
   },
   {
     term: "LangGraph",
     slug: "langgraph",
     definition:
-      "LangGraph is LangChain's graph-based agent orchestration library, modeling multi-agent flows as stateful directed graphs. MAD Studio uses purpose-built debate protocols rather than user-authored graphs, with built-in M-MAD scoring and Bullshit Index hallucination detection.",
+      "LangGraph is LangChain's graph-based agent orchestration library, modeling multi-agent flows as stateful directed graphs. Delibora uses configured debate protocols rather than user-authored graphs, with M-MAD-inspired scoring.",
     related: ["multi-agent-debate", "autogen"],
   },
   {
     term: "Model Context Protocol (MCP)",
     slug: "mcp",
     definition:
-      "The Model Context Protocol is an open standard for connecting LLM clients to external tools and data sources. MAD Studio ships a native MCP server so debates can be triggered as a callable tool from Claude Desktop, Cursor, or any MCP-compatible client — your agent of agents.",
+      "The Model Context Protocol is an open standard for connecting AI applications to external tools, data sources, and reusable prompts through a common client-server interface. It reduces the need to build a separate proprietary connector for every compatible host and service.",
     aliases: ["MCP"],
   },
   {
@@ -179,28 +165,28 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: "calibration",
     definition:
       "In LLM evaluation, calibration measures whether a model's stated confidence matches its actual accuracy. Well-calibrated agents say 'I'm uncertain' on questions they get wrong. Multi-agent debate generally improves calibration; the M-MAD arbiter scores it as a separate dimension.",
-    related: ["m-mad", "bullshit-index"],
+    related: ["m-mad", "hallucination"],
   },
   {
     term: "Steelman",
     slug: "steelman",
     definition:
-      "Steelmanning is the rhetorical practice of constructing the strongest possible version of an opposing argument before rebutting it. In multi-agent debate, steelman quality is a scored dimension — adversaries that produce only strawmen flag low and reduce trust in the verdict.",
+      "Steelmanning is the rhetorical practice of constructing the strongest possible version of an opposing argument before rebutting it. In multi-agent debate, asking agents to steelman can expose whether a disagreement survives a fair representation of both sides rather than a convenient strawman.",
     related: ["red-teaming"],
   },
   {
     term: "Position Drift",
     slug: "position-drift",
     definition:
-      "Position Drift is the failure mode where an agent silently abandons or contradicts an earlier claim without acknowledgment. The Bullshit Index tracks drift across turns: if an agent endorses A in turn 3 and contradicts it in turn 9 without explicit reversal, the meter rises.",
-    related: ["bullshit-index", "sycophancy"],
+      "Position Drift is the failure mode where an agent silently abandons or contradicts an earlier claim without acknowledgment. Reviewing drift across turns helps identify when an agent endorses one position and later contradicts it without an explicit reversal.",
+    related: ["sycophancy", "calibration"],
   },
   {
     term: "Hallucination",
     slug: "hallucination",
     definition:
-      "An LLM hallucination is a confidently-stated claim that is fabricated, contradicted by sources, or unsupported by the evidence pack. Multi-agent debate reduces hallucination rates by forcing claims through adversarial cross-examination; the Bullshit Index quantifies it in real time.",
-    related: ["bullshit-index", "calibration"],
+      "An LLM hallucination is a confidently stated claim that is fabricated, contradicted by sources, or unsupported by the available evidence. Adversarial cross-examination may surface some unsupported claims, but results still require human review and source checking.",
+    related: ["calibration", "multi-agent-debate"],
   },
   {
     term: "LLM-as-Judge",
@@ -220,14 +206,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Best-of-N",
     slug: "best-of-n",
     definition:
-      "Best-of-N sampling runs an LLM N times and selects the highest-scoring output by a reward model or rubric. It is conceptually close to Self-Consistency but selects rather than votes. MAD Studio's Lab Experiments use Best-of-N over parameter sweeps with a validation prompt as the selector.",
+      "Best-of-N sampling runs an LLM N times and selects the highest-scoring output by a reward model or rubric. It is conceptually close to Self-Consistency but selects rather than votes. Delibora's Lab Experiments similarly score parameter-sweep runs against a validation prompt and expected outcome.",
     related: ["self-consistency", "experiments"],
   },
   {
     term: "Worker",
     slug: "worker",
     definition:
-      "In MAD Studio, a Worker is a reusable agent definition — model, system prompt, persona, and provider configuration. Workers are snapshotted into a conversation when used, so editing a Worker definition never rewrites historical transcripts. The primitive that makes 2–100 agent compositions practical.",
+      "In Delibora, a Worker is a reusable agent definition containing a model, system prompt, persona, and provider configuration. Workers are snapshotted into a conversation when used, so editing a Worker definition does not rewrite historical transcripts.",
     related: ["persona", "playbook"],
   },
 ];
