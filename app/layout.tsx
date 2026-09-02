@@ -12,24 +12,25 @@ const inter = Inter({
 });
 
 const SITE_URL = "https://multiagentdebates.com";
-const SITE_NAME = "Delibora";
-const CURRENT_YEAR = new Date().getFullYear();
+const SITE_NAME = "Multi Agent Debates";
+const PRODUCT_NAME = "Multi Agent Debates by Delibora";
 const DESCRIPTION =
-  "Run 2–100 LLM agents across 10 formats for decisions, debates, focus groups, pitch review, audience simulation, idea tournaments, and custom discussions.";
+  "Run structured multi-agent debates for decisions, pitches, research, and ideas. Compare multiple AI perspectives and get an inspectable result.";
 const SOCIAL_DESCRIPTION =
-  "A workspace for structured multi-agent deliberation with 10 purpose-built formats and inspectable, format-specific outputs.";
+  "Structured AI debates with multiple perspectives, purpose-built formats, and inspectable outputs.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `Delibora — Structured Multi-Agent Deliberation (${CURRENT_YEAR})`,
+    default: `${PRODUCT_NAME} | Structured AI Debate`,
     template: `%s | ${SITE_NAME}`,
   },
   description: DESCRIPTION,
   applicationName: SITE_NAME,
   keywords: [
     "multi-agent debate",
-    "Delibora",
+    "multi agent debates",
+    "Multi Agent Debates",
     "AI debate platform",
     "LLM reasoning",
     "M-MAD",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
       "application/rss+xml": [
         {
           url: `${SITE_URL}/research/feed.xml`,
-          title: "Delibora Research",
+          title: "Multi Agent Debates Research",
         },
       ],
     },
@@ -59,12 +60,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "Delibora — Structured Multi-Agent Deliberation",
+    title: PRODUCT_NAME,
     description: SOCIAL_DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Delibora — Multi-Agent Deliberation",
+    title: PRODUCT_NAME,
     description: SOCIAL_DESCRIPTION,
   },
   robots: {

@@ -9,20 +9,20 @@ const SITE_URL = "https://multiagentdebates.com";
 export const metadata: Metadata = {
   title: "Research — Free Guides on Multi-Agent Debate & LLM Reasoning",
   description:
-    "Practical, research-backed guides on multi-agent debate, self-consistency, and LLM reasoning. From the Delibora team. Free, no signup.",
+    "Practical, research-backed guides on multi-agent debate, self-consistency, and LLM reasoning. Free to read, with no signup.",
   alternates: {
     canonical: `${SITE_URL}/research`,
     types: {
       "application/rss+xml": [
         {
           url: `${SITE_URL}/research/feed.xml`,
-          title: "Delibora Research",
+          title: "Multi Agent Debates Research",
         },
       ],
     },
   },
   openGraph: {
-    title: "Research Guides on Multi-Agent Debate | Delibora",
+    title: "Research Guides on Multi-Agent Debate | Multi Agent Debates",
     description:
       "Free guides on multi-agent debate vs self-consistency, LLM reasoning, and red-teaming with AI.",
     url: `${SITE_URL}/research`,
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Delibora Research — guides on multi-agent debate",
+        alt: "Multi Agent Debates research guides",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Research Guides on Multi-Agent Debate | Delibora",
+    title: "Research Guides on Multi-Agent Debate | Multi Agent Debates",
     description:
       "Free guides on multi-agent debate vs self-consistency and LLM reasoning.",
     images: ["/opengraph-image"],
@@ -50,13 +50,13 @@ const blogSchema = {
   "@type": "Blog",
   "@id": `${SITE_URL}/research`,
   url: `${SITE_URL}/research`,
-  name: "Delibora Research",
+  name: "Multi Agent Debates Research",
   description:
     "Practical guides on multi-agent debate, LLM reasoning, and structured AI deliberation.",
   inLanguage: "en-US",
   publisher: {
     "@type": "Organization",
-    name: "Delibora",
+    name: "Multi Agent Debates",
     url: SITE_URL,
   },
   blogPost: researchArticles.map((article) => ({
@@ -64,9 +64,9 @@ const blogSchema = {
     headline: article.title,
     description: article.description,
     datePublished: article.publishedAt,
-    dateModified: article.publishedAt,
+    dateModified: article.modifiedAt,
     url: `${SITE_URL}/research/${article.slug}`,
-    author: { "@type": "Organization", name: "Delibora", url: SITE_URL },
+    author: { "@type": "Organization", name: "Multi Agent Debates", url: SITE_URL },
     image: [`${SITE_URL}/opengraph-image`],
   })),
 };
@@ -177,7 +177,7 @@ export default function ResearchIndexPage() {
             Ready to run structured debate?
           </p>
           <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-            Delibora implements the protocols described in these guides. Join
+            Multi Agent Debates implements the protocols described in these guides. Join
             the beta waitlist if you would like to try them in the product.
           </p>
           <Link

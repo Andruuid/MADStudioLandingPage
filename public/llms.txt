@@ -1,6 +1,6 @@
-# Delibora — Multi-Agent Deliberation
+# Multi Agent Debates by Delibora
 
-> Delibora is a workspace for structured multi-agent AI deliberation. Configure 2–100 reasoning agents across 10 purpose-built discussion formats and inspect the transcript, run trail, and format-specific output.
+> Multi Agent Debates is a workspace for structured multi-agent AI deliberation, built by Delibora. Configure 2–100 reasoning agents across 10 purpose-built discussion formats and inspect the transcript, run trail, and format-specific output.
 
 Site: https://multiagentdebates.com
 Contact: mad@multiagentdebates.com
@@ -49,4 +49,4 @@ Decision stress-testing, expert review, adversarial debate, AI-to-AI dialogue, t
 
 ## Scientific foundation
 
-Delibora's debate workflows are informed by published multi-agent research including Du et al. (ICML 2024), Liang et al. (EMNLP 2024), Feng et al. M-MAD (ACL 2025), Khan et al. (ICML 2024 Best Paper), Choi et al. Debate or Vote (NeurIPS 2025), and related work.
+The platform's debate workflows are informed by published multi-agent research including Du et al. (ICML 2024), Liang et al. (EMNLP 2024), Feng et al. M-MAD (ACL 2025), Khan et al. (ICML 2024 Best Paper), Choi et al. Debate or Vote (NeurIPS 2025), and related work.

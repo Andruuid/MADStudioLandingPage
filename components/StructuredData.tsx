@@ -3,7 +3,8 @@ import { productFormats } from "@/lib/product-formats";
 import { seoReferences } from "@/lib/seo-references";
 
 const SITE_URL = "https://multiagentdebates.com";
-const SITE_NAME = "Delibora";
+const SITE_NAME = "Multi Agent Debates";
+const MAKER_NAME = "Delibora";
 
 function scholarlyArticle(ref: (typeof seoReferences)[number]) {
   return {
@@ -29,8 +30,8 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${SITE_URL}#organization`,
-    name: SITE_NAME,
-    alternateName: "Delibora · Multi-Agent Deliberation",
+    name: MAKER_NAME,
+    alternateName: "Delibora AI",
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
@@ -46,13 +47,15 @@ export default function StructuredData() {
       availableLanguage: ["English"],
     },
     description:
-      "Delibora is a workspace for structured multi-agent AI deliberation informed by peer-reviewed research.",
+      "Delibora develops Multi Agent Debates, a workspace for structured multi-agent AI deliberation.",
   };
 
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}#website`,
     name: SITE_NAME,
+    alternateName: "Multi Agent Debates by Delibora",
     url: SITE_URL,
     inLanguage: "en-US",
     publisher: {
@@ -64,11 +67,17 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: SITE_NAME,
+    alternateName: "Multi Agent Debates by Delibora",
+    url: SITE_URL,
+    brand: {
+      "@type": "Brand",
+      name: MAKER_NAME,
+    },
     applicationCategory: "DeveloperApplication",
     applicationSubCategory: "Multi-Agent AI Debate Platform",
     operatingSystem: "Web, Linux, macOS, Windows",
     description:
-      "Configure 2–100 reasoning agents across 10 purpose-built discussion formats, preserve the run, and review a format-specific report, verdict, transcript, or decision artifact.",
+      "Run 2–100 reasoning agents across 10 structured multi-agent debate formats and review a report, verdict, transcript, or decision artifact.",
     offers: {
       "@type": "Offer",
       price: "0",

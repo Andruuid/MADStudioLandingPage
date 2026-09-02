@@ -435,9 +435,9 @@ export default function DebateVsSelfConsistency() {
         drift.
       </p>
 
-      <h2>Where Delibora fits</h2>
+      <h2>Where Multi Agent Debates fits</h2>
       <p>
-        Delibora focuses on structured multi-agent discussion rather than a
+        Multi Agent Debates focuses on structured multi-agent discussion rather than a
         dedicated self-consistency runner. Its 10 formats cover decision
         stress-tests, expert panels, judged debates, private 1:1 dialogue, Team
         Battle, Shark Tank, Focus Group, TribeMind, Idea Tournament, and custom
@@ -503,7 +503,7 @@ export default function DebateVsSelfConsistency() {
           Ready to run structured debate?
         </p>
         <p className="mb-4 text-sm leading-relaxed text-zinc-300">
-          Delibora implements research-informed protocols with M-MAD arbiter
+          Multi Agent Debates implements research-informed protocols with M-MAD arbiter
           scoring, 2–100 agents, and full transcript persistence. Join the beta
           waitlist — no scaffolding required.
         </p>

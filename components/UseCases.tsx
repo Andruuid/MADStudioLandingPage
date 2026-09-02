@@ -56,7 +56,7 @@ export default function UseCases() {
             A workspace for questions that benefit from structured disagreement.
           </h2>
           <p className="text-balance text-zinc-400 md:text-lg">
-            Delibora can support message testing, qualitative research, pitch
+            Multi Agent Debates can support message testing, qualitative research, pitch
             review, argument mapping, product decisions, audience simulation,
             and idea selection.
           </p>

@@ -377,9 +377,9 @@ export default function RedTeamIdeasWithDebate() {
         .
       </p>
 
-      <h2>Running red-team debate in Delibora</h2>
+      <h2>Running red-team debate in Multi Agent Debates</h2>
       <p>
-        Delibora supports this workflow. Configure adversary and
+        Multi Agent Debates supports this workflow. Configure adversary and
         advocate Workers with distinct personas and playbooks, snapshotted into
         a Team Battle or Judged Debate run. Set cost
         and turn caps before you start. Inject human guidance mid-run if an
@@ -397,7 +397,7 @@ export default function RedTeamIdeasWithDebate() {
           Stress-test your next idea before it ships
         </p>
         <p className="mb-4 text-sm leading-relaxed text-zinc-300">
-          Delibora combines structured adversarial formats, reusable Workers
+          Multi Agent Debates combines structured adversarial formats, reusable Workers
           and Teams, Evidence Packs, human intervention, format-specific
           verdicts, and persisted transcripts. Join the beta waitlist to
           red-team without building the orchestration yourself.

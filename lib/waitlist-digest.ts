@@ -21,7 +21,7 @@ function formatUtc(value: string): string {
 export function buildWaitlistDigest(submissions: PendingWaitlistSubmission[]) {
   const count = submissions.length;
   const label = count === 1 ? "submission" : "submissions";
-  const subject = `Delibora waitlist digest — ${count} ${label}`;
+  const subject = `Multi Agent Debates waitlist digest — ${count} ${label}`;
 
   const textEntries = submissions.map((submission, index) => {
     const notes = submission.notes || "—";
@@ -58,7 +58,7 @@ export function buildWaitlistDigest(submissions: PendingWaitlistSubmission[]) {
   return {
     subject,
     text: [
-      `Delibora received ${count} new or updated waitlist ${label}.`,
+      `Multi Agent Debates received ${count} new or updated waitlist ${label}.`,
       "",
       ...textEntries.flatMap((entry) => [entry, ""]),
       "The authoritative list is in Vercel → Storage → Neon → waitlist_submissions.",
@@ -68,7 +68,7 @@ export function buildWaitlistDigest(submissions: PendingWaitlistSubmission[]) {
       <html lang="en">
         <body style="margin:0;padding:32px;background:#f4f4f5;color:#18181b;font-family:Arial,sans-serif;">
           <main style="max-width:680px;margin:0 auto;padding:28px;background:#ffffff;border-radius:14px;">
-            <h1 style="margin:0 0 8px;font-size:24px;">Delibora waitlist digest</h1>
+            <h1 style="margin:0 0 8px;font-size:24px;">Multi Agent Debates waitlist digest</h1>
             <p style="margin:0 0 24px;color:#52525b;">${count} new or updated ${label} since the last successful digest.</p>
             ${htmlEntries}
             <p style="margin:24px 0 0;color:#71717a;font-size:12px;">

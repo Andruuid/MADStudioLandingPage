@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
@@ -18,29 +17,25 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto max-w-6xl px-6 pb-28 pt-24 md:pb-36 md:pt-32">
-        <div className="flex max-w-3xl flex-col gap-7">
-          <Image
-            src="/brand/delibora-wordmark.svg"
-            alt="Delibora"
-            width={825}
-            height={166}
-            priority
-            className="h-auto w-[250px] sm:w-[320px]"
-          />
-
+        <div className="flex max-w-4xl flex-col gap-7">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-blue-300/20 bg-blue-950/45 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-blue-100/80 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan shadow-[0_0_12px_2px_rgba(0,213,220,0.45)]" />
             Closed beta · early access
           </div>
 
-          <h1 className="text-balance text-5xl font-semibold leading-[1.05] tracking-tight text-white md:text-7xl">
-            Put more than one perspective on the question.
+          <h1 className="text-balance font-semibold leading-[0.98] tracking-tight text-white">
+            <span className="block text-5xl md:text-7xl">
+              Multi Agent Debates
+            </span>
+            <span className="mt-4 block text-2xl font-medium tracking-[-0.015em] text-blue-100/65 md:text-4xl">
+              by <span className="text-accent-glow">Delibora</span>
+            </span>
           </h1>
 
           <p className="max-w-2xl text-balance text-lg leading-relaxed text-blue-100/70 md:text-xl">
-            Delibora is a workspace for structured AI deliberation. Configure
-            multiple reasoning agents, give them a shared question, and inspect
-            the arguments, revisions, and final assessment in one place.
+            A structured multi-agent debate platform for decisions, pitches,
+            research, and ideas. Give several AI participants the same question,
+            compare their arguments, and leave with an inspectable result.
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
@@ -48,7 +43,7 @@ export default function Hero() {
               href="#waitlist"
               className="group inline-flex items-center justify-center gap-2 rounded-md bg-gradient-to-r from-accent to-accent-glow px-6 py-3 text-sm font-semibold text-white shadow-[0_0_40px_-10px_rgba(124,92,255,0.8)] transition hover:shadow-[0_0_60px_-8px_rgba(124,92,255,1)]"
             >
-              Request beta access
+              Request free beta access
               <svg
                 className="h-4 w-4 transition group-hover:translate-x-0.5"
                 viewBox="0 0 16 16"
@@ -67,6 +62,9 @@ export default function Hero() {
             >
               Explore the research
             </Link>
+            <span className="w-full text-xs text-blue-100/45 sm:w-auto">
+              Free during beta · no credit card
+            </span>
           </div>
 
           <dl className="mt-6 grid grid-cols-3 gap-6 border-t border-white/5 pt-8 text-left">

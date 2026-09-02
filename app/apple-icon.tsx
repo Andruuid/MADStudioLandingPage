@@ -1,7 +1,5 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
-
 export const size = {
   width: 180,
   height: 180,
@@ -23,29 +21,12 @@ export default function AppleIcon() {
           borderRadius: "32px",
         }}
       >
-        <div
-          style={{
-            color: "white",
-            display: "flex",
-            fontSize: "118px",
-            fontWeight: 500,
-            lineHeight: 1,
-            position: "relative",
-          }}
-        >
-          D
-          <span
-            style={{
-              position: "absolute",
-              left: "-7px",
-              top: "54px",
-              width: "24px",
-              height: "24px",
-              borderRadius: "50%",
-              background: "#675cff",
-            }}
-          />
-        </div>
+        <svg width="108" height="108" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="6" cy="7" r="2" fill="#675cff" />
+          <circle cx="18" cy="7" r="2" fill="#063b5b" />
+          <circle cx="12" cy="18" r="2" fill="#063b5b" />
+          <path d="m7.7 8.1 3.2 7.8M16.3 8.1l-3.2 7.8M8 7h8" />
+        </svg>
       </div>
     ),
     { ...size }

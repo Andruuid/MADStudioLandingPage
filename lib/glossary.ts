@@ -28,7 +28,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "M-MAD",
     slug: "m-mad",
     definition:
-      "M-MAD (Multidimensional Multi-Agent Debate) is a verdict-scoring protocol from Feng et al. (ACL 2025) that runs independent arbiter passes on separate dimensions — correctness, evidence use, responsiveness, calibration, and citation quality — instead of one holistic 'who won' judgment. Delibora uses M-MAD in its Truth-Seeking Debate workflow.",
+      "M-MAD (Multidimensional Multi-Agent Debate) is a verdict-scoring protocol from Feng et al. (ACL 2025) that runs independent arbiter passes on separate dimensions — correctness, evidence use, responsiveness, calibration, and citation quality — instead of one holistic 'who won' judgment. Multi Agent Debates uses M-MAD in its Truth-Seeking Debate workflow.",
     related: ["multi-agent-debate", "arbiter", "dimension-sweep"],
   },
   {
@@ -43,21 +43,21 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Truth-Seeking Debate",
     slug: "truth-seeking-debate",
     definition:
-      "Truth-Seeking Debate is Delibora's 10-phase protocol combining structured rebuttals, claim extraction, and an independent M-MAD arbiter sweep. It is designed for cases where an auditable per-dimension scorecard is more useful than a single confidence number.",
+      "Truth-Seeking Debate is a 10-phase protocol combining structured rebuttals, claim extraction, and an independent M-MAD arbiter sweep. It is designed for cases where an auditable per-dimension scorecard is more useful than a single confidence number.",
     related: ["m-mad", "arbiter", "multi-agent-debate"],
   },
   {
     term: "Open Discussion",
     slug: "open-discussion",
     definition:
-      "Open Discussion is Delibora's brainstorming protocol. Agents take turns surfacing objections, evidence, and angles without a fixed verdict pipeline. It can be used for exploratory pre-mortems, early-stage idea expansion, and collecting objections before a more structured debate.",
+      "Open Discussion is the platform's brainstorming protocol. Agents take turns surfacing objections, evidence, and angles without a fixed verdict pipeline. It can be used for exploratory pre-mortems, early-stage idea expansion, and collecting objections before a more structured debate.",
     related: ["truth-seeking-debate", "team-discussion"],
   },
   {
     term: "Team Discussion",
     slug: "team-discussion",
     definition:
-      "Team Discussion is Delibora's two-team protocol. Battle mode places an advocate team against an adversary team across bounded rounds; collaboration mode lets the teams synthesize. It can be used for message testing, product positioning, and other settings that benefit from a staged opposing case.",
+      "Team Discussion is the platform's two-team protocol. Battle mode places an advocate team against an adversary team across bounded rounds; collaboration mode lets the teams synthesize. It can be used for message testing, product positioning, and other settings that benefit from a staged opposing case.",
     related: ["open-discussion", "truth-seeking-debate"],
   },
   {
@@ -108,21 +108,21 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "AutoGen",
     slug: "autogen",
     definition:
-      "AutoGen (Microsoft, COLM 2024) is a multi-agent conversation framework that orchestrates role-specialized agents through structured dialogues. It covers general multi-agent tasks, while Delibora focuses on configured debate protocols and an M-MAD-inspired arbiter pipeline.",
+      "AutoGen (Microsoft, COLM 2024) is a multi-agent conversation framework that orchestrates role-specialized agents through structured dialogues. It covers general multi-agent tasks, while Multi Agent Debates focuses on configured debate protocols and an M-MAD-inspired arbiter pipeline.",
     related: ["multi-agent-debate"],
   },
   {
     term: "CrewAI",
     slug: "crewai",
     definition:
-      "CrewAI is an open-source framework for role-based multi-agent orchestration with sequential or hierarchical task execution. It is a general-purpose orchestration framework, while Delibora focuses on purpose-built discussion formats, durable monitoring, and format-specific reports.",
+      "CrewAI is an open-source framework for role-based multi-agent orchestration with sequential or hierarchical task execution. It is a general-purpose orchestration framework, while Multi Agent Debates focuses on purpose-built discussion formats, durable monitoring, and format-specific reports.",
     related: ["multi-agent-debate", "autogen"],
   },
   {
     term: "LangGraph",
     slug: "langgraph",
     definition:
-      "LangGraph is LangChain's graph-based agent orchestration library, modeling multi-agent flows as stateful directed graphs. Delibora uses configured debate protocols rather than user-authored graphs, with M-MAD-inspired scoring.",
+      "LangGraph is LangChain's graph-based agent orchestration library, modeling multi-agent flows as stateful directed graphs. Multi Agent Debates uses configured debate protocols rather than user-authored graphs, with M-MAD-inspired scoring.",
     related: ["multi-agent-debate", "autogen"],
   },
   {
@@ -206,14 +206,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Best-of-N",
     slug: "best-of-n",
     definition:
-      "Best-of-N sampling runs an LLM N times and selects the highest-scoring output by a reward model or rubric. It is conceptually close to Self-Consistency but selects rather than votes. Delibora's Lab Experiments similarly score parameter-sweep runs against a validation prompt and expected outcome.",
+      "Best-of-N sampling runs an LLM N times and selects the highest-scoring output by a reward model or rubric. It is conceptually close to Self-Consistency but selects rather than votes. The platform's Lab Experiments similarly score parameter-sweep runs against a validation prompt and expected outcome.",
     related: ["self-consistency", "experiments"],
   },
   {
     term: "Worker",
     slug: "worker",
     definition:
-      "In Delibora, a Worker is a reusable agent definition containing a model, system prompt, persona, and provider configuration. Workers are snapshotted into a conversation when used, so editing a Worker definition does not rewrite historical transcripts.",
+      "In Multi Agent Debates, a Worker is a reusable agent definition containing a model, system prompt, persona, and provider configuration. Workers are snapshotted into a conversation when used, so editing a Worker definition does not rewrite historical transcripts.",
     related: ["persona", "playbook"],
   },
 ];

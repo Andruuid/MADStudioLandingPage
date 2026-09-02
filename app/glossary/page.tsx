@@ -9,12 +9,12 @@ const SITE_URL = "https://multiagentdebates.com";
 export const metadata: Metadata = {
   title: "Glossary — Multi-Agent Debate & LLM Reasoning Terms",
   description:
-    "Plain-English definitions for multi-agent debate, M-MAD, CoT-SC, Degeneration of Thought, sycophancy, and related terms — from the Delibora team.",
+    "Plain-English definitions for multi-agent debate, M-MAD, CoT-SC, Degeneration of Thought, sycophancy, and related LLM reasoning terms.",
   alternates: {
     canonical: `${SITE_URL}/glossary`,
   },
   openGraph: {
-    title: "Multi-Agent Debate Glossary | Delibora",
+    title: "Multi-Agent Debate Glossary | Multi Agent Debates",
     description:
       "Definitions for multi-agent debate, M-MAD, CoT-SC, Degeneration of Thought, and related LLM reasoning terms.",
     url: `${SITE_URL}/glossary`,
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Delibora Glossary",
+        alt: "Multi Agent Debate Glossary",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Multi-Agent Debate Glossary | Delibora",
+    title: "Multi-Agent Debate Glossary | Multi Agent Debates",
     description:
       "Plain-English definitions for multi-agent debate, M-MAD, CoT-SC, and related LLM reasoning terms.",
     images: ["/opengraph-image"],
@@ -101,7 +101,7 @@ export default function GlossaryPage() {
           <p className="mt-4 text-balance text-zinc-400 md:text-lg">
             Plain-English definitions for the terms used across{" "}
             <Link href="/research" className="text-accent-glow underline decoration-accent/40 underline-offset-2 transition hover:text-white">
-              Delibora research
+              Multi Agent Debates research
             </Link>{" "}
             — from <em>M-MAD</em> and <em>CoT-SC</em> to{" "}
             <em>Degeneration of Thought</em> and <em>calibration</em>.
@@ -170,7 +170,7 @@ export default function GlossaryPage() {
             Want to see these protocols in action?
           </p>
           <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-            Delibora applies several ideas described on this page through
+            Multi Agent Debates applies several ideas described on this page through
             Judged Debate, Team Battle, Expert Panel, Focus Group, TribeMind,
             Idea Tournament, and other purpose-built formats. The product is
             currently in beta.

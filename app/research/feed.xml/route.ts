@@ -1,7 +1,7 @@
 import { researchArticles } from "@/lib/research-articles";
 
 const SITE_URL = "https://multiagentdebates.com";
-const SITE_NAME = "Delibora Research";
+const SITE_NAME = "Multi Agent Debates Research";
 
 function escapeXml(value: string): string {
   return value
@@ -32,7 +32,7 @@ export function GET() {
   <channel>
     <title>${SITE_NAME}</title>
     <link>${SITE_URL}/research</link>
-    <description>Practical guides on multi-agent debate, LLM reasoning, and structured AI deliberation from Delibora.</description>
+    <description>Practical guides on multi-agent debate, LLM reasoning, and structured AI deliberation from Multi Agent Debates.</description>
     <language>en-us</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${SITE_URL}/research/feed.xml" rel="self" type="application/rss+xml" />${items}

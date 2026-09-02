@@ -3,6 +3,7 @@ export type ResearchArticle = {
   title: string;
   description: string;
   publishedAt: string;
+  modifiedAt: string;
   readTimeMinutes: number;
   tags: string[];
 };
@@ -14,6 +15,7 @@ export const researchArticles: ResearchArticle[] = [
     description:
       "A research-backed guide to choosing between self-consistency (CoT-SC) and multi-agent debate (MAD) — with benchmark numbers, cost analysis, failure modes, and a hybrid playbook for production.",
     publishedAt: "2026-05-26",
+    modifiedAt: "2026-09-02",
     readTimeMinutes: 12,
     tags: [
       "multi-agent debate",
@@ -28,6 +30,7 @@ export const researchArticles: ResearchArticle[] = [
     description:
       "A practical playbook for adversarial AI deliberation — stress-test political messaging, product decisions, research claims, and legal arguments before they ship.",
     publishedAt: "2026-05-27",
+    modifiedAt: "2026-09-02",
     readTimeMinutes: 10,
     tags: [
       "AI red teaming",

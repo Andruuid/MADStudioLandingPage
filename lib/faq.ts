@@ -5,19 +5,19 @@ export const faqs = [
       "Multi-agent debate is an AI reasoning technique where multiple language models, or multiple instances of the same model with different roles, discuss a question across structured rounds. Research suggests it can improve some reasoning and evaluation tasks, though results depend on the models, format, and problem.",
   },
   {
-    question: "How is Delibora different from running prompts in ChatGPT or Claude?",
+    question: "How is Multi Agent Debates different from prompting ChatGPT or Claude?",
     answer:
-      "A single prompt gives you one model's first-pass answer. Delibora gives you 10 purpose-built formats: Decision stress-test, Expert panel, Judged debate, 1:1 Human Dialogue, Team Battle, Shark Tank, Focus group, TribeMind, Idea Tournament, and Custom discussion. Each format preserves the run and produces an output suited to the job.",
+      "A single prompt gives you one model's first-pass answer. Multi Agent Debates gives you 10 purpose-built formats: Decision stress-test, Expert panel, Judged debate, 1:1 Human Dialogue, Team Battle, Shark Tank, Focus group, TribeMind, Idea Tournament, and Custom discussion. Each format preserves the run and produces an output suited to the job.",
   },
   {
-    question: "Which AI models can I use with Delibora?",
+    question: "Which AI models can I use with Multi Agent Debates?",
     answer:
-      "Delibora supports models available through OpenRouter and local models served by LM Studio. You can select models per Worker and configure automatic fallback order in Settings.",
+      "Multi Agent Debates supports models available through OpenRouter and local models served by LM Studio. You can select models per Worker and configure automatic fallback order in Settings.",
   },
   {
     question: "Is multi-agent debate scientifically validated?",
     answer:
-      "Delibora's debate workflows draw on published research from several institutions. The evidence is promising for some reasoning and evaluation tasks, but results remain model-, protocol-, and task-dependent. Key papers include:",
+      "The platform's debate workflows draw on published research from several institutions. The evidence is promising for some reasoning and evaluation tasks, but results remain model-, protocol-, and task-dependent. Key papers include:",
     links: [
       {
         label: "Du et al. — Multiagent Debate (ICML 2024)",
@@ -61,7 +61,7 @@ export const faqs = [
     ],
   },
   {
-    question: "What can I use Delibora for?",
+    question: "What can I use Multi Agent Debates for?",
     answer:
       "Use it to pressure-test decisions, gather specialist viewpoints, compare two arguments, observe a private AI-to-AI dialogue, stage Team Battles, evaluate pitches, run moderated Focus Groups, simulate audience response with TribeMind, select ideas in a tournament, or configure a discussion from scratch.",
   },
@@ -81,24 +81,24 @@ export const faqs = [
       "Lab Experiments copy a draft discussion into hidden child runs, vary temperature and repetition, frequency, and presence penalties, then evaluate each transcript against your validation prompt and expected outcome. They can stop on a score threshold, iteration limit, or total cost cap.",
   },
   {
-    question: "Is Delibora an alternative to AutoGen, CrewAI, or LangGraph?",
+    question: "Is Multi Agent Debates an alternative to AutoGen, CrewAI, or LangGraph?",
     answer:
-      "Delibora focuses on purpose-built discussion formats, durable run monitoring, and format-specific reports rather than general-purpose agent orchestration. AutoGen, CrewAI, and LangGraph are broader frameworks for building custom agent applications and graphs.",
+      "Multi Agent Debates focuses on purpose-built discussion formats, durable run monitoring, and format-specific reports rather than general-purpose agent orchestration. AutoGen, CrewAI, and LangGraph are broader frameworks for building custom agent applications and graphs.",
   },
   {
-    question: "How much does a Delibora run cost?",
+    question: "How much does a run cost?",
     answer:
-      "Cost varies with the selected models, participant count, number of rounds, research calls, and report generation. Delibora records token and cost metadata and supports turn, runtime, and observed-cost limits. Lab Experiments also support their own total cost cap.",
+      "Cost varies with the selected models, participant count, number of rounds, research calls, and report generation. Multi Agent Debates records token and cost metadata and supports turn, runtime, and observed-cost limits. Lab Experiments also support their own total cost cap.",
   },
   {
-    question: "Can I use Delibora without writing any code?",
+    question: "Can I use Multi Agent Debates without writing any code?",
     answer:
       "Yes. All 10 discussion formats, Workers, Teams, Personas, Playbooks, Lab Experiments, live monitors, and exports are available through the web interface.",
   },
   {
     question: "Is my data used to train AI models?",
     answer:
-      "Delibora does not train models on your transcripts. Prompts are sent to the model route you configure, so provider data handling depends on your OpenRouter model choice or LM Studio setup. Delibora persists workspace records in its configured Supabase storage and provides archive, delete, and export controls.",
+      "Multi Agent Debates does not train models on your transcripts. Prompts are sent to the model route you configure, so provider data handling depends on your OpenRouter model choice or LM Studio setup. The platform persists workspace records in its configured Supabase storage and provides archive, delete, and export controls.",
   },
   {
     question: "What is the Degeneration of Thought problem?",

@@ -22,7 +22,7 @@ export default function ApiSection() {
             Go beyond a debate transcript.
           </h2>
           <p className="text-balance text-zinc-400 md:text-lg">
-            Delibora includes dedicated workflows for pitch evaluation,
+            Multi Agent Debates includes dedicated workflows for pitch evaluation,
             moderated qualitative research, synthetic-audience simulation, and
             head-to-head idea selection.
           </p>

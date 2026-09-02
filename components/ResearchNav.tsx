@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import SiteBrand from "@/components/SiteBrand";
 
 export default function ResearchNav() {
   return (
@@ -8,16 +8,9 @@ export default function ResearchNav() {
         <Link
           href="/"
           className="group flex shrink-0 items-center gap-3"
-          aria-label="Delibora home"
+          aria-label="Multi Agent Debates home"
         >
-          <Image
-            src="/brand/delibora-wordmark.svg"
-            alt="Delibora"
-            width={825}
-            height={166}
-            className="h-auto w-[126px]"
-            priority
-          />
+          <SiteBrand compact />
         </Link>
 
         <nav className="flex items-center gap-4 text-sm text-zinc-400">

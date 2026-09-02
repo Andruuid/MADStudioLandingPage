@@ -111,7 +111,7 @@ export default function Waitlist() {
           07 / Beta access
         </span>
         <h2 className="text-balance text-4xl font-semibold tracking-tight text-white md:text-6xl">
-          See whether Delibora fits{" "}
+          See whether Multi Agent Debates fits{" "}
           <span className="bg-gradient-to-r from-accent via-accent-glow to-accent-cyan bg-clip-text text-transparent">
             your way of working.
           </span>
@@ -243,7 +243,7 @@ export default function Waitlist() {
             {step === 2 && (
               <fieldset>
                 <legend className="text-xl font-semibold text-white sm:text-2xl">
-                  What would you use Delibora for?
+                  What would you use Multi Agent Debates for?
                 </legend>
                 <div className="mt-2 flex items-center justify-between gap-4">
                   <p className="text-sm text-zinc-400">Choose exactly three.</p>
@@ -288,7 +288,7 @@ export default function Waitlist() {
                     htmlFor="waitlist-notes"
                     className="text-sm font-medium text-zinc-200"
                   >
-                    Anything else you’d like to use Delibora for?{" "}
+                    Anything else you’d like to use Multi Agent Debates for?{" "}
                     <span className="font-normal text-zinc-500">Optional</span>
                   </label>
                   <textarea
@@ -329,7 +329,7 @@ export default function Waitlist() {
                   Where should we send your invite?
                 </legend>
                 <p className="mt-2 text-sm text-zinc-400">
-                  You’re one step away from the Delibora beta.
+                  You’re one step away from the Multi Agent Debates beta.
                 </p>
 
                 <div className="mt-6">

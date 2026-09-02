@@ -52,7 +52,7 @@ export default function Evaluation() {
             Every format leaves something inspectable.
           </h2>
           <p className="text-balance text-zinc-400 md:text-lg">
-            Delibora keeps the transcript and operational trail, then adds the
+            Multi Agent Debates keeps the transcript and operational trail, then adds the
             output that fits the job: a memo, verdict, report, scorecard,
             dialogue, metrics package, or tournament result.
           </p>

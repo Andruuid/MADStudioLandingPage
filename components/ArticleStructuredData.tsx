@@ -1,7 +1,7 @@
 import type { ResearchArticle } from "@/lib/research-articles";
 
 const SITE_URL = "https://multiagentdebates.com";
-const SITE_NAME = "Delibora";
+const SITE_NAME = "Multi Agent Debates";
 
 type ArticleStructuredDataProps = {
   article: ResearchArticle;
@@ -18,7 +18,7 @@ export default function ArticleStructuredData({
     headline: article.title,
     description: article.description,
     datePublished: article.publishedAt,
-    dateModified: article.publishedAt,
+    dateModified: article.modifiedAt,
     image: [`${SITE_URL}/opengraph-image`],
     author: {
       "@type": "Organization",

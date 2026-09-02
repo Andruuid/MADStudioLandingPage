@@ -1,10 +1,10 @@
-# Delibora — Landing Page
+# Multi Agent Debates — Landing Page
 
 **Live site:** [https://multiagentdebates.com](https://multiagentdebates.com)
 
 **Contact:** [mad@multiagentdebates.com](mailto:mad@multiagentdebates.com)
 
-**Delibora** is a workspace for structured multi-agent AI deliberation, informed by peer-reviewed research in multi-agent debate.
+**Multi Agent Debates by Delibora** is a workspace for structured multi-agent AI deliberation, informed by peer-reviewed research in multi-agent debate.
 
 The public format catalogue lives in [`lib/product-formats.ts`](./lib/product-formats.ts)
 and mirrors the canonical product registry at
@@ -68,7 +68,7 @@ the changed row for the next digest.
 
    ```dotenv
    WAITLIST_DIGEST_TO=your-private-inbox@example.com
-   WAITLIST_DIGEST_FROM=Delibora <waitlist@multiagentdebates.com>
+   WAITLIST_DIGEST_FROM=Multi Agent Debates <waitlist@multiagentdebates.com>
    CRON_SECRET=replace-with-a-long-random-secret
    ```
 

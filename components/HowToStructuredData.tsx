@@ -34,7 +34,7 @@ const redTeamHowTo = {
   tool: [
     {
       "@type": "HowToTool",
-      name: "Delibora (or any multi-agent debate framework)",
+      name: "Multi Agent Debates by Delibora (or any multi-agent debate framework)",
     },
     {
       "@type": "HowToTool",

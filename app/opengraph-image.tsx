@@ -1,8 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
-
-export const alt = "Delibora — Structured Multi-Agent Deliberation";
+export const alt = "Multi Agent Debates by Delibora";
 export const size = {
   width: 1200,
   height: 630,
@@ -92,7 +90,7 @@ export default async function Image() {
                 lineHeight: 1,
               }}
             >
-              Delibora
+              Multi Agent Debates
             </div>
             <div
               style={{
@@ -103,7 +101,7 @@ export default async function Image() {
                 marginTop: "4px",
               }}
             >
-              Structured deliberation
+              by Delibora
             </div>
           </div>
         </div>
@@ -130,7 +128,7 @@ export default async function Image() {
                 display: "flex",
               }}
             />
-            Multi-agent deliberation workspace
+            Structured AI debate platform
           </div>
           <div
             style={{
@@ -143,7 +141,7 @@ export default async function Image() {
               flexWrap: "wrap",
             }}
           >
-            <span>Put more than one&nbsp;</span>
+            <span>Better decisions need&nbsp;</span>
             <span
               style={{
                 background:
@@ -152,9 +150,8 @@ export default async function Image() {
                 color: "transparent",
               }}
             >
-              perspective
+              more than one perspective.
             </span>
-            <span>&nbsp;on the question.</span>
           </div>
         </div>
 
@@ -170,7 +167,7 @@ export default async function Image() {
           <div style={{ display: "flex", gap: "32px" }}>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ fontSize: "12px", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)" }}>
-                Agents
+                Participants
               </div>
               <div style={{ fontFamily: "monospace", color: "white", fontSize: "20px", marginTop: "4px" }}>
                 2–100
@@ -178,18 +175,18 @@ export default async function Image() {
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ fontSize: "12px", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)" }}>
-                Phases
+                Formats
               </div>
               <div style={{ fontFamily: "monospace", color: "white", fontSize: "20px", marginTop: "4px" }}>
-                1–10
+                10
               </div>
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ fontSize: "12px", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)" }}>
-                Concurrent
+                Model routes
               </div>
               <div style={{ fontFamily: "monospace", color: "white", fontSize: "20px", marginTop: "4px" }}>
-                1–100
+                Cloud + local
               </div>
             </div>
           </div>

@@ -46,7 +46,7 @@ export const papers: Paper[] = [
     authors: "Feng, Zhao, Lyu, Li, Tu, Wang",
     venue: "ACL 2025",
     href: "https://arxiv.org/abs/2412.20127",
-    note: "Introduces the per-dimension arbiter sweep that informs Delibora's truth-seeking verdict scoring.",
+    note: "Introduces the per-dimension arbiter sweep that informs the platform's truth-seeking verdict scoring.",
   },
   {
     id: "chateval-2024",

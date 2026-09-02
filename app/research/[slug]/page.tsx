@@ -56,8 +56,8 @@ export async function generateMetadata({
       description: article.description,
       url,
       publishedTime: article.publishedAt,
-      modifiedTime: article.publishedAt,
-      authors: ["Delibora"],
+      modifiedTime: article.modifiedAt,
+      authors: ["Multi Agent Debates"],
       tags: article.tags,
       images: [
         {

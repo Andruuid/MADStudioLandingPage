@@ -62,7 +62,7 @@ export default function Science() {
             Protocols connected to their research origins.
           </h2>
           <p className="text-balance text-zinc-400 md:text-lg">
-            Delibora&apos;s debate workflows are informed by published
+            The platform&apos;s debate workflows are informed by published
             multi-agent research. The references below explain the methods and
             tradeoffs behind structured debate, judging, and collaboration on{" "}
             <a
